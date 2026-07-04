@@ -48,4 +48,5 @@ jobs:
         run: vercel deploy --prod --yes --token="$VERCEL_TOKEN" --project=radarop-es
 
       - name: Registrar endereço
-        run: echo "Dashboard: https://radarop-es.vercel.app" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "Dashboard: https://radarop-es.vercel.app" >> "$GITHUB_STEP_SUMMARY"
