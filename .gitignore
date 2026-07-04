@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+data/cache/*.json
+data/runtime/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.agents/

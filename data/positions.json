@@ -1,0 +1,25 @@
+[
+  {
+    "id": "88060bd3-fcce-469e-9534-7efdc35cdee1",
+    "opportunity_id": "mock-petr4-trava-alta",
+    "ativo": "PETR4",
+    "estrategia": "Trava de alta",
+    "status": "em acompanhamento",
+    "preco_planejado": 0.42,
+    "preco_real_entrada": 0.45,
+    "quantidade": 1,
+    "data_entrada": "2026-07-01",
+    "observacao": "",
+    "tipo_dado": "MOCK / EXEMPLO",
+    "fonte_oportunidade": "mock interno",
+    "ganho_maximo": "R$ 158 por lote",
+    "perda_maxima": "R$ 42 por lote",
+    "break_even": "R$ 37,42",
+    "vencimento_dias": 28,
+    "strikes": {
+      "comprado": "R$ 37,00",
+      "vendido": "R$ 39,00"
+    },
+    "created_at": "2026-07-01T17:35:54-03:00"
+  }
+]

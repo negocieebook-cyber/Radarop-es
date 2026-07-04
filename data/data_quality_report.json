@@ -1,0 +1,13 @@
+{
+  "generated_at": null,
+  "status": "mock/exemplo",
+  "summary": {
+    "sources_registered": 0,
+    "sources_implemented": 0,
+    "mock_sources": 0,
+    "missing_metadata": 0
+  },
+  "notes": [
+    "Nenhuma coleta real implementada nesta etapa."
+  ]
+}

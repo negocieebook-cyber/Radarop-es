@@ -1,0 +1,38 @@
+[
+  {
+    "id": "6d64e4db-49bd-44cb-ba5a-afef2d09940f",
+    "tipo": "entrada_confirmada",
+    "ativo": "PETR4",
+    "estrategia": "Trava de alta",
+    "data_hora": "2026-07-01T17:35:54-03:00",
+    "mensagem": "Entrada MOCK / EXEMPLO confirmada: quantidade 1, preço R$ 0.45.",
+    "tipo_dado": "MOCK / EXEMPLO"
+  },
+  {
+    "id": "2f54479e-e2e0-4fc4-8c73-46a14845d8a2",
+    "tipo": "acompanhar_tese_grafica",
+    "ativo": "ITUB4",
+    "estrategia": "call_debit_spread ou bull_put_spread",
+    "data_hora": "2026-07-03T16:17:37-03:00",
+    "mensagem": "Tese gráfica adicionada à watchlist persistente durante validação.",
+    "tipo_dado": "coletado/calculado"
+  },
+  {
+    "id": "287223f3-1ed2-481f-8174-82685d5e830e",
+    "tipo": "acompanhar_tese_grafica",
+    "ativo": "GOAU4",
+    "estrategia": "put_debit_spread ou bear_call_spread",
+    "data_hora": "2026-07-03T22:16:36-03:00",
+    "mensagem": "Tese gráfica adicionada pela prioridade diária.",
+    "tipo_dado": "MOCK / EXEMPLO"
+  },
+  {
+    "id": "20086584-54b5-4915-b716-542566c52371",
+    "tipo": "acompanhar_tese_grafica",
+    "ativo": "LREN3",
+    "estrategia": "apenas observar",
+    "data_hora": "2026-07-03T22:20:38-03:00",
+    "mensagem": "Tese gráfica adicionada pela prioridade diária.",
+    "tipo_dado": "MOCK / EXEMPLO"
+  }
+]
