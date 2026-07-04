@@ -1,5 +1,9 @@
 # Radar de Opções Brasil
 
+Dashboard publicada em: **https://radarop-es.vercel.app**
+
+O deploy usa Streamlit em um container Vercel. Arquivos gravados em `data/runtime/` são locais e efêmeros no ambiente hospedado; persistência durável exige um banco externo.
+
 Dashboard diária para apoiar a análise de oportunidades em opções do mercado brasileiro. O projeto organiza informações de liquidez, risco, vencimento, strikes, prêmio, break-even, perda e ganho máximos, leitura gráfica, Stock Healthbox e referências do ThePatternSite/Bulkowski.
 
 > **Estado atual:** a brapi alimenta o Radar de Mercado e seus snapshots reais são salvos localmente. O Opportunity Engine e todas as informações de opções continuam **MOCK / EXEMPLO**.

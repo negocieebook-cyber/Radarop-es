@@ -1,0 +1,14 @@
+.git
+.github
+.vercel
+.env
+.env.*
+!.env.example
+.pytest_cache
+.agents
+__pycache__
+*.py[cod]
+data/cache/*.json
+data/runtime
+tests
+docs
