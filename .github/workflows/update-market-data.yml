@@ -20,7 +20,7 @@ on:
     - cron: "0 10 * * 0"      # Descoberta semanal de opções: domingo 10:00 UTC
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: update-market-data
@@ -93,18 +93,14 @@ jobs:
           echo "Arquivos persistidos pelo pipeline em data/runtime/"
           echo "Opportunity Engine: MOCK / EXEMPLO"
 
-      - name: Commitar arquivos atualizados
-        shell: bash
-        run: |
-          git config user.name "github-actions"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/runtime/market_snapshots.json data/runtime/update_status.json data/runtime/real_opportunities_snapshot.json data/runtime/graphical_theses_snapshot.json data/runtime/pipeline_status.json data/runtime/options_eod_status.json data/runtime/options_snapshots
-          if git diff --cached --quiet; then
-            echo "Sem alterações para commitar."
-          else
-            git commit -m "Atualiza snapshots de mercado"
-            git push
-          fi
+      - name: Guardar snapshots como artefato privado
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshots-${{ steps.mode.outputs.mode }}-${{ github.run_id }}
+          path: data/runtime/
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: Sinalizar falha da atualização
         if: steps.market_update.outcome == 'failure'
@@ -140,15 +136,10 @@ jobs:
           echo "Secret BRAPI_TOKEN detectado."
       - name: Descobrir universo real de opções
         run: python scripts/discover_options_universe.py --limit 30
-      - name: Commitar mapa de disponibilidade
-        shell: bash
-        run: |
-          git config user.name "github-actions"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/runtime/options_universe_availability.json
-          if git diff --cached --quiet; then
-            echo "Sem alterações para commitar."
-          else
-            git commit -m "Atualiza universo real de opções"
-            git push
-          fi
+      - name: Guardar mapa como artefato privado
+        uses: actions/upload-artifact@v4
+        with:
+          name: universo-opcoes-${{ github.run_id }}
+          path: data/runtime/options_universe_availability.json
+          if-no-files-found: error
+          retention-days: 14

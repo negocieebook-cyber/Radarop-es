@@ -1,0 +1,51 @@
+name: Publicar dashboard no Vercel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-vercel-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Instalar Vercel CLI
+        run: npm install --global vercel@54.20.1
+
+      - name: Validar secrets do Vercel
+        shell: bash
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ] || [ -z "$VERCEL_ORG_ID" ] || [ -z "$VERCEL_PROJECT_ID" ]; then
+            echo "Secrets VERCEL_TOKEN, VERCEL_ORG_ID ou VERCEL_PROJECT_ID ausentes."
+            exit 1
+          fi
+
+      - name: Publicar produção
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prod --yes --token="$VERCEL_TOKEN" --project=radarop-es
+
+      - name: Registrar endereço
+        run: echo "Dashboard: https://radarop-es.vercel.app" >> "$GITHUB_STEP_SUMMARY"
