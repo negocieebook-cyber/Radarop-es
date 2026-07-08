@@ -87,6 +87,8 @@ from app.components import (
     render_data_notice,
     render_data_status_strip,
     render_decision_card,
+    render_empty_state,
+    render_info_panel,
     render_market_card,
     render_options_status_card,
     render_options_eod_status_card,
@@ -204,6 +206,30 @@ def build_decision_panel_groups(theses: list[dict], near_setups: list[dict]) -> 
     return groups, summary
 
 
+def build_events_summary() -> dict:
+    snapshot = load_real_opportunities_snapshot()
+    opportunities = snapshot.get("opportunities", []) if isinstance(snapshot, dict) else []
+    today = datetime.now().date()
+    dated = []
+    for item in opportunities:
+        vencimento = item.get("vencimento")
+        try:
+            event_date = datetime.fromisoformat(str(vencimento)).date()
+        except (TypeError, ValueError):
+            continue
+        delta = (event_date - today).days
+        if delta >= 0:
+            dated.append({"ativo": item.get("ativo"), "date": event_date.isoformat(), "days": delta})
+    dated.sort(key=lambda item: item["days"])
+    return {
+        "within_2": sum(item["days"] <= 2 for item in dated),
+        "within_5": sum(item["days"] <= 5 for item in dated),
+        "next_asset": dated[0]["ativo"] if dated else None,
+        "next_date": dated[0]["date"] if dated else None,
+        "risk": "atenção" if dated and dated[0]["days"] <= 2 else "informativo" if dated else "sem evento",
+    }
+
+
 def handle_thesis_card_action(thesis: dict, action: str | None, key_suffix: str) -> None:
     if action == "simulate":
         best = thesis.get("best_strategy") or {}
@@ -258,38 +284,135 @@ def decision_panel_page() -> None:
     graphical_snapshot, theses = prepare_graphical_theses()
     near_setups = graphical_snapshot.get("near_setups", [])[:10]
     groups, summary = build_decision_panel_groups(theses, near_setups)
+    events_summary = build_events_summary()
+    summary["events"] = events_summary["within_5"]
 
-    render_data_status_strip(update_summary)
+    latest = update_summary.get("latest_update") or {}
+    title_left, title_right = st.columns([0.7, 0.3])
+    with title_left:
+        st.markdown("# Painel de decisão")
+        st.caption("O que merece atenção hoje")
+    with title_right:
+        header_bits = [
+            '<span class="status-badge status-info">Dados EOD</span>',
+            f'<span class="status-badge {"status-approved" if latest.get("success", False) else "status-warning" if latest else "status-neutral"}">{("Atualizado" if latest.get("success", False) else "Parcial" if latest else "Sem leitura")}</span>',
+            f'<span class="status-badge status-neutral">{latest.get("finished_at") or "sem horário"}</span>',
+        ]
+        st.markdown(f'<div class="header-meta">{"".join(header_bits)}</div>', unsafe_allow_html=True)
+        if st.button("Atualizar", key="decision_panel_update_header"):
+            result = run_market_update(
+                tickers=default_watchlist(),
+                range="3mo",
+                interval="1d",
+                mode="intraday",
+                runner="streamlit_app",
+            )
+            if result.get("success"):
+                st.success("Atualização concluída.")
+            else:
+                st.warning("Atualização concluída com dados parciais ou indisponíveis.")
+            st.rerun()
+
+    render_data_notice("Este painel não envia ordens. Valide preços e liquidez no book.")
     render_action_summary(summary)
 
-    sections = (
-        ("Olhar primeiro", "Operável só após validação no book.", "olhar_primeiro"),
-        ("Aguardar gatilho", "Monitorar sem antecipar entrada.", "aguardar_gatilho"),
-        ("Evitar por enquanto", "Bloqueios, contexto ruim ou dados insuficientes.", "evitar"),
-    )
-    for title, subtitle, key in sections:
-        render_section_title(title, subtitle)
-        items = groups[key]
-        if not items:
-            st.info("Nenhum item nesta faixa com os dados atuais.")
-            continue
-        for index, thesis in enumerate(items[:8]):
-            action = render_decision_card(
-                {
-                    "card_key": f"decision_panel_{key}_{index}_{thesis.get('ativo')}",
-                    "source_label": "PAINEL DE DECISÃO",
-                    "ativo": thesis.get("ativo"),
-                    "action_status": thesis.get("practical_action"),
-                    "action_label": thesis.get("practical_action"),
-                    "strategy_name": (thesis.get("best_strategy") or {}).get("strategy_name") or thesis.get("preferred_strategy"),
-                    "score": (thesis.get("best_strategy") or {}).get("score") or thesis.get("near_setup_score"),
-                    "gatilho_confirmacao": thesis.get("gatilho_confirmacao"),
-                    "invalidacao": thesis.get("invalidacao"),
-                    "cadeia_opcoes_status": thesis.get("cadeia_opcoes_status"),
-                    "reason": (thesis.get("best_strategy") or {}).get("reason") or thesis.get("evaluation_reason"),
-                }
+    has_any_data = any(summary[key] for key in ("validated", "near_entries", "events", "avoid"))
+    if not has_any_data:
+        render_empty_state("Nenhuma leitura disponível", "Execute o pipeline ou atualize os dados.")
+        c1, c2 = st.columns(2)
+        if c1.button("Atualizar dados", key="empty_state_update_data"):
+            result = run_market_update(
+                tickers=default_watchlist(),
+                range="3mo",
+                interval="1d",
+                mode="intraday",
+                runner="streamlit_app",
             )
-            handle_thesis_card_action(thesis, action, f"{key}_{index}")
+            if result.get("success"):
+                st.success("Atualização concluída.")
+            else:
+                st.warning("Atualização concluída com dados parciais ou indisponíveis.")
+            st.rerun()
+        if c2.button("Ver status do pipeline", key="empty_state_pipeline_status"):
+            st.session_state["sidebar_page"] = "Configurações"
+            st.rerun()
+        return
+
+    left_col, right_col = st.columns([0.65, 0.35], gap="large")
+
+    with left_col:
+        sections = (
+            ("Prioridade de hoje", "O que merece validação primeiro no book.", "olhar_primeiro"),
+            ("Aguardar gatilho", "Ideias que ainda dependem de confirmação.", "aguardar_gatilho"),
+            ("Evitar por enquanto", "Bloqueios, contexto ruim ou risco sem confirmação.", "evitar"),
+        )
+        for title, subtitle, key in sections:
+            render_section_title(title, subtitle)
+            items = groups[key]
+            if not items:
+                st.caption("Sem itens nesta seção no momento.")
+                continue
+            for index, thesis in enumerate(items[:6]):
+                event_label = (
+                    f'{events_summary["next_asset"]} · {events_summary["next_date"]}'
+                    if events_summary["next_asset"] == thesis.get("ativo") and events_summary["next_date"]
+                    else "sem evento próximo"
+                )
+                action = render_decision_card(
+                    {
+                        "card_key": f"decision_panel_{key}_{index}_{thesis.get('ativo')}",
+                        "source_label": "PAINEL",
+                        "ativo": thesis.get("ativo"),
+                        "action_status": thesis.get("practical_action"),
+                        "action_label": thesis.get("practical_action"),
+                        "strategy_name": (thesis.get("best_strategy") or {}).get("strategy_name") or thesis.get("preferred_strategy"),
+                        "score": (thesis.get("best_strategy") or {}).get("score") or thesis.get("near_setup_score"),
+                        "event_label": event_label,
+                        "gatilho_confirmacao": thesis.get("gatilho_confirmacao"),
+                        "invalidacao": thesis.get("invalidacao"),
+                        "cadeia_opcoes_status": thesis.get("cadeia_opcoes_status"),
+                        "reason": (thesis.get("best_strategy") or {}).get("reason") or thesis.get("evaluation_reason"),
+                    }
+                )
+                handle_thesis_card_action(thesis, action, f"{key}_{index}")
+
+    with right_col:
+        render_info_panel(
+            "Eventos próximos",
+            [
+                ("Até 2 dias", events_summary["within_2"]),
+                ("Até 5 dias", events_summary["within_5"]),
+                ("Próximo ativo", events_summary["next_asset"] or "Nenhum resultado confirmado no período."),
+                ("Data", events_summary["next_date"] or "indisponível"),
+            ],
+        )
+        render_info_panel(
+            "Status do pipeline",
+            [
+                ("Leitura", "Atualizado" if latest.get("success", False) else "Parcial" if latest else "Sem leitura"),
+                ("Horário", latest.get("finished_at") or "indisponível"),
+                ("Modo", latest.get("mode") or "indisponível"),
+                ("Origem", latest.get("runner") or "indisponível"),
+            ],
+        )
+        render_info_panel(
+            "Qualidade dos dados",
+            [
+                ("Status", latest.get("source") or "indisponível"),
+                ("Atualizados", latest.get("updated_count", 0)),
+                ("Incompletos", latest.get("incomplete_count", 0)),
+                ("Erros", latest.get("error_count", 0)),
+            ],
+        )
+        render_info_panel(
+            "Avisos importantes",
+            [
+                ("Regra 1", "Nenhuma tese vira ordem automaticamente."),
+                ("Regra 2", "Dados EOD exigem conferência de preço e liquidez."),
+                ("Regra 3", "MOCK e real continuam separados."),
+                ("Risco", events_summary["risk"]),
+            ],
+        )
 
     if st.session_state.get("manual_simulation_seed"):
         with st.expander("Simular manualmente", expanded=True):
@@ -1860,60 +1983,41 @@ def sources_configuration_page() -> None:
 
 
 with st.sidebar:
-    st.markdown("## 📡 Radar de Opções Brasil")
-    st.caption("Painel de decisão para leitura rápida")
-    st.markdown("**Decisão**")
-    st.caption("Painel de Decisão · Radar · Radar EOD")
-    st.markdown("**Acompanhamento**")
-    st.caption("Teses · Watchlist · Posições · Alertas")
-    st.markdown("**Ferramentas**")
-    st.caption("Simulador · Histórico · Dados/Config")
-    page = st.selectbox(
+    st.markdown('<div class="sidebar-title">Radar de Opções Brasil</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-group">Painel</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-group">Acompanhamento</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-group">Ferramentas</div>', unsafe_allow_html=True)
+    page = st.radio(
         "Navegação",
         [
-            "Painel de Decisão",
-            "Radar",
+            "Visão geral",
             "Radar EOD",
             "Teses",
-            "Watchlist de Abertura",
+            "Eventos",
             "Posições",
             "Alertas",
             "Simulador",
             "Histórico",
-            "Dados/Config",
+            "Configurações",
         ],
         label_visibility="collapsed",
     )
-    st.markdown("---")
-    st.markdown(
-        '<div class="sidebar-note"><b>Uso responsável</b><br>Decisão assistida, sem envio de ordens e sem mistura entre MOCK e real.</div>',
-        unsafe_allow_html=True,
-    )
-    st.markdown('<div class="sidebar-note"><b>Camadas</b><br>Radar EOD e Teses usam snapshots reais/EOD. Radar usa MOCK / EXEMPLO.</div>', unsafe_allow_html=True)
-    if page == "Radar":
-        st.markdown('<div class="sidebar-note"><b>Filtros ativos</b><br>Use os filtros da página para reduzir o ruído visual.</div>', unsafe_allow_html=True)
 
 st.markdown('<div class="eyebrow">Radar de Opções Brasil</div>', unsafe_allow_html=True)
-if page == "Painel de Decisão":
-    st.title("Painel de Decisão")
-    st.markdown("O que olhar primeiro, o que acompanhar e o que evitar por enquanto.")
-else:
+if page != "Visão geral":
     st.title(page)
-if page in {"Painel de Decisão", "Radar EOD", "Watchlist de Abertura", "Teses", "Posições", "Alertas"}:
+if page in {"Visão geral", "Radar EOD", "Eventos", "Teses", "Posições", "Alertas"}:
     mock_badge("DADOS REAIS EOD / EXPERIMENTAL")
 else:
     mock_badge()
 
 render_global_risk_notice()
 
-if page == "Painel de Decisão":
+if page == "Visão geral":
     decision_panel_page()
-elif page == "Radar":
-    st.subheader("Oportunidades do Dia")
-    opportunities_page()
 elif page == "Radar EOD":
     real_eod_opportunities_page()
-elif page == "Watchlist de Abertura":
+elif page == "Eventos":
     opening_watchlist_page()
 elif page == "Teses":
     graphical_watchlist_page()

@@ -8,237 +8,11 @@ from datetime import datetime, timezone
 import pandas as pd
 import streamlit as st
 
+from app.theme import get_theme_css
+
 
 def inject_styles() -> None:
-    st.markdown(
-        """
-        <style>
-        :root{
-          --bg:#f4f0e8;
-          --panel:#fffaf2;
-          --panel-2:#f8f3ea;
-          --line:#d7cfc2;
-          --text:#1b1c18;
-          --muted:#6b6b63;
-          --green:#2f8f5b;
-          --yellow:#d6a125;
-          --blue:#2f78c4;
-          --red:#c24d47;
-          --gray:#7d858e;
-        }
-        #MainMenu,footer,[data-testid="stHeader"]{visibility:hidden}
-        .stApp{
-          background:
-            radial-gradient(circle at 0% 0%, #efe5d1 0, transparent 26%),
-            radial-gradient(circle at 100% 0%, #dce8dd 0, transparent 24%),
-            linear-gradient(180deg,#f5efe4 0%,#f1ece3 100%);
-          color:var(--text);
-        }
-        .block-container{padding-top:1.35rem;padding-bottom:3rem;max-width:1380px}
-        h1,h2,h3{font-weight:800!important;color:var(--text)}
-        h1{letter-spacing:-0.04em}
-        .stCaption,.muted-copy{color:var(--muted)!important}
-        [data-testid="stSidebar"]{
-          background:linear-gradient(180deg,#efe4d0 0%,#efe9df 100%);
-          border-right:1px solid var(--line);
-        }
-        [data-testid="stSidebar"] .block-container{padding-top:1.2rem}
-        div.stButton>button{
-          border-radius:12px;
-          width:100%;
-          min-height:2.5rem;
-          border:1px solid #c9bfaf;
-          background:#fff8ef;
-          color:var(--text);
-          font-weight:700;
-        }
-        div.stButton>button:hover{
-          border-color:#8ca584;
-          background:#f9f3e8;
-        }
-        [data-testid="stDataFrame"]{
-          border:1px solid var(--line);
-          border-radius:16px;
-          overflow:hidden;
-          background:var(--panel);
-        }
-        [data-testid="stExpander"]{
-          border:1px solid var(--line);
-          border-radius:14px;
-          background:rgba(255,250,242,.75);
-        }
-        [data-testid="stForm"]{
-          border:1px solid var(--line);
-          border-radius:16px;
-          background:rgba(255,250,242,.88);
-          padding:1rem;
-        }
-        [data-baseweb="select"]>div,[data-baseweb="input"]>div{
-          background:#fffaf2!important;
-          border-color:#cfc3b0!important;
-        }
-        .eyebrow,.small-label{
-          color:#7f735f;
-          font-size:.72rem;
-          font-weight:800;
-          letter-spacing:.13em;
-          text-transform:uppercase;
-        }
-        .mock-badge,.status-badge,.mini-badge{
-          display:inline-flex;
-          align-items:center;
-          gap:.3rem;
-          padding:.32rem .7rem;
-          border-radius:999px;
-          font-size:.72rem;
-          font-weight:800;
-          letter-spacing:.04em;
-          text-transform:uppercase;
-          border:1px solid transparent;
-        }
-        .mock-badge{background:#e7decb;color:#6f664f;border-color:#d2c6b0}
-        .status-approved{background:#e5f3ea;color:var(--green);border-color:#b7d6c4}
-        .status-warning{background:#fff4d6;color:#9a6d00;border-color:#edd39b}
-        .status-info{background:#e5f0fb;color:var(--blue);border-color:#bfd3ec}
-        .status-rejected{background:#fae5e2;color:var(--red);border-color:#e4beb9}
-        .status-neutral{background:#eceff2;color:#616972;border-color:#d1d7dd}
-        .sidebar-note,.section-card,.notice-banner,.decision-card,.metric-card,.strip-card{
-          border:1px solid var(--line);
-          border-radius:18px;
-          background:rgba(255,250,242,.88);
-          box-shadow:0 10px 30px rgba(92,82,58,.08);
-        }
-        .sidebar-note,.section-card,.strip-card{padding:1rem 1.1rem}
-        .notice-banner{
-          padding:.95rem 1rem;
-          background:linear-gradient(90deg,#fff8ea 0%,#f3efe8 100%);
-        }
-        .section-title{
-          display:flex;
-          align-items:flex-end;
-          justify-content:space-between;
-          gap:1rem;
-          margin:1.4rem 0 .8rem;
-        }
-        .section-title h2{margin:0!important}
-        .section-title p{margin:0;color:var(--muted)}
-        .metric-card{
-          padding:1rem 1.05rem;
-          min-height:112px;
-          position:relative;
-          overflow:hidden;
-        }
-        .metric-card:before{
-          content:"";
-          position:absolute;
-          left:0;top:0;bottom:0;width:5px;
-          background:var(--gray);
-        }
-        .metric-card.approved:before{background:var(--green)}
-        .metric-card.warning:before{background:var(--yellow)}
-        .metric-card.rejected:before{background:var(--red)}
-        .metric-card.teal:before,.metric-card.info:before{background:var(--blue)}
-        .metric-card .value{font-size:2rem;font-weight:850;line-height:1.05}
-        .metric-card .label{font-size:.88rem;color:#373730;margin-top:.35rem}
-        .metric-card .subtitle{font-size:.74rem;color:var(--muted);margin-top:.42rem}
-        .decision-card{padding:1rem 1.05rem;margin:.65rem 0}
-        .decision-card .top{
-          display:flex;
-          justify-content:space-between;
-          gap:.8rem;
-          align-items:flex-start;
-          margin-bottom:.75rem;
-        }
-        .decision-card .asset{font-size:1.38rem;font-weight:850;letter-spacing:-.03em}
-        .decision-card .summary{
-          color:var(--muted);
-          font-size:.9rem;
-          margin:.45rem 0 .7rem;
-        }
-        .decision-grid{
-          display:grid;
-          grid-template-columns:repeat(3,minmax(0,1fr));
-          gap:.55rem;
-          margin:.65rem 0 .85rem;
-        }
-        .mini-panel{
-          padding:.62rem .68rem;
-          border-radius:12px;
-          background:#f8f2e8;
-          border:1px solid #dfd4c4;
-        }
-        .mini-panel b{
-          display:block;
-          font-size:.67rem;
-          color:var(--muted);
-          text-transform:uppercase;
-          letter-spacing:.08em;
-          margin-bottom:.18rem;
-        }
-        .mini-panel span{font-size:.82rem;font-weight:700}
-        .compact-row{
-          display:grid;
-          grid-template-columns:repeat(2,minmax(0,1fr));
-          gap:.55rem;
-          margin:.5rem 0;
-        }
-        .compact-line{
-          padding:.5rem .62rem;
-          border-radius:11px;
-          background:#fbf6ee;
-          border:1px solid #e0d7c8;
-          font-size:.82rem;
-        }
-        .compact-line b{
-          display:block;
-          color:var(--muted);
-          font-size:.67rem;
-          text-transform:uppercase;
-          letter-spacing:.08em;
-        }
-        .detail-list{
-          display:grid;
-          grid-template-columns:repeat(2,minmax(0,1fr));
-          gap:.5rem;
-        }
-        .detail-box{
-          background:#fbf6ee;
-          border:1px solid #e0d7c8;
-          border-radius:12px;
-          padding:.7rem .75rem;
-        }
-        .detail-box b{
-          display:block;
-          margin-bottom:.2rem;
-          color:#3f433b;
-          font-size:.78rem;
-        }
-        .strip-grid{
-          display:grid;
-          grid-template-columns:repeat(4,minmax(0,1fr));
-          gap:.7rem;
-        }
-        .strip-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;font-weight:800;letter-spacing:.08em}
-        .strip-value{font-size:.92rem;font-weight:750;color:var(--text);margin-top:.15rem}
-        .alert-card{
-          border:1px solid var(--line);
-          border-radius:14px;
-          padding:.85rem 1rem;
-          margin:.45rem 0;
-          background:#fffaf2;
-        }
-        .alert-card.red{border-left:4px solid var(--red)}
-        .alert-card.yellow{border-left:4px solid var(--yellow)}
-        .alert-card.green{border-left:4px solid var(--green)}
-        .alert-card.gray{border-left:4px solid var(--gray)}
-        @media(max-width:920px){
-          .decision-grid,.strip-grid,.detail-list,.compact-row{grid-template-columns:1fr}
-          .block-container{padding-left:1rem;padding-right:1rem}
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown(get_theme_css(), unsafe_allow_html=True)
 
 
 def _escape(value: object, fallback: str = "indisponível") -> str:
@@ -301,9 +75,9 @@ def render_mock_badge(text: str = "DADOS MOCK / EXEMPLO") -> None:
 def render_metric_card(value: str | int, label: str, subtitle: str = "Leitura protegida", status: str = "neutral") -> None:
     st.markdown(
         f'<div class="metric-card {html.escape(status)}">'
-        f'<div class="value">{_escape(value, "0")}</div>'
-        f'<div class="label">{_escape(label)}</div>'
-        f'<div class="subtitle">{_escape(subtitle)}</div>'
+        f'<div class="metric-top"><div class="metric-label">{_escape(label)}</div><span class="status-badge {_status_css(status)}">{_escape(status)}</span></div>'
+        f'<div class="metric-value">{_escape(value, "0")}</div>'
+        f'<div class="metric-note">{_escape(subtitle)}</div>'
         f"</div>",
         unsafe_allow_html=True,
     )
@@ -324,7 +98,7 @@ def render_section_title(title: str, subtitle: str = "") -> None:
 
 
 def render_data_notice(text: str) -> None:
-    st.markdown(f'<div class="notice-banner">⚠ {_escape(text)}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="compact-banner">⚠ {_escape(text)}</div>', unsafe_allow_html=True)
 
 
 def render_alert_card(alert: dict) -> None:
@@ -363,28 +137,25 @@ def render_data_status_strip(status: dict) -> None:
         ("Status dos dados", "falha na fonte" if not latest.get("success", True) and latest else "atualizado" if latest else "sem leitura"),
         ("Última atualização", latest.get("finished_at") or "indisponível"),
         ("Ativos atualizados", latest.get("updated_count", summary.get("completos", 0))),
-        ("Incompletos / erros", f'{latest.get("incomplete_count", summary.get("incompletos", 0))} / {latest.get("error_count", summary.get("erros", 0))}'),
     ]
     body = "".join(
-        f'<div><div class="strip-label">{_escape(label)}</div><div class="strip-value">{_escape(value)}</div></div>'
+        f'<div class="status-item"><b>{_escape(label)}</b><span>{_escape(value)}</span></div>'
         for label, value in strip
     )
-    st.markdown(f'<div class="strip-card"><div class="strip-grid">{body}</div></div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="surface-card"><div class="status-strip">{body}</div></div>', unsafe_allow_html=True)
 
 
 def render_action_summary(summary: dict) -> None:
     metrics = [
-        (summary.get("validated", 0), "Oportunidades validadas", "approved"),
-        (summary.get("near_entries", 0), "Quase entradas", "warning"),
-        (summary.get("watching", 0), "Em acompanhamento", "info"),
-        (summary.get("avoid", 0), "Para evitar", "rejected"),
-        (summary.get("inconclusive", 0), "Inconclusivo", "neutral"),
-        (summary.get("top_asset", "nenhum"), "Olhar primeiro", "teal"),
+        (summary.get("validated", 0), "Operáveis", "approved"),
+        (summary.get("near_entries", 0), "Aguardando gatilho", "warning"),
+        (summary.get("events", 0), "Eventos próximos", "info"),
+        (summary.get("avoid", 0), "Evitar", "rejected"),
     ]
-    columns = st.columns(6)
+    columns = st.columns(4)
     for column, (value, label, status) in zip(columns, metrics):
         with column:
-            render_metric_card(value, label, "Painel de decisão", status)
+            render_metric_card(value, label, "Leitura compacta", status)
 
 
 def _detail_box(label: str, value: object) -> str:
@@ -407,29 +178,47 @@ def render_decision_card(item: dict) -> str | None:
     score = _escape(item.get("score") or item.get("near_setup_score") or (item.get("best_strategy") or {}).get("score") or "indisponível")
     reason = _escape(item.get("reason") or item.get("motivo") or item.get("evaluation_reason") or "indisponível")
     body = (
-        f'<div class="decision-card"><div class="top"><div><div class="small-label">{_escape(item.get("source_label", "PAINEL DE DECISÃO"))}</div>'
-        f'<div class="asset">{_escape(item.get("ativo"))}</div></div><div>{badges}</div></div>'
-        f'<div class="summary"><b>{headline}</b> · estratégia sugerida {_escape(strategy)} · score {_escape(score)}</div>'
-        f'<div class="decision-grid">'
-        f'<div class="mini-panel"><b>Ação prática</b><span>{headline}</span></div>'
-        f'<div class="mini-panel"><b>Estratégia</b><span>{strategy}</span></div>'
-        f'<div class="mini-panel"><b>Score</b><span>{score}</span></div>'
-        f'<div class="mini-panel"><b>Gatilho</b><span>{_escape(item.get("gatilho_confirmacao") or item.get("entry_price_condition") or item.get("conditional_trigger"))}</span></div>'
-        f'<div class="mini-panel"><b>Invalidação</b><span>{_escape(item.get("invalidacao") or item.get("invalidation_rules_short") or item.get("motivo"))}</span></div>'
-        f'<div class="mini-panel"><b>Status da cadeia</b><span>{_escape(item.get("cadeia_opcoes_status") or item.get("chain_status") or "pendente")}</span></div>'
+        f'<div class="compact-card"><div class="compact-top"><div><div class="small-label">{_escape(item.get("source_label", "PAINEL"))}</div>'
+        f'<div class="compact-asset">{_escape(item.get("ativo"))}</div></div><div>{badges}</div></div>'
+        f'<div class="compact-summary"><b>{headline}</b> · estratégia {_escape(strategy)} · score {_escape(score)}</div>'
+        f'<div class="compact-grid">'
+        f'<div class="compact-kv"><b>Estratégia</b><span>{strategy}</span></div>'
+        f'<div class="compact-kv"><b>Score</b><span>{score}</span></div>'
+        f'<div class="compact-kv"><b>Evento próximo</b><span>{_escape(item.get("event_label") or item.get("evento_proximo") or "sem evento")}</span></div>'
+        f'<div class="compact-kv"><b>Status da cadeia</b><span>{_escape(item.get("cadeia_opcoes_status") or item.get("chain_status") or "pendente")}</span></div>'
+        f'<div class="compact-kv"><b>Gatilho</b><span>{_escape(item.get("gatilho_confirmacao") or item.get("entry_price_condition") or item.get("conditional_trigger"))}</span></div>'
+        f'<div class="compact-kv"><b>Invalidação</b><span>{_escape(item.get("invalidacao") or item.get("invalidation_rules_short") or item.get("motivo"))}</span></div>'
+        f'<div class="compact-kv"><b>Motivo principal</b><span>{reason}</span></div>'
+        f'<div class="compact-kv"><b>Ação prática</b><span>{headline}</span></div>'
         f"</div>"
-        f'<div class="summary"><b>Motivo principal:</b> {reason}</div></div>'
+        f"</div>"
     )
     st.markdown(body, unsafe_allow_html=True)
-    details, simulate, follow = st.columns(3)
+    details, simulate = st.columns(2)
     action = None
     if details.button("Ver detalhes", key=f"decision_detail_{card_key}"):
         action = "details"
     if simulate.button("Simular manualmente", key=f"decision_simulate_{card_key}"):
         action = "simulate"
-    if follow.button("Acompanhar tese", key=f"decision_follow_{card_key}"):
-        action = "follow"
     return action
+
+
+def render_empty_state(title: str, text: str) -> None:
+    st.markdown(
+        f'<div class="empty-state"><div class="empty-title">{_escape(title)}</div><div class="empty-copy">{_escape(text)}</div></div>',
+        unsafe_allow_html=True,
+    )
+
+
+def render_info_panel(title: str, rows: list[tuple[str, object]]) -> None:
+    body = "".join(
+        f'<div class="info-box"><b>{_escape(label)}</b><span>{_escape(value)}</span></div>'
+        for label, value in rows
+    )
+    st.markdown(
+        f'<div class="surface-card"><div class="small-label">{_escape(title)}</div><div class="info-row">{body}</div></div>',
+        unsafe_allow_html=True,
+    )
 
 
 def render_compact_thesis_card(item: dict) -> str | None:
