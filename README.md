@@ -14,7 +14,9 @@ Transformar dados rastreáveis em uma rotina objetiva de estudo, acompanhamento 
 
 ## Módulos principais
 
-- Painel do Dia e ranking de oportunidades;
+- Painel de Decisão com leitura rápida do que olhar primeiro;
+- Radar de oportunidades MOCK / EXEMPLO com filtros;
+- Radar EOD com candidatas reais condicionais e detalhes técnicos em expanders;
 - análise de estratégias com risco definido;
 - Stock Healthbox;
 - leitura gráfica baseada em Bulkowski/ThePatternSite;
@@ -30,7 +32,7 @@ Transformar dados rastreáveis em uma rotina objetiva de estudo, acompanhamento 
 - interface premium em dark mode com hierarquia visual e status por cor.
 - Data Provider Engine com brapi para testes manuais de preços/histórico e cache local.
 - Market Snapshot Engine e Healthbox real experimental com indicadores calculados sobre histórico brapi.
-- Radar de Mercado real/experimental no Painel do Dia, separado das oportunidades mockadas.
+- Painel de Decisão usando snapshots reais/EOD sem misturar com o Radar MOCK / EXEMPLO.
 - Update Orchestrator para persistir snapshots reais e registrar execuções e erros por modo.
 
 As decisões da versão demonstrativa são persistidas localmente em `data/positions.json` e `data/history.json`. Esses registros continuam classificados como **MOCK / EXEMPLO** e não representam ordens ou posições de corretora.
@@ -153,7 +155,7 @@ Por padrão, `--graphical-limit 30` usa `data/graphical_candidate_tickers.json`,
 
 O diagnóstico separa blockers técnicos de confirmações ausentes e cria um `near_setup_score` para ordenar até dez quase setups. O ranking é explicativo: não promove tese a entrada nem afrouxa os critérios de compra/venda operável.
 
-A aba **Teses Gráficas** mantém uma watchlist persistente em
+A aba **Teses** mantém uma watchlist persistente em
 `data/runtime/graphical_watchlist.json`. O pipeline reavalia gatilho,
 proximidade e invalidação com snapshots salvos, sem transformar a tese em
 entrada, depender da cadeia de opções ou enviar ordens. Consulte
@@ -194,6 +196,6 @@ O Strategy Screener mostra capital técnico mínimo, capital recomendado, perda 
 
 ### Simulador manual
 
-A aba **Simulações Manuais** recebe strikes, prêmios, vencimento, quantidade e multiplicador vistos pelo usuário no book. Os resultados ficam marcados como `manual`, podem ser salvos localmente e nunca geram ordens. Capital, perda máxima, ganho máximo e break-even só aparecem quando os campos necessários permitem cálculo determinístico.
+A aba **Simulador** recebe strikes, prêmios, vencimento, quantidade e multiplicador vistos pelo usuário no book. Os resultados ficam marcados como `manual`, podem ser salvos localmente e nunca geram ordens. Capital, perda máxima, ganho máximo e break-even só aparecem quando os campos necessários permitem cálculo determinístico.
 
 Os cálculos principais possuem auditoria didática em `tests/test_manual_trade_simulator.py`. As fixtures são identificadas como `MOCK / TESTE` e não são dados reais de mercado.

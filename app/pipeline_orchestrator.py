@@ -47,6 +47,10 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def _phase_messages(phase: str, messages: list[str] | None) -> list[str]:
+    return [f"{phase}: {message}" for message in (messages or []) if message]
+
+
 def load_real_opportunities_snapshot() -> dict[str, Any]:
     value = load_json(REAL_OPPORTUNITIES_FILE, {})
     return value if isinstance(value, dict) else {}
@@ -144,7 +148,10 @@ def run_pipeline(mode: str = "close", tickers: list[str] | None = None, max_expi
     phases: dict[str, Any] = {}
     try:
         phases["market"] = run_market_update(tickers=market_symbols, mode=mode, runner=runner)
-        errors.extend(phases["market"].get("errors") or [])
+        if phases["market"].get("success"):
+            warnings.extend(_phase_messages("market parcial", phases["market"].get("errors")))
+        else:
+            errors.extend(_phase_messages("market", phases["market"].get("errors")))
     except Exception as exc:
         errors.append(f"market: {exc}")
         phases["market"] = {"success": False, "error": str(exc)}
@@ -153,7 +160,10 @@ def run_pipeline(mode: str = "close", tickers: list[str] | None = None, max_expi
     if mode == "close":
         try:
             phases["options"] = run_options_update(option_symbols, mode="close", max_expirations=max_expirations)
-            errors.extend(phases["options"].get("errors") or [])
+            if phases["options"].get("success"):
+                warnings.extend(_phase_messages("options parcial", phases["options"].get("errors")))
+            else:
+                errors.extend(_phase_messages("options", phases["options"].get("errors")))
         except Exception as exc:
             errors.append(f"options: {exc}")
             phases["options"] = {"success": False, "error": str(exc)}

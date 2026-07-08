@@ -82,7 +82,11 @@ from app.components import (
     opportunity_card,
     positions_table,
     render_alert_card,
+    render_action_summary,
+    render_compact_thesis_card,
     render_data_notice,
+    render_data_status_strip,
+    render_decision_card,
     render_market_card,
     render_options_status_card,
     render_options_eod_status_card,
@@ -152,6 +156,146 @@ def money(value: object) -> str:
     return str(value) if value is not None else "não calculado por falta de dados"
 
 
+def render_global_risk_notice() -> None:
+    render_data_notice(
+        "Este painel não envia ordens. Dados EOD precisam ser validados no book. Prêmio não é lucro garantido."
+    )
+
+
+def prepare_graphical_theses() -> tuple[dict, list[dict]]:
+    graphical_snapshot = load_graphical_theses_snapshot()
+    theses = [dict(item) for item in graphical_snapshot.get("theses", [])]
+    profile = load_user_trading_profile()
+    for thesis in theses:
+        screening = []
+        for candidate in thesis.get("strategy_screening", []):
+            enriched = dict(candidate)
+            fit = classify_capital_fit(enriched, thesis, profile)
+            enriched.update(fit)
+            enriched["capital_fit_reason"] = explain_capital_requirement(enriched, thesis, profile)
+            screening.append(enriched)
+        thesis["strategy_screening"] = screening
+        thesis.update(build_practical_strategy_summary(thesis))
+    return graphical_snapshot, theses
+
+
+def build_decision_panel_groups(theses: list[dict], near_setups: list[dict]) -> tuple[dict[str, list[dict]], dict]:
+    groups = {"olhar_primeiro": [], "aguardar_gatilho": [], "evitar": []}
+    near_assets = {item.get("ativo") for item in near_setups}
+    for thesis in theses:
+        action = str(thesis.get("practical_action") or "inconclusivo")
+        if action == "olhar_no_book":
+            groups["olhar_primeiro"].append(thesis)
+        elif action in {"aguardar_gatilho", "acompanhar"} or thesis.get("ativo") in near_assets:
+            groups["aguardar_gatilho"].append(thesis)
+        else:
+            groups["evitar"].append(thesis)
+    groups["olhar_primeiro"] = sorted(groups["olhar_primeiro"], key=lambda item: item.get("near_setup_score") or 0, reverse=True)
+    groups["aguardar_gatilho"] = sorted(groups["aguardar_gatilho"], key=lambda item: item.get("near_setup_score") or 0, reverse=True)
+    groups["evitar"] = sorted(groups["evitar"], key=lambda item: item.get("near_setup_score") or 0, reverse=True)
+    summary = {
+        "validated": len(groups["olhar_primeiro"]),
+        "near_entries": len(near_setups),
+        "watching": len(groups["aguardar_gatilho"]),
+        "avoid": sum(1 for item in theses if str(item.get("practical_action") or "") == "evitar_por_enquanto"),
+        "inconclusive": sum(1 for item in theses if str(item.get("practical_action") or "inconclusivo") == "inconclusivo"),
+        "top_asset": groups["olhar_primeiro"][0].get("ativo") if groups["olhar_primeiro"] else "nenhum",
+    }
+    return groups, summary
+
+
+def handle_thesis_card_action(thesis: dict, action: str | None, key_suffix: str) -> None:
+    if action == "simulate":
+        best = thesis.get("best_strategy") or {}
+        candidate = next(
+            (item for item in thesis.get("strategy_screening", []) if item.get("strategy_id") == best.get("strategy_id")),
+            best,
+        )
+        st.session_state["manual_simulation_seed"] = {"candidate": candidate, "thesis": thesis}
+        st.info("Simulador preparado com os dados atuais da tese.")
+    elif action == "follow":
+        result = add_to_graphical_watchlist(thesis)
+        if result["added"]:
+            add_history_event(history_event("acompanhar_tese_grafica", result["item"], "Tese gráfica adicionada à watchlist persistente."))
+            st.success("Tese salva para acompanhamento. Nenhuma ordem foi enviada.")
+        elif result["reason"] == "duplicado":
+            st.info("Esta tese já está em acompanhamento.")
+        else:
+            st.warning("A tese não está elegível para acompanhamento.")
+    elif action == "details":
+        with st.expander(f"Detalhes técnicos · {thesis.get('ativo')} · {key_suffix}", expanded=True):
+            best = thesis.get("best_strategy") or {}
+            bulkowski = thesis.get("bulkowski_usado") or {}
+            st.write(
+                {
+                    "Healthbox": {
+                        "score": thesis.get("healthbox_score"),
+                        "status": thesis.get("healthbox_status"),
+                        "confirma": thesis.get("healthbox_confirmation"),
+                    },
+                    "Bulkowski": {
+                        "padrão": bulkowski.get("nome_padrao"),
+                        "status": thesis.get("bulkowski_status"),
+                        "rompimento": bulkowski.get("rompimento"),
+                    },
+                    "Strategy Screener": thesis.get("strategy_screening", []),
+                    "capital": {
+                        "status": best.get("capital_fit_status"),
+                        "motivo": best.get("capital_fit_reason"),
+                        "capital_minimo": best.get("minimum_technical_capital"),
+                        "capital_recomendado": best.get("recommended_capital"),
+                    },
+                    "plano_manual": (best.get("manual_validation_plan") or {}),
+                    "checklist_book": (best.get("manual_validation_plan") or {}).get("book_checklist", []),
+                    "motivos_rejeicao": best.get("rejection_rules", []),
+                    "campos_ausentes": thesis.get("missing_graphical_fields", []) or best.get("missing_capital_fields", []),
+                }
+            )
+
+
+def decision_panel_page() -> None:
+    update_summary = get_last_update_summary()
+    graphical_snapshot, theses = prepare_graphical_theses()
+    near_setups = graphical_snapshot.get("near_setups", [])[:10]
+    groups, summary = build_decision_panel_groups(theses, near_setups)
+
+    render_data_status_strip(update_summary)
+    render_action_summary(summary)
+
+    sections = (
+        ("Olhar primeiro", "Operável só após validação no book.", "olhar_primeiro"),
+        ("Aguardar gatilho", "Monitorar sem antecipar entrada.", "aguardar_gatilho"),
+        ("Evitar por enquanto", "Bloqueios, contexto ruim ou dados insuficientes.", "evitar"),
+    )
+    for title, subtitle, key in sections:
+        render_section_title(title, subtitle)
+        items = groups[key]
+        if not items:
+            st.info("Nenhum item nesta faixa com os dados atuais.")
+            continue
+        for index, thesis in enumerate(items[:8]):
+            action = render_decision_card(
+                {
+                    "card_key": f"decision_panel_{key}_{index}_{thesis.get('ativo')}",
+                    "source_label": "PAINEL DE DECISÃO",
+                    "ativo": thesis.get("ativo"),
+                    "action_status": thesis.get("practical_action"),
+                    "action_label": thesis.get("practical_action"),
+                    "strategy_name": (thesis.get("best_strategy") or {}).get("strategy_name") or thesis.get("preferred_strategy"),
+                    "score": (thesis.get("best_strategy") or {}).get("score") or thesis.get("near_setup_score"),
+                    "gatilho_confirmacao": thesis.get("gatilho_confirmacao"),
+                    "invalidacao": thesis.get("invalidacao"),
+                    "cadeia_opcoes_status": thesis.get("cadeia_opcoes_status"),
+                    "reason": (thesis.get("best_strategy") or {}).get("reason") or thesis.get("evaluation_reason"),
+                }
+            )
+            handle_thesis_card_action(thesis, action, f"{key}_{index}")
+
+    if st.session_state.get("manual_simulation_seed"):
+        with st.expander("Simular manualmente", expanded=True):
+            manual_simulator_form(st.session_state["manual_simulation_seed"], "decision_panel_manual")
+
+
 def manual_simulator_form(seed: dict | None = None, key_prefix: str = "manual") -> None:
     seed = seed or {}
     thesis = seed.get("thesis") or {}
@@ -215,6 +359,7 @@ def manual_simulator_form(seed: dict | None = None, key_prefix: str = "manual") 
 
 
 def manual_simulations_page() -> None:
+    st.header("Simulador")
     st.warning("Valores desta tela são digitados manualmente e não são cotações validadas. Nenhuma ordem é enviada.")
     manual_simulator_form(st.session_state.get("manual_simulation_seed"), "manual_page")
     st.markdown("## Simulações salvas")
@@ -740,24 +885,37 @@ def show_graphical_radar() -> None:
     followable_statuses = {"compra_operavel", "interesse_compra", "venda_operavel", "interesse_venda"}
     near_assets = {item.get("ativo") for item in near_setups}
     for index, thesis in enumerate(filtered_theses):
-            render_practical_strategy_card(thesis)
-            render_full_strategy_screening(thesis)
+        action = render_compact_thesis_card(thesis)
+        handle_thesis_card_action(thesis, action, f"teses_{index}")
+        with st.expander(f"Detalhes técnicos · {thesis.get('ativo')}", expanded=False):
             best = thesis.get("best_strategy") or {}
-            if best.get("capital_fit_status") == "pendente_dados" and st.button("Simular com dados do book", key=f"simulate_graphical_{index}_{thesis.get('ativo')}"):
-                st.session_state["manual_simulation_seed"] = {"candidate": next((candidate for candidate in thesis.get("strategy_screening", []) if candidate.get("strategy_id") == best.get("strategy_id")), best), "thesis": thesis}
-                st.info("Simulador preparado nesta página e em Simulações Manuais.")
-            if (thesis.get("status") in followable_statuses or thesis.get("ativo") in near_assets) and st.button("Acompanhar tese gráfica", key=f"follow_graphical_practical_{index}_{thesis.get('ativo')}"):
-                result = add_to_graphical_watchlist(thesis)
-                if result["added"]:
-                    add_history_event(history_event("acompanhar_tese_grafica", result["item"], "Tese gráfica adicionada à watchlist persistente."))
-                    st.success("Tese gráfica salva. Nenhuma entrada ou ordem foi registrada.")
-                elif result["reason"] == "duplicado":
-                    st.info("Esta tese gráfica já está sendo acompanhada.")
-                else:
-                    st.warning("A tese não está elegível para acompanhamento.")
+            bulkowski = thesis.get("bulkowski_usado") or {}
+            st.write(
+                {
+                    "Healthbox": {
+                        "score": thesis.get("healthbox_score"),
+                        "status": thesis.get("healthbox_status"),
+                        "confirmação": thesis.get("healthbox_confirmation"),
+                    },
+                    "Bulkowski": {
+                        "padrão": bulkowski.get("nome_padrao"),
+                        "status": thesis.get("bulkowski_status"),
+                    },
+                    "Strategy Screener": thesis.get("strategy_screening", []),
+                    "capital": {
+                        "status": best.get("capital_fit_status"),
+                        "motivo": best.get("capital_fit_reason"),
+                    },
+                    "plano_manual": best.get("manual_validation_plan", {}),
+                    "checklist_book": (best.get("manual_validation_plan") or {}).get("book_checklist", []),
+                    "motivos_rejeicao": best.get("rejection_rules", []),
+                    "campos_ausentes": thesis.get("missing_graphical_fields", []),
+                }
+            )
 
 
 def graphical_watchlist_page() -> None:
+    st.header("Teses")
     items = load_graphical_watchlist()
     summary = summarize_graphical_watchlist(items)
     st.caption("Acompanhamento de gatilhos com snapshots persistidos. Nenhuma tese representa entrada ou ordem.")
@@ -990,6 +1148,7 @@ def opportunities_page() -> None:
 
 
 def real_eod_opportunities_page() -> None:
+    st.header("Radar EOD")
     st.warning(
         "Dados de opções são EOD/fim de pregão. Esta seção não indica entrada imediata. "
         "Ela mostra estruturas condicionais para validar no pregão. Não envia ordens."
@@ -1103,20 +1262,45 @@ def real_eod_opportunities_page() -> None:
     for status in ("entrada_condicional", "acompanhar_na_abertura", "evitar", "inconclusivo"):
         st.markdown(f"## {labels[status]} ({len(groups[status])})")
         for index, item in enumerate(groups[status]):
-            render_real_opportunity_card(item)
-            with st.expander(f"Ver detalhe · {item.get('ativo')} · {item.get('estrategia')}"):
-                st.json(item)
-                if status in {"entrada_condicional", "acompanhar_na_abertura"}:
-                    if st.button("Acompanhar na abertura", key=f"opening_watch_{status}_{index}"):
-                        result = add_to_opening_watchlist(item)
-                        if result["added"]:
-                            add_history_event(history_event("acompanhar_abertura", result["item"], "Candidata EOD adicionada à lista da abertura."))
-                            st.success("Candidata salva para validação na abertura. Nenhuma entrada ou ordem foi registrada.")
-                        else:
-                            st.info("Esta candidata já está na lista da abertura.")
+            action = render_real_opportunity_card(item)
+            if action == "simulate":
+                st.session_state["manual_simulation_seed"] = {"candidate": item, "thesis": {}}
+                st.info("Simulador preparado com os dados atuais da candidata EOD.")
+            elif action == "follow" and status in {"entrada_condicional", "acompanhar_na_abertura"}:
+                result = add_to_opening_watchlist(item)
+                if result["added"]:
+                    add_history_event(history_event("acompanhar_abertura", result["item"], "Candidata EOD adicionada à lista da abertura."))
+                    st.success("Candidata salva para validação na abertura. Nenhuma entrada ou ordem foi registrada.")
+                else:
+                    st.info("Esta candidata já está na lista da abertura.")
+            with st.expander(f"Detalhes técnicos · {item.get('ativo')} · {item.get('estrategia')}", expanded=False):
+                st.write(
+                    {
+                        "Healthbox": {
+                            "score": item.get("healthbox_score"),
+                            "status": item.get("healthbox_status"),
+                        },
+                        "Bulkowski": "não aplicável nesta camada EOD",
+                        "Strategy Screener": "não aplicável nesta camada EOD",
+                        "capital": {
+                            "perda_maxima": item.get("perda_maxima"),
+                            "ganho_maximo": item.get("ganho_maximo"),
+                            "risco_retorno": item.get("risco_retorno"),
+                        },
+                        "plano_manual": {
+                            "confirmation_rules": item.get("confirmation_rules", []),
+                            "invalidation_rules": item.get("invalidation_rules", []),
+                            "entry_price_condition": item.get("entry_price_condition"),
+                        },
+                        "checklist_book": item.get("confirmation_rules", []),
+                        "motivos_rejeicao": item.get("hard_blockers", []),
+                        "campos_ausentes": item.get("campos_ausentes", []),
+                    }
+                )
 
 
 def opening_watchlist_page() -> None:
+    st.header("Watchlist de Abertura")
     st.warning(EOD_NOTICE + " Esta lista não envia ordens e não conecta corretora.")
     items = load_opening_watchlist()
     if not items:
@@ -1187,7 +1371,7 @@ def opening_watchlist_page() -> None:
 
 
 def positions_page() -> None:
-    st.header("Minhas Posições")
+    st.header("Posições")
     mock_badge("REGISTROS LOCAIS — MOCK E ENTRADAS MANUAIS EOD IDENTIFICADOS")
     positions = load_positions()
     if positions:
@@ -1312,7 +1496,7 @@ def history_page() -> None:
 
 
 def alerts_page() -> None:
-    st.header("Alertas de Saída")
+    st.header("Alertas")
     st.warning(
         "Alertas desta etapa usam contexto MOCK / EXEMPLO. Não há dados reais de mercado, conexão com corretora ou envio de ordens."
     )
@@ -1337,7 +1521,7 @@ def alerts_page() -> None:
 
 
 def sources_configuration_page() -> None:
-    st.header("Provedor de Dados")
+    st.header("Dados/Config")
     status = provider_status()
     p1, p2, p3, p4 = st.columns(4)
     p1.metric("Provider ativo", status.get("provider", "indisponível"))
@@ -1677,60 +1861,67 @@ def sources_configuration_page() -> None:
 
 with st.sidebar:
     st.markdown("## 📡 Radar de Opções Brasil")
-    st.caption("Inteligência estruturada para opções")
-    page = st.radio(
+    st.caption("Painel de decisão para leitura rápida")
+    st.markdown("**Decisão**")
+    st.caption("Painel de Decisão · Radar · Radar EOD")
+    st.markdown("**Acompanhamento**")
+    st.caption("Teses · Watchlist · Posições · Alertas")
+    st.markdown("**Ferramentas**")
+    st.caption("Simulador · Histórico · Dados/Config")
+    page = st.selectbox(
         "Navegação",
         [
-            "Painel do Dia",
-            "Oportunidades",
-            "Oportunidades Reais EOD — Experimental",
-            "Abertura",
-            "Teses Gráficas",
-            "Simulações Manuais",
-            "Minhas Posições",
-            "Alertas de Saída",
+            "Painel de Decisão",
+            "Radar",
+            "Radar EOD",
+            "Teses",
+            "Watchlist de Abertura",
+            "Posições",
+            "Alertas",
+            "Simulador",
             "Histórico",
-            "Configurações",
+            "Dados/Config",
         ],
         label_visibility="collapsed",
     )
     st.markdown("---")
     st.markdown(
-        '<div class="sidebar-note"><b>Uso responsável</b><br>Este painel não envia ordens e não substitui análise própria.</div>',
+        '<div class="sidebar-note"><b>Uso responsável</b><br>Decisão assistida, sem envio de ordens e sem mistura entre MOCK e real.</div>',
         unsafe_allow_html=True,
     )
-    st.markdown('<div class="data-warning"><b>Versão atual</b><br>MOCK / EXEMPLO</div>', unsafe_allow_html=True)
-    if page == "Oportunidades":
-        st.markdown('<div class="sidebar-note"><b>Filtros ativos</b><br>Configure status, ativo, estratégia, score e confirmações no topo da página.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-note"><b>Camadas</b><br>Radar EOD e Teses usam snapshots reais/EOD. Radar usa MOCK / EXEMPLO.</div>', unsafe_allow_html=True)
+    if page == "Radar":
+        st.markdown('<div class="sidebar-note"><b>Filtros ativos</b><br>Use os filtros da página para reduzir o ruído visual.</div>', unsafe_allow_html=True)
 
 st.markdown('<div class="eyebrow">Radar de Opções Brasil</div>', unsafe_allow_html=True)
-if page == "Painel do Dia":
-    st.title("Oportunidades do Dia")
-    st.markdown("Operações filtradas por liquidez, risco, estrutura, gráfico e dados disponíveis")
+if page == "Painel de Decisão":
+    st.title("Painel de Decisão")
+    st.markdown("O que olhar primeiro, o que acompanhar e o que evitar por enquanto.")
 else:
     st.title(page)
-if page in {"Oportunidades Reais EOD — Experimental", "Abertura"}:
+if page in {"Painel de Decisão", "Radar EOD", "Watchlist de Abertura", "Teses", "Posições", "Alertas"}:
     mock_badge("DADOS REAIS EOD / EXPERIMENTAL")
 else:
     mock_badge()
 
-if page == "Painel do Dia":
-    st.subheader("Operações filtradas por liquidez, risco e estrutura")
-    dashboard_page()
-elif page == "Oportunidades":
+render_global_risk_notice()
+
+if page == "Painel de Decisão":
+    decision_panel_page()
+elif page == "Radar":
     st.subheader("Oportunidades do Dia")
     opportunities_page()
-elif page == "Oportunidades Reais EOD — Experimental":
+elif page == "Radar EOD":
     real_eod_opportunities_page()
-elif page == "Abertura":
+elif page == "Watchlist de Abertura":
     opening_watchlist_page()
-elif page == "Teses Gráficas":
+elif page == "Teses":
     graphical_watchlist_page()
-elif page == "Simulações Manuais":
+elif page == "Simulador":
     manual_simulations_page()
-elif page == "Minhas Posições":
+elif page == "Posições":
     positions_page()
-elif page == "Alertas de Saída":
+elif page == "Alertas":
     alerts_page()
 elif page == "Histórico":
     history_page()

@@ -210,7 +210,7 @@ def run_options_update(underlyings: list[str] | None = None, mode: str = "close"
     aggregate = summarize_options_snapshots(snapshots)
     asset_errors = [f"{symbol}: {item.get('error')}" for symbol, item in snapshots.items() if item.get("error")]
     result = {
-        "success": aggregate["status"] == "disponível", "completed": True, "mode": mode,
+        "success": aggregate["available_count"] > 0, "completed": True, "mode": mode,
         "started_at": started_at, "finished_at": _now(), "total_underlyings": len(symbols),
         "available_count": aggregate["available_count"], "unavailable_count": aggregate["unavailable_count"],
         "error_count": aggregate["error_count"], "total_series": aggregate["total_series"],

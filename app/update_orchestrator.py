@@ -139,9 +139,10 @@ def run_market_update(
         errors = [f"Falha na atualização: {exc}"]
 
     counts = summarize_snapshots(snapshots)
+    usable_snapshots = counts["completos"] + counts["incompletos"]
     finished_at = _now()
     result = {
-        "success": not errors,
+        "success": usable_snapshots > 0,
         "mode": mode,
         "runner": resolve_runner(runner),
         "started_at": started_at,
