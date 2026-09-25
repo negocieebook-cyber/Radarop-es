@@ -9,6 +9,8 @@ from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
+import streamlit as st
+
 from app.healthbox_engine import build_healthbox, healthbox_score
 from app.storage import load_json, save_json
 
@@ -42,6 +44,7 @@ def _number(value: Any) -> float | None:
         return None
 
 
+@st.cache_data(ttl=5)
 def load_graphical_watchlist() -> list[dict[str, Any]]:
     data = load_json(GRAPHICAL_WATCHLIST_PATH, [])
     return data if isinstance(data, list) else []
@@ -49,6 +52,7 @@ def load_graphical_watchlist() -> list[dict[str, Any]]:
 
 def save_graphical_watchlist(items: list[dict[str, Any]]) -> None:
     save_json(GRAPHICAL_WATCHLIST_PATH, items)
+    load_graphical_watchlist.clear()
 
 
 def _thesis_id(thesis: dict[str, Any]) -> str:

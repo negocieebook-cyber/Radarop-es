@@ -6,7 +6,7 @@ O deploy usa Streamlit em um container Vercel. Arquivos gravados em `data/runtim
 
 Dashboard diária para apoiar a análise de oportunidades em opções do mercado brasileiro. O projeto organiza informações de liquidez, risco, vencimento, strikes, prêmio, break-even, perda e ganho máximos, leitura gráfica, Stock Healthbox e referências do ThePatternSite/Bulkowski.
 
-> **Estado atual:** a brapi alimenta o Radar de Mercado e seus snapshots reais são salvos localmente. O Opportunity Engine e todas as informações de opções continuam **MOCK / EXEMPLO**.
+> **Estado atual:** mercado e opções EOD são reais — cadeias via opcoes.net.br (gratuita) com fallback brapi — e o Radar EOD cruza Healthbox real com as cadeias em uma camada experimental de decisão. Posições manuais são marcadas com preço real EOD, a Retrospectiva fecha o ciclo das candidatas vencidas e o digest diário pode ir para o Telegram. Nada disso é tempo real e nenhuma ordem é enviada.
 
 ## Objetivo
 
@@ -14,22 +14,20 @@ Transformar dados rastreáveis em uma rotina objetiva de estudo, acompanhamento 
 
 ## Módulos principais
 
-A navegação é única na sidebar, com 14 páginas servidas pelo `app.py`:
+A navegação é única na sidebar, com 11 páginas servidas pelo `app.py`:
 
 - **Visão geral** — Painel de Decisão com leitura rápida do que olhar primeiro;
 - **Terminal** — motor unificado por ativo (contexto, Healthbox, estratégia, calendário, alertas);
-- **Oportunidades** — Radar de oportunidades MOCK / EXEMPLO com filtros e controle de fonte;
 - **Radar EOD** — candidatas reais condicionais, funil diagnóstico, quase entradas e auditoria;
 - **Radar Gráfico** — teses de regiões, prioridades por objetivo, diagnóstico e quase setups;
 - **Radar de Mercado** — snapshots reais brapi com Healthbox por ativo e status de coleta;
 - **Teses** — watchlist gráfica persistente com gatilho, proximidade e invalidação;
 - **Eventos** — Watchlist de Abertura e registro manual de entrada com confirmação;
-- **Posições** — acompanhamento com P/L, captura de ganho e contexto por posição;
-- **Alertas** — saídas explicáveis por severidade;
-- **Simulador** — estruturas digitadas do book, salvas localmente, nunca ordens;
-- **Histórico** — registro das decisões;
-- **Motores** — Healthbox, Bulkowski, checklist e exemplos MOCK / EXEMPLO;
-- **Configurações** — testes brapi, atualização de opções EOD, universo, rotinas e fontes.
+- **Posições** — acompanhamento com marcação EOD real, P/L, captura de ganho e contexto por posição;
+- **Retrospectiva** — resultado estimado no vencimento das candidatas da Abertura;
+- **Simulador** — estruturas digitadas do book, salvas localmente, nunca ordens; decisões na aba Histórico;
+- **Demonstração** — motores e exemplos MOCK / EXEMPLO, separados do radar real;
+- **Configurações** — fontes (opcoes.net.br e brapi), atualização de opções EOD, universo, rotinas e Telegram.
 
 As decisões da versão demonstrativa são persistidas localmente em `data/positions.json` e `data/history.json`. Esses registros continuam classificados como **MOCK / EXEMPLO** e não representam ordens ou posições de corretora.
 
@@ -41,15 +39,15 @@ python scripts/validate_project.py
 
 ## Status atual e próximos passos
 
-O projeto possui interface, persistência local de decisões mockadas, matemática de opções, validações, score, Bulkowski estrutural, Healthbox e camada de fontes/contratos. **Todos os dados de mercado continuam MOCK / EXEMPLO.** A camada de fontes é somente governança; nenhuma coleta real está ativa.
+O projeto possui interface, matemática de opções validada por testes, Bulkowski estrutural, Healthbox, coleta real EOD de mercado e opções, funil de decisão com bloqueios e avisos e retrospectiva das candidatas. Os dados de mercado são reais EOD; a camada de decisão permanece experimental e nenhuma ordem é enviada.
 
-Próximos passos possíveis: definir licenças e fornecedores, implementar um conector por vez, validar timestamps e integridade, criar testes automatizados e somente então habilitar dados coletados na interface.
+Próximos passos possíveis: ampliar cobertura de ativos, melhorar liquidez e preços (book intraday), validar metodologia da fonte em relação à B3 e evoluir a calibração da decisão.
 
 ## Configurar a brapi
 
-Copie `.env.example` para `.env`, substitua `BRAPI_TOKEN` pela sua chave local e reinicie o Streamlit. **Nunca commite o arquivo `.env` ou um token real.** Na aba Configurações, use os botões de teste da brapi. O Opportunity Engine e as opções continuam usando somente MOCK / EXEMPLO nesta etapa.
+Copie `.env.example` para `.env`, substitua `BRAPI_TOKEN` pela sua chave local e reinicie o Streamlit. **Nunca commite o arquivo `.env` ou um token real.** Na aba Configurações, use os botões de teste da brapi. As cadeias de opções EOD usam o opcoes.net.br como fonte primária e a brapi como fallback registrado.
 
-Na mesma aba, a seção **Healthbox Real — brapi experimental** cria snapshots reais sob demanda. Opções reais ainda não foram integradas e nenhum indicador ausente é inventado.
+Na mesma aba, a seção **Healthbox Real — brapi experimental** cria snapshots reais sob demanda. Nenhum indicador ausente é inventado.
 
 Para atualizar e persistir o Radar de Mercado fora do Streamlit:
 
@@ -57,15 +55,13 @@ Para atualizar e persistir o Radar de Mercado fora do Streamlit:
 python scripts/update_market_data.py --mode intraday
 ```
 
-Os snapshots reais ficam em `data/runtime/market_snapshots.json` e o estado das rotinas em `data/runtime/update_status.json`. O Opportunity Engine permanece mockado e opções reais ainda não foram integradas.
+Os snapshots reais ficam em `data/runtime/market_snapshots.json` e o estado das rotinas em `data/runtime/update_status.json`. As cadeias de opções ficam em `data/runtime/options_snapshots/` e o histórico datado em `data/runtime/options_chains_history/`.
 
 ## Atualização automática
 
 O projeto inclui um GitHub Actions agendado para executar o pipeline em modos de pré-pregão, intraday e pós-fechamento, além da descoberta semanal de opções. Para ativá-lo, crie no repositório o secret `BRAPI_TOKEN` em **Settings > Secrets and variables > Actions**. O token não deve ser colocado no código nem em arquivos versionados.
 
-As agendas de segunda a sexta rodam às 12:30 UTC (pré-pregão), a cada 15 minutos entre 13:00 e 20:45 UTC (intraday) e às 21:30 UTC (pós-fechamento). O workflow commita os snapshots em `data/runtime/` (market, update_status, oportunidades reais, teses gráficas e opções), exceto `pipeline_status.json`; os commits de snapshots não disparam deploy novo. A dashboard lê o último snapshot persistido.
-
-Essa rotina é periódica, não uma conexão em tempo real. O Opportunity Engine e os dados de opções continuam **MOCK / EXEMPLO**. Consulte [a documentação da automação](docs/GITHUB_ACTIONS_AUTOMACAO.md) para configurar o secret e executar o workflow manualmente.
+As agendas de segunda a sexta rodam às 12:30 UTC (pré-pregão), a cada 15 minutos entre 13:00 e 20:45 UTC (intraday) e às 21:30 UTC (pós-fechamento). O workflow commita os snapshots em `data/runtime/` (market, update_status, oportunidades reais, teses gráficas e opções), exceto `pipeline_status.json`; os commits de snapshots não disparam deploy novo. A dashboard lê o último snapshot persistido. Os secrets `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`, se existirem, fazem o workflow enviar o digest diário após o fechamento. Consulte [a documentação da automação](docs/GITHUB_ACTIONS_AUTOMACAO.md) para configurar os secrets e executar o workflow manualmente.
 
 ## Deploy no Vercel
 
@@ -77,23 +73,47 @@ A dashboard exibe o modo, a origem (`streamlit_app`, `local_script` ou `github_a
 
 O Brapi Options Provider permite testar vencimentos e cadeias EOD sem conectá-los ao radar de oportunidades. O teste salva um snapshot isolado, informa erros de API ou falta de acesso do plano e nunca completa campos ausentes com dados inventados.
 
-O Opportunity Engine continua **MOCK / EXEMPLO**. O próximo passo, condicionado à validação de acesso e qualidade, será decidir entre integrar a cadeia real ou avaliar outro fornecedor. Consulte [Brapi Options Provider](docs/BRAPI_OPTIONS_PROVIDER.md).
+Consulte [Brapi Options Provider](docs/BRAPI_OPTIONS_PROVIDER.md) e [Opções Net Provider](docs/OPCOES_NET_PROVIDER.md).
 
 ## Options EOD Orchestrator
 
-O projeto agora coleta e salva cadeias EOD reais da brapi separadamente por ativo, continuando mesmo quando um ativo falha ou não possui séries. Execute:
+O projeto coleta e salva cadeias EOD reais separadamente por ativo, continuando mesmo quando um ativo falha ou não possui séries. Execute:
 
 ```powershell
 python scripts/update_options_data.py --mode close
 ```
 
-Estado atual: ações reais via brapi, opções reais EOD via brapi e Opportunity Engine ainda **MOCK / EXEMPLO**. Recomendações reais permanecem desativadas. Consulte [Options EOD Orchestrator](docs/OPTIONS_EOD_ORCHESTRATOR.md).
+A fonte primária é o opcoes.net.br; em falha, o ativo cai para a brapi com o erro da primária registrado. Estado atual: mercado real via brapi, opções reais EOD via opcoes.net.br (fallback brapi) e camada de decisão experimental com bloqueios e avisos honestos. Consulte [Options EOD Orchestrator](docs/OPTIONS_EOD_ORCHESTRATOR.md).
 
 ## Opportunity Engine Real Experimental
 
 Uma seção separada cruza market snapshots reais, Healthbox real e opções EOD para classificar estudos como `estudar`, `atenção`, `evitar` ou `inconclusivo`. Ela não é tempo real, não confirma entradas e não envia ordens. O Opportunity Engine mockado continua existindo sem mistura silenciosa de fontes.
 
 Consulte [Opportunity Engine Real Experimental](docs/REAL_OPPORTUNITY_ENGINE.md) para as regras de preço indicativo, estratégias permitidas e critérios de decisão.
+
+## Fonte opcoes.net.br (cadeias e histórico EOD)
+
+A coleta de opções usa o opcoes.net.br como fonte primária gratuita: cadeia completa com gregas, posição em aberto, negócios e IV, além do histórico diário do ativo usado pela Retrospectiva. Sem chave de acesso; a fonte é pública de terceiros e pode mudar sem aviso, por isso a auditoria de campos fica em cada snapshot. Em falha, o ativo cai para a brapi com o erro da primária registrado. Cada coleta grava o histórico datado em `data/runtime/options_chains_history/{ATIVO}/{AAAA-MM-DD}.json` (30 dias por ativo).
+
+Consulte [Opções Net Provider](docs/OPCOES_NET_PROVIDER.md).
+
+## Marcação EOD de posições
+
+O monitor de posições marca cada estrutura com o preço real das séries da cadeia EOD (pareamento por lado, strike e vencimento). Débito soma compras e subtrai vendas; crédito (bull put, bear call, covered call) soma vendas e subtrai compras. O P/L real substitui a estimativa quando a cadeia cobre as pernas; sem cobertura, o app mantém a estimativa rotulada e lista as pernas ausentes. As regras de saída com marcação real: perda máxima atingida sugere sair agora; captura de 75% ou mais sugere realizar total; 50% a 75%, realizar parcial.
+
+Consulte [Marcação de Posições com Preço Real EOD](docs/MARCACAO_POSICOES_EOD.md).
+
+## Retrospectiva das candidatas
+
+Candidatas da Watchlist de Abertura cujo vencimento passou são avaliadas com o fechamento EOD do ativo (histórico do opcoes.net.br). Com preço real de entrada registrada, o resultado usa esse preço; sem ele, o resultado é estimativa rotulada. O resumo por estratégia mostra taxa de ganho e P/L estimado por contrato. Não é registro de execução.
+
+Consulte [Retrospectiva](docs/RETROSPECTIVA.md).
+
+## Notificações por Telegram
+
+O digest diário resume rotinas, oportunidades, watchlist, posições e retrospectiva no Telegram. Configure na aba Configurações > Rotinas (token salvo apenas em `data/secrets/telegram.json`) ou use os secrets `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` no GitHub Actions, que enviam o digest após o fechamento. Nenhuma ordem é enviada e o app funciona sem essa configuração.
+
+Consulte [Notificações por Telegram](docs/NOTIFICACOES_TELEGRAM.md).
 
 ## Entradas Condicionais EOD
 

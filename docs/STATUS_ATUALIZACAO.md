@@ -14,7 +14,7 @@ O campo `runner` identifica quem iniciou a atualização:
 - `local_script`: comando executado no computador local;
 - `github_actions`: rotina automática do GitHub, detectada por `GITHUB_ACTIONS=true`.
 
-O runner informa a origem da execução, não a origem dos dados. A fonte dos dados continua registrada separadamente como `brapi`.
+O runner informa a origem da execução, não a origem dos dados. A fonte é registrada separadamente: `brapi` para mercado e `opcoes_net_br` ou `brapi_options` para cadeias de opções (com fallback registrado quando a primária falha).
 
 ## Estados dos dados
 
@@ -31,6 +31,6 @@ A idade do último snapshot é classificada assim:
 
 Essa classificação é apenas informativa e ainda não bloqueia nenhuma ação.
 
-## Opportunity Engine
+## Camada de decisão real EOD
 
-O Opportunity Engine permanece **MOCK / EXEMPLO** porque opções reais, cadeia de opções e integração com corretora ainda não fazem parte desta etapa. A atualização real da brapi alimenta somente o contexto e os snapshots do Radar de Mercado; nenhuma ordem é enviada.
+O Radar EOD cruza snapshots de mercado, Healthbox real e cadeias de opções EOD em uma camada experimental de decisão com bloqueios e avisos honestos: preço EOD não é executável, candidatas devem ser confirmadas no pregão e nenhuma ordem é enviada. Os motores MOCK / EXEMPLO continuam disponíveis na página Demonstração, separados sem mistura silenciosa de fontes.

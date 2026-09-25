@@ -20,6 +20,7 @@ SUPPORTED_STRATEGIES = {
 }
 BULLISH_STRATEGIES = {"call_debit_spread", "bull_put_spread", "covered_call", "long_call"}
 BEARISH_STRATEGIES = {"put_debit_spread", "bear_call_spread", "long_put"}
+CREDIT_ENTRY_STRATEGIES = {"bull_put_spread", "bear_call_spread", "covered_call"}
 OPENING_ORIGIN = "opening_watchlist"
 OPTION_MARK_UNAVAILABLE = "sem preço intraday da estrutura"
 
@@ -57,14 +58,18 @@ def calculate_position_pnl(position: dict[str, Any], current_mark: Any) -> dict[
         missing.append("current_mark")
     if missing:
         return {"calculated": False, "pnl_per_unit": None, "pnl_total": None, "pnl_percent": None, "missing_fields": missing, "reason": "não calculado por falta de dados"}
-    pnl_unit = mark - entry
+    strategy = str(position.get("tipo_estrutura") or "")
+    if strategy in CREDIT_ENTRY_STRATEGIES:
+        pnl_unit = entry - mark
+    else:
+        pnl_unit = mark - entry
     return {
         "calculated": True,
         "pnl_per_unit": round(pnl_unit, 4),
         "pnl_total": round(pnl_unit * quantity, 2),
         "pnl_percent": round((pnl_unit / entry) * 100, 2) if entry != 0 else None,
         "missing_fields": [],
-        "reason": "calculado sobre marcação MOCK / EXEMPLO",
+        "reason": "calculado sobre a marcação informada no contexto",
     }
 
 
@@ -87,17 +92,33 @@ def is_opening_watchlist_position(position: dict[str, Any]) -> bool:
 def build_opening_position_status(
     position: dict[str, Any], context: dict[str, Any] | None
 ) -> dict[str, Any]:
-    """Monitora a tese pelo ativo real sem transformar EOD em marca intraday da opção."""
-    pnl = _opening_option_pnl()
-    capture = {
-        "calculated": False, "capture_ratio": None, "capture_percent": None,
-        "missing_fields": ["preco_intraday_estrutura"], "reason": OPTION_MARK_UNAVAILABLE,
-    }
+    """Monitora a tese pelo ativo real e, quando há cadeia disponível, marca o P/L
+    da opção com os preços reais da última sessão (EOD), nunca como intraday."""
+    option_mark = (context or {}).get("option_mark") if isinstance(context, dict) else None
+    mark_available = isinstance(option_mark, dict) and option_mark.get("calculated")
+    if mark_available:
+        pnl = {
+            **calculate_position_pnl(position, option_mark.get("current_mark")),
+            "eod_used_as_current_mark": False,
+            "reason": f"calculado com marcação {option_mark.get('mark_basis')} via {option_mark.get('fonte')}",
+        }
+        capture = calculate_gain_capture(position, option_mark.get("current_mark"))
+        option_pnl_label = f"P/L da opção com marcação {option_mark.get('mark_basis')}"
+        option_pnl_reason = f"marcação da última sessão via {option_mark.get('fonte')}; não é cotação intraday"
+    else:
+        pnl = _opening_option_pnl()
+        capture = {
+            "calculated": False, "capture_ratio": None, "capture_percent": None,
+            "missing_fields": ["preco_intraday_estrutura"], "reason": OPTION_MARK_UNAVAILABLE,
+        }
+        option_pnl_label = "P/L da opção: indisponível"
+        option_pnl_reason = OPTION_MARK_UNAVAILABLE
     base = {
         "pnl": pnl,
         "gain_capture": capture,
-        "option_pnl_label": "P/L da opção: indisponível",
-        "option_pnl_reason": OPTION_MARK_UNAVAILABLE,
+        "option_pnl_label": option_pnl_label,
+        "option_pnl_reason": option_pnl_reason,
+        "option_mark": option_mark if isinstance(option_mark, dict) else None,
         "eod_used_as_current_mark": False,
         "invalidation_rules": list(position.get("invalidation_rules") or []),
         "confirmation_rules": list(position.get("confirmation_rules") or []),
@@ -122,6 +143,21 @@ def build_opening_position_status(
     if expiry["status"] == "vencimento próximo":
         alert = _result("vencimento próximo", expiry["severity"], expiry["reason"], expiry["details"], base["fonte"])
         return {**alert, **base, "status": alert["status"], "severity": alert["severity"], "reason": alert["reason"], "details": alert["details"], "pnl": pnl, "gain_capture": capture, "alerts": [alert]}
+
+    pl_alerts: list[dict[str, Any]] = []
+    if pnl["calculated"]:
+        max_loss = _maximum_per_unit(position, "perda_maxima")
+        if max_loss is not None and pnl["pnl_per_unit"] <= -abs(max_loss):
+            pl_alerts.append(_result("sair agora", "vermelho", "perda atual atingiu o limite de risco definido", {"pnl_per_unit": pnl["pnl_per_unit"], "max_loss_per_unit": max_loss}, base["fonte"]))
+        if capture["calculated"]:
+            if capture["capture_ratio"] >= 0.75:
+                pl_alerts.append(_result("realizar total", "verde", "captura do ganho máximo igual ou superior a 75%", capture, base["fonte"]))
+            elif capture["capture_ratio"] >= 0.50:
+                pl_alerts.append(_result("realizar parcial", "verde", "captura do ganho máximo entre 50% e 75%", capture, base["fonte"]))
+    if pl_alerts:
+        priority = {"sair agora": 7, "realizar total": 6, "realizar parcial": 5}
+        primary = max(pl_alerts, key=lambda alert: priority.get(alert["status"], 0))
+        return {**primary, **base, "status": primary["status"], "severity": primary["severity"], "reason": primary["reason"], "details": primary["details"], "alerts": pl_alerts}
 
     healthbox = context.get("healthbox") or {}
     confirmation = str(healthbox.get("confirmation", healthbox.get("confirmacao", ""))).lower()

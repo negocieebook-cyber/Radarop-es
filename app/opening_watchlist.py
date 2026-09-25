@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any
 from uuid import uuid4
 
+import streamlit as st
+
 from app.storage import load_json, save_json
 
 
@@ -18,6 +20,7 @@ ELIGIBLE_STATUSES = {"acompanhar_na_abertura", "entrada_condicional"}
 EOD_NOTICE = "Preço EOD indicativo. Validar no pregão antes de qualquer decisão."
 
 
+@st.cache_data(ttl=5)
 def load_opening_watchlist() -> list[dict[str, Any]]:
     data = load_json(OPENING_WATCHLIST_PATH, [])
     return data if isinstance(data, list) else []
@@ -25,6 +28,7 @@ def load_opening_watchlist() -> list[dict[str, Any]]:
 
 def save_opening_watchlist(items: list[dict[str, Any]]) -> None:
     save_json(OPENING_WATCHLIST_PATH, items)
+    load_opening_watchlist.clear()
 
 
 def _candidate_id(candidate: dict[str, Any]) -> str:

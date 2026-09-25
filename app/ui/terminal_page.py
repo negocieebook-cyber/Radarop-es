@@ -4,6 +4,7 @@ from typing import Any
 
 import streamlit as st
 
+from app.components import status_label, strategy_label
 from app.data.hub import build_terminal_decision_payload
 from app.ui.components import (
     render_data_notice,
@@ -36,10 +37,10 @@ def _metric_delta(value: Any) -> str | None:
 def _event_style(impact: str) -> tuple[str, str]:
     normalized = str(impact or "").lower()
     if any(token in normalized for token in ("favor", "positivo", "verde")):
-        return "#163127", "#7ef0a7"
+        return "#ECFDF3", "#15803D"
     if any(token in normalized for token in ("atenção", "atencao", "negativo", "vermelho", "imediata")):
-        return "#341616", "#ff8f8f"
-    return "#1c2634", "#9fc4ff"
+        return "#FEF2F2", "#DC2626"
+    return "#EFF6FF", "#2563EB"
 
 
 def _alert_icon(text: str) -> str:
@@ -69,17 +70,17 @@ def _render_strategy_card(payload: dict[str, Any]) -> None:
     with st.container(border=True):
         delta_value = _format_value(operation.get("delta"))
         if "0,25" in delta_value or "0,30" in delta_value or "0,35" in delta_value or "0,40" in delta_value:
-            delta_value = f"{delta_value} 🟢"
+            delta_value = f"{delta_value} (faixa adequada)"
 
         st.markdown(
             """
-            <div style="font-size:12px;letter-spacing:.12em;color:#8da2bd;margin-bottom:6px;">ESTRATÉGIA RECOMENDADA</div>
-            <div style="font-size:24px;font-weight:700;color:#f5f7fb;">%s</div>
-            <div style="font-size:14px;color:#b8c3d6;margin-top:4px;margin-bottom:14px;">%s</div>
+            <div style="font-size:12px;letter-spacing:.12em;color:#64748B;margin-bottom:6px;">ESTRATÉGIA RECOMENDADA</div>
+            <div style="font-size:24px;font-weight:700;color:#111827;">%s</div>
+            <div style="font-size:14px;color:#475569;margin-top:4px;margin-bottom:14px;">%s</div>
             """
             % (
-                _format_value(strategy.get("strategy_name") or strategy.get("preferred_strategy")),
-                _format_value(strategy.get("explicacao_curta") or strategy.get("motivo") or strategy.get("status")),
+                strategy_label(strategy.get("strategy_name") or strategy.get("preferred_strategy")),
+                _format_value(strategy.get("explicacao_curta") or strategy.get("motivo") or status_label(strategy.get("status"))),
             ),
             unsafe_allow_html=True,
         )
@@ -99,13 +100,13 @@ def _render_strategy_card(payload: dict[str, Any]) -> None:
         with detail_right:
             st.markdown(
                 """
-                <div style="font-size:12px;letter-spacing:.08em;color:#8da2bd;margin-bottom:10px;">PLANO DE RISCO</div>
+                <div style="font-size:12px;letter-spacing:.08em;color:#64748B;margin-bottom:10px;">PLANO DE RISCO</div>
                 <div style="display:grid;gap:10px;">
-                <div style="padding:10px 12px;border-radius:12px;background:#173022;color:#87f0aa;"><b>Lucro Máximo</b><br>%s</div>
-                <div style="padding:10px 12px;border-radius:12px;background:#341818;color:#ff9a9a;"><b>Perda Máxima</b><br>%s</div>
-                <div style="padding:10px 12px;border-radius:12px;background:#17283b;color:#8fc5ff;"><b>Capital</b><br>%s</div>
-                <div style="padding:10px 12px;border-radius:12px;background:#1f2632;color:#d5dbe7;"><b>Break-even</b><br>%s</div>
-                <div style="padding:10px 12px;border-radius:12px;background:#1f2632;color:#d5dbe7;"><b>Risco/retorno</b><br>%s</div>
+                <div style="padding:10px 12px;border-radius:12px;background:#ECFDF3;border:1px solid #BBF7D0;color:#15803D;"><b>Lucro Máximo</b><br>%s</div>
+                <div style="padding:10px 12px;border-radius:12px;background:#FEF2F2;border:1px solid #FECACA;color:#DC2626;"><b>Perda Máxima</b><br>%s</div>
+                <div style="padding:10px 12px;border-radius:12px;background:#EFF6FF;border:1px solid #BFDBFE;color:#2563EB;"><b>Capital</b><br>%s</div>
+                <div style="padding:10px 12px;border-radius:12px;background:#FCFDFE;border:1px solid #E2E8F0;color:#111827;"><b>Break-even</b><br>%s</div>
+                <div style="padding:10px 12px;border-radius:12px;background:#FCFDFE;border:1px solid #E2E8F0;color:#111827;"><b>Risco/retorno</b><br>%s</div>
                 </div>
                 """
                 % (
@@ -169,11 +170,20 @@ def _render_alerts(payload: dict[str, Any]) -> None:
 
 
 def render_terminal_page() -> None:
-    st.sidebar.markdown("## Terminal")
-    ticker = _normalize_ticker(st.sidebar.text_input("Ticker", value="", placeholder="Ex: PETR4"))
+    ticker = _normalize_ticker(
+        st.text_input(
+            "Ticker do ativo",
+            value="",
+            placeholder="Ex: PETR4",
+            help="Consolida contexto, Healthbox, estratégia, calendário e alertas em uma única tela.",
+        )
+    )
 
     if not ticker:
-        render_data_notice("Digite um ticker para consolidar contexto, estratégia, risco, eventos e alertas em uma única tela.")
+        render_empty_state(
+            "Digite um ticker para começar",
+            "Consolide contexto, Healthbox, estratégia, calendário e alertas em uma única tela.",
+        )
         return
 
     payload = build_terminal_decision_payload(ticker)
@@ -190,7 +200,7 @@ def render_terminal_page() -> None:
         )
         return
 
-    st.markdown("## Terminal")
+    st.markdown("## Leitura do ativo")
     metric_cols = st.columns(4, gap="medium")
     metric_cols[0].metric("Preço Atual", _format_value(contexto.get("preco_atual")))
     metric_cols[1].metric("Variação %", _format_value(contexto.get("variacao_diaria_percent"), "indisponível"), _metric_delta(contexto.get("variacao_diaria_percent")))

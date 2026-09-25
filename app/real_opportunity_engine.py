@@ -8,6 +8,8 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import streamlit as st
+
 from app.healthbox_engine import build_healthbox, healthbox_confirms_strategy, healthbox_score
 from app.conditional_entry_engine import calculate_entry_conditions, summarize_conditional_entries
 from app.funnel_diagnostics import what_needs_to_change
@@ -38,11 +40,13 @@ def _number(value: Any) -> float | None:
     return float(value) if isinstance(value, (int, float)) and not isinstance(value, bool) else None
 
 
+@st.cache_data(ttl=5)
 def load_real_market_snapshots() -> list[dict[str, Any]]:
     value = _read(SNAPSHOTS_FILE, [])
     return value if isinstance(value, list) else []
 
 
+@st.cache_data(ttl=5)
 def load_real_options_snapshots() -> dict[str, dict[str, Any]]:
     if not OPTIONS_SNAPSHOTS_DIR.exists():
         return {}
@@ -69,6 +73,10 @@ def resolve_option_price(option: dict[str, Any]) -> dict[str, Any]:
         mid = (bid + ask) / 2
         if mid > 0:
             return {"price": round(mid, 6), "price_basis": "mid", "is_executable_price": True, "warning": "Mid calculado de bid/ask EOD; confirmar no pregão."}
+    normalized = _number(option.get("normalized_price"))
+    if normalized is not None and normalized > 0:
+        basis = str(option.get("normalized_price_basis") or "indisponível")
+        return {"price": normalized, "price_basis": f"normalizado:{basis}", "is_executable_price": basis == "mid", "warning": EOD_WARNING}
     close = _number(option.get("close"))
     if close is not None and close > 0:
         return {"price": close, "price_basis": "close_eod", "is_executable_price": False, "warning": EOD_WARNING}
@@ -129,15 +137,18 @@ def _make_candidate(strategy: str, bought: dict[str, Any], sold: dict[str, Any])
         "price_basis": basis, "is_executable_price": bought_price["is_executable_price"] and sold_price["is_executable_price"],
         "aviso_preco": f"Compra: {bought_price['warning']} Venda: {sold_price['warning']}", "liquidez": _liquidity([bought, sold]),
         "spread_disponivel": bought.get("spread_pct") is not None and sold.get("spread_pct") is not None,
-        "campos_ausentes": missing, "fonte": "brapi_options", "coleta": max(str(bought.get("date") or ""), str(sold.get("date") or "")) or None,
+        "campos_ausentes": missing, "fonte": bought.get("fonte") or "brapi_options", "coleta": max(str(bought.get("date") or ""), str(sold.get("date") or "")) or None,
         "tipo_dado": REAL_DATA_TYPE, "status_dado": "experimental EOD",
     }
+
+
+SUPPORTED_OPTION_SOURCES = {"brapi_options", "opcoes_net_br"}
 
 
 def _pairs(options: list[dict[str, Any]], side: str) -> list[tuple[dict[str, Any], dict[str, Any]]]:
     eligible = [
         item for item in options
-        if item.get("side") == side and item.get("fonte") == "brapi_options"
+        if item.get("side") == side and item.get("fonte") in SUPPORTED_OPTION_SOURCES
         and item.get("liquidity_status") != "ilíquida" and resolve_option_price(item)["price"] is not None
         and _number(item.get("strike")) is not None and item.get("expiration_date")
     ]
@@ -236,7 +247,7 @@ def evaluate_real_candidate(candidate: dict[str, Any], market_snapshot: dict[str
     else:
         attention = []
         if not candidate.get("is_executable_price"):
-            attention.append("preço baseado em close/average EOD")
+            attention.append("preço EOD, não intraday; confirmar no pregão")
         if confirmation != "confirma":
             attention.append("Healthbox em atenção")
         if candidate.get("liquidez") in {"baixa", "indisponível"}:
@@ -280,7 +291,8 @@ def _inconclusive(ticker: str, reason: str, options_snapshot: dict[str, Any] | N
         "is_executable_price": False, "aviso_preco": EOD_WARNING, "perda_maxima": None,
         "ganho_maximo": None, "break_even": None, "risco_retorno": None,
         "healthbox_score": None, "healthbox_status": "indisponível", "liquidez": "indisponível",
-        "campos_ausentes": [reason], "fonte": "brapi_options", "coleta": (options_snapshot or {}).get("coleta"),
+        "campos_ausentes": [reason], "fonte": (options_snapshot or {}).get("source") or (options_snapshot or {}).get("fonte") or "indisponível",
+        "coleta": (options_snapshot or {}).get("coleta"),
         "tipo_dado": REAL_DATA_TYPE, "status_dado": (options_snapshot or {}).get("status_dado", "indisponível"),
     }
     result.update(calculate_entry_conditions(result))

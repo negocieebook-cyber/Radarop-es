@@ -8,6 +8,8 @@ from datetime import datetime, timezone
 import pandas as pd
 import streamlit as st
 
+from app.formatting import format_dt
+from app.statuses import status_css_class, status_label
 from app.theme import get_theme_css
 
 
@@ -22,72 +24,74 @@ def _escape(value: object, fallback: str = "indisponível") -> str:
 
 
 def _status_css(status: str) -> str:
-    normalized = str(status or "").lower()
-    if normalized in {
-        "aprovada",
-        "validado",
-        "validada",
-        "ok",
-        "entrada_condicional",
-        "compra_operavel",
-        "venda_operavel",
-        "gatilho acionado",
-        "realizar parcial",
-        "realizar total",
-        "manter",
-    }:
-        return "status-approved"
-    if normalized in {
-        "atenção",
-        "acompanhar",
-        "acompanhar_na_abertura",
-        "aguardar_gatilho",
-        "aguardando gatilho",
-        "perto do gatilho",
-        "vencimento próximo",
-        "interesse_compra",
-        "interesse_venda",
-        "neutra_observar",
-        "parcial",
-        "atualizado com dados parciais",
-    }:
-        return "status-warning"
-    if normalized in {"estudo", "informação", "info", "gerado"}:
-        return "status-info"
-    if normalized in {
-        "reprovada",
-        "evitar",
-        "evitar_por_enquanto",
-        "invalidada",
-        "tese invalidada",
-        "sair agora",
-        "falha na fonte",
-        "erro",
-    }:
-        return "status-rejected"
-    return "status-neutral"
+    return status_css_class(status)
 
 
 def render_mock_badge(text: str = "DADOS MOCK / EXEMPLO") -> None:
     st.markdown(f'<span class="mock-badge">{_escape(text)}</span>', unsafe_allow_html=True)
 
 
-def render_metric_card(value: str | int, label: str, subtitle: str = "Leitura protegida", status: str = "neutral") -> None:
+def _metric_value_css(status: str) -> str:
+    mapping = {
+        "status-approved": "v-approved",
+        "status-warning": "v-warning",
+        "status-rejected": "v-rejected",
+        "status-info": "v-info",
+    }
+    return mapping.get(_status_css(status), "v-neutral")
+
+
+def _fmt_num(value: object, digits: int = 2) -> str:
+    if value in (None, ""):
+        return "—"
+    try:
+        return f"{float(value):,.{digits}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    except (TypeError, ValueError):
+        return str(value)
+
+
+def _money_br(value: object) -> str:
+    if not isinstance(value, (int, float)):
+        return _escape(value)
+    return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def render_metric_card(value: str | int, label: str, subtitle: str = "", status: str = "neutral") -> None:
     st.markdown(
-        f'<div class="metric-card {html.escape(status)}">'
-        f'<div class="metric-top"><div class="metric-label">{_escape(label)}</div><span class="status-badge {_status_css(status)}">{_escape(status)}</span></div>'
-        f'<div class="metric-value">{_escape(value, "0")}</div>'
-        f'<div class="metric-note">{_escape(subtitle)}</div>'
-        f"</div>",
+        f'<div class="metric-card">'
+        f'<div class="metric-label">{_escape(label)}</div>'
+        f'<div class="metric-value {_metric_value_css(status)}">{_escape(value, "0")}</div>'
+        + (f'<div class="metric-note">{_escape(subtitle)}</div>' if subtitle else "")
+        + "</div>",
         unsafe_allow_html=True,
     )
 
 
 def render_status_badge(status: str) -> None:
     st.markdown(
-        f'<span class="status-badge {_status_css(status)}">{_escape(status)}</span>',
+        f'<span class="status-badge {_status_css(status)}">{_escape(status_label(status))}</span>',
         unsafe_allow_html=True,
     )
+
+
+def render_page_header(title: str, badge_text: str, description: str = "", how_to: list[str] | None = None) -> None:
+    description_html = f'<p class="page-desc">{_escape(description, "")}</p>' if description else ""
+    st.markdown(
+        f'<div class="page-header"><div><div class="eyebrow">Radar de Opções Brasil</div>'
+        f'<h1 class="page-title">{_escape(title)}</h1>{description_html}</div>'
+        f'<span class="mock-badge page-header-badge">{_escape(badge_text)}</span></div>',
+        unsafe_allow_html=True,
+    )
+    if how_to:
+        parts = [
+            f'<span class="howto-step"><span class="howto-num">{index}</span>{_escape(step, "")}</span>'
+            for index, step in enumerate(how_to, start=1)
+        ]
+        steps = '<span class="howto-sep">›</span>'.join(parts)
+        st.markdown(
+            f'<div class="howto-box"><span class="howto-label">Como usar</span>{steps}</div>',
+            unsafe_allow_html=True,
+        )
 
 
 def render_section_title(title: str, subtitle: str = "") -> None:
@@ -135,7 +139,7 @@ def render_data_status_strip(status: dict) -> None:
     summary = status.get("snapshot_summary") or {}
     strip = [
         ("Status dos dados", "falha na fonte" if not latest.get("success", True) and latest else "atualizado" if latest else "sem leitura"),
-        ("Última atualização", latest.get("finished_at") or "indisponível"),
+        ("Última atualização", format_dt(latest.get("finished_at"))),
         ("Ativos atualizados", latest.get("updated_count", summary.get("completos", 0))),
     ]
     body = "".join(
@@ -147,15 +151,15 @@ def render_data_status_strip(status: dict) -> None:
 
 def render_action_summary(summary: dict) -> None:
     metrics = [
-        (summary.get("validated", 0), "Operáveis", "approved"),
-        (summary.get("near_entries", 0), "Aguardando gatilho", "warning"),
-        (summary.get("events", 0), "Eventos próximos", "info"),
-        (summary.get("avoid", 0), "Evitar", "rejected"),
+        (summary.get("validated", 0), "Operáveis", "Prontas para validar no book", "approved"),
+        (summary.get("near_entries", 0), "Aguardando gatilho", "Gatilho e invalidação definidos", "warning"),
+        (summary.get("events", 0), "Eventos próximos", "Resultados em até 5 dias", "info"),
+        (summary.get("avoid", 0), "Evitar", "Sem setup ou bloqueadas hoje", "rejected"),
     ]
     columns = st.columns(4)
-    for column, (value, label, status) in zip(columns, metrics):
+    for column, (value, label, subtitle, status) in zip(columns, metrics):
         with column:
-            render_metric_card(value, label, "Leitura compacta", status)
+            render_metric_card(value, label, subtitle, status)
 
 
 def _detail_box(label: str, value: object) -> str:
@@ -166,41 +170,112 @@ def _line_box(label: str, value: object) -> str:
     return f'<div class="compact-line"><b>{_escape(label)}</b><span>{_escape(value)}</span></div>'
 
 
+_PILL_CLASS = {
+    "status-approved": "pill-approved",
+    "status-warning": "pill-warning",
+    "status-rejected": "pill-rejected",
+    "status-info": "pill-info",
+    "status-neutral": "pill-neutral",
+}
+
+
+def _render_op_actions(card_key: str) -> str | None:
+    row = st.columns([0.15, 0.12, 0.73], gap="small")
+    action = None
+    if row[0].button("Detalhes", key=f"decision_detail_{card_key}", type="primary"):
+        action = "details"
+    if row[1].button("Simular", key=f"decision_simulate_{card_key}"):
+        action = "simulate"
+    return action
+
+
+RUNNER_LABELS = {
+    "local_script": "Script local",
+    "streamlit_app": "App Streamlit",
+    "github_actions": "GitHub Actions",
+}
+
+
+def runner_label(value: object) -> str:
+    raw = str(value or "").strip()
+    return RUNNER_LABELS.get(raw.lower(), raw.replace("_", " ") if raw else "indisponível")
+
+
+STRATEGY_LABELS = {
+    "call_debit_spread": "Spread debitável de call",
+    "put_debit_spread": "Spread debitável de put",
+    "bull_put_spread": "Bull put spread",
+    "bear_call_spread": "Bear call spread",
+    "covered_call": "Call coberta",
+    "iron_condor": "Iron condor",
+    "iron_butterfly": "Iron butterfly",
+    "cash_secured_put": "Put coberta de caixa (cash secured)",
+    "protective_put": "Put protetiva",
+    "calendar_spread": "Spread de calendário",
+    "collar": "Colar (collar)",
+    "diagonal_spread": "Spread diagonal",
+    "long_straddle": "Straddle comprado",
+    "long_strangle": "Strangle comprado",
+    "short_straddle_travado": "Straddle vendido travado",
+    "short_strangle_travado": "Strangle vendido travado",
+    "ratio_spread_travado": "Ratio spread travado",
+    "backspread_call": "Backspread de call",
+    "backspread_put": "Backspread de put",
+    "spread": "Spread",
+    "spread_disponivel": "Spread disponível",
+}
+
+
+def strategy_label(value: object) -> str:
+    raw = str(value or "").strip()
+    if not raw:
+        return "Estratégia indisponível"
+    if raw in STRATEGY_LABELS:
+        return STRATEGY_LABELS[raw]
+    parts = [part.strip() for part in raw.split(" ou ")]
+    if len(parts) > 1:
+        return " ou ".join(STRATEGY_LABELS.get(part, part.replace("_", " ")) for part in parts)
+    return raw.replace("_", " ")
+
+
 def render_decision_card(item: dict) -> str | None:
     card_key = str(item.get("card_key") or item.get("id") or item.get("ativo") or "item")
     status = str(item.get("action_status") or item.get("practical_action") or item.get("conditional_status") or item.get("status") or "inconclusivo")
-    badges = (
-        f'<span class="status-badge {_status_css(status)}">{_escape(status)}</span> '
-        f'<span class="status-badge status-neutral">NÃO É ORDEM</span>'
+    badge_css = _status_css(status)
+    accent = {"status-approved": "c-approved", "status-warning": "c-warning", "status-rejected": "c-rejected", "status-info": "c-info"}.get(badge_css, "c-neutral")
+    headline = status_label(status)
+    strategy = item.get("strategy_name") or item.get("estrategia") or item.get("preferred_strategy")
+    score = item.get("score") or item.get("near_setup_score") or (item.get("best_strategy") or {}).get("score")
+    gatilho = item.get("gatilho_confirmacao") or item.get("entry_price_condition") or item.get("conditional_trigger")
+    invalidacao = item.get("invalidacao") or item.get("invalidation_rules_short") or item.get("motivo")
+    evento = item.get("event_label") or item.get("evento_proximo")
+    cadeia = item.get("cadeia_opcoes_status") or item.get("chain_status")
+    motivo = item.get("reason") or item.get("motivo") or item.get("evaluation_reason")
+
+    score_text = str(score) if score is not None and str(score) != "" else None
+    score_chip = f'<span class="op-score">Score {html.escape(score_text)}</span>' if score_text else ""
+    head = (
+        f'<div class="op-head"><div>'
+        f'<div class="op-eyebrow">{_escape(item.get("source_label", "PAINEL"))}</div>'
+        f'<div class="op-ticker">{_escape(item.get("ativo"))}</div></div>'
+        f'<div class="op-badges"><span class="pill {_PILL_CLASS.get(badge_css, "pill-neutral")}">{_escape(headline)}</span>'
+        f'<span class="pill pill-ghost">Não é ordem</span></div></div>'
     )
-    headline = _escape(item.get("action_label") or item.get("acao_pratica") or item.get("conditional_decision") or "acompanhar")
-    strategy = _escape(item.get("strategy_name") or item.get("estrategia") or item.get("preferred_strategy") or "indisponível")
-    score = _escape(item.get("score") or item.get("near_setup_score") or (item.get("best_strategy") or {}).get("score") or "indisponível")
-    reason = _escape(item.get("reason") or item.get("motivo") or item.get("evaluation_reason") or "indisponível")
-    body = (
-        f'<div class="compact-card"><div class="compact-top"><div><div class="small-label">{_escape(item.get("source_label", "PAINEL"))}</div>'
-        f'<div class="compact-asset">{_escape(item.get("ativo"))}</div></div><div>{badges}</div></div>'
-        f'<div class="compact-summary"><b>{headline}</b> · estratégia {_escape(strategy)} · score {_escape(score)}</div>'
-        f'<div class="compact-grid">'
-        f'<div class="compact-kv"><b>Estratégia</b><span>{strategy}</span></div>'
-        f'<div class="compact-kv"><b>Score</b><span>{score}</span></div>'
-        f'<div class="compact-kv"><b>Evento próximo</b><span>{_escape(item.get("event_label") or item.get("evento_proximo") or "sem evento")}</span></div>'
-        f'<div class="compact-kv"><b>Status da cadeia</b><span>{_escape(item.get("cadeia_opcoes_status") or item.get("chain_status") or "pendente")}</span></div>'
-        f'<div class="compact-kv"><b>Gatilho</b><span>{_escape(item.get("gatilho_confirmacao") or item.get("entry_price_condition") or item.get("conditional_trigger"))}</span></div>'
-        f'<div class="compact-kv"><b>Invalidação</b><span>{_escape(item.get("invalidacao") or item.get("invalidation_rules_short") or item.get("motivo"))}</span></div>'
-        f'<div class="compact-kv"><b>Motivo principal</b><span>{reason}</span></div>'
-        f'<div class="compact-kv"><b>Ação prática</b><span>{headline}</span></div>'
-        f"</div>"
-        f"</div>"
-    )
-    st.markdown(body, unsafe_allow_html=True)
-    details, simulate = st.columns(2)
-    action = None
-    if details.button("Ver detalhes", key=f"decision_detail_{card_key}"):
-        action = "details"
-    if simulate.button("Simular manualmente", key=f"decision_simulate_{card_key}"):
-        action = "simulate"
-    return action
+    line = f'<div class="op-line"><span class="op-strategy">{_escape(strategy_label(strategy) if strategy else "Estratégia indisponível")}</span>{score_chip}</div>'
+    fields: list[tuple[str, object]] = []
+    if gatilho:
+        fields.append(("Gatilho", gatilho))
+    if invalidacao:
+        fields.append(("Invalidação", invalidacao))
+    if cadeia:
+        fields.append(("Cadeia de opções", status_label(cadeia)))
+    if evento:
+        fields.append(("Evento próximo", evento))
+    field_html = "".join(f'<div class="op-field"><dt>{_escape(label)}</dt><dd>{_escape(value)}</dd></div>' for label, value in fields)
+    fields_block = f'<dl class="op-fields">{field_html}</dl>' if field_html else ""
+    reason_block = f'<div class="op-reason">{_escape(motivo)}</div>' if motivo else ""
+    st.markdown(f'<div class="op-card {accent}">{head}{line}{fields_block}{reason_block}</div>', unsafe_allow_html=True)
+    return _render_op_actions(card_key)
 
 
 def render_empty_state(title: str, text: str) -> None:
@@ -240,19 +315,31 @@ def render_compact_thesis_card(item: dict) -> str | None:
 
 def render_market_card(snapshot: dict, healthbox: dict) -> None:
     change = snapshot.get("variacao_diaria_percent")
-    score = (healthbox.get("score_result") or {}).get("score", "não calculado")
+    score = (healthbox.get("score_result") or {}).get("score")
+    status_dado = str(snapshot.get("status_dado", "indisponível"))
+    badge_css = _status_css(status_dado)
+    change_html = ""
+    if isinstance(change, (int, float)):
+        direction = "up" if change > 0 else "down" if change < 0 else "flat"
+        arrow = "▲" if change > 0 else "▼" if change < 0 else ""
+        change_html = f'<span class="chg {direction}">{arrow} {abs(change):.2f}%</span>'.replace(".", ",")
+    stats = [
+        ("Tendência", status_label(snapshot.get("tendencia"))),
+        ("Healthbox", score if score is not None else "—"),
+        ("RSI", _fmt_num(snapshot.get("rsi"))),
+        ("rVol", _fmt_num(snapshot.get("rvol"))),
+    ]
+    stats_html = "".join(f'<div class="mkt-stat"><dt>{_escape(label)}</dt><dd>{_escape(value)}</dd></div>' for label, value in stats)
+    campos = ", ".join(snapshot.get("campos_ausentes", [])) or "nenhum"
     st.markdown(
-        f'<div class="section-card"><div class="top"><div><div class="small-label">MERCADO REAL</div><div class="asset">{_escape(snapshot.get("ativo"))}</div></div>'
-        f'<div><span class="status-badge {_status_css(snapshot.get("status_dado", "indisponível"))}">{_escape(snapshot.get("status_dado", "indisponível"))}</span></div></div>'
-        f'<div class="compact-row">'
-        f'{_line_box("Preço", snapshot.get("preco_atual"))}'
-        f'{_line_box("Variação diária %", change)}'
-        f'{_line_box("Tendência", snapshot.get("tendencia"))}'
-        f'{_line_box("Healthbox", score)}'
-        f'{_line_box("RSI", snapshot.get("rsi"))}'
-        f'{_line_box("rVol", snapshot.get("rvol"))}'
-        f"</div>"
-        f'<div class="summary">Fonte {_escape(snapshot.get("fonte"))} · coleta {_escape(snapshot.get("coleta"))} · campos ausentes {_escape(", ".join(snapshot.get("campos_ausentes", [])) or "nenhum")}</div></div>',
+        f'<div class="mkt-card {badge_css.replace("status-", "c-")}">'
+        f'<div class="op-head"><div><div class="op-eyebrow">Mercado real</div>'
+        f'<div class="op-ticker">{_escape(snapshot.get("ativo"))}</div></div>'
+        f'<span class="pill {_PILL_CLASS.get(badge_css, "pill-neutral")}">{_escape(status_label(status_dado))}</span></div>'
+        f'<div class="mkt-price">{_money_br(snapshot.get("preco_atual"))} {change_html}</div>'
+        f'<dl class="mkt-stats">{stats_html}</dl>'
+        f'<div class="mkt-foot">Fonte {_escape(snapshot.get("fonte"))} · coleta {format_dt(snapshot.get("coleta"))} · campos ausentes: {_escape(campos)}</div>'
+        f"</div>",
         unsafe_allow_html=True,
     )
 
@@ -270,10 +357,10 @@ def render_update_status_card(status: dict, summary: dict) -> None:
         general = "atualizado"
     st.markdown(
         f'<div class="section-card"><div class="small-label">STATUS DOS DADOS</div>'
-        f'<p><span class="status-badge {_status_css(general)}">{_escape(general)}</span> '
-        f'<span class="status-badge status-neutral">snapshot {_escape(status.get("snapshot_age_status", "indisponível"))}</span></p>'
-        f'<p><b>Última atualização:</b> {_escape(latest.get("finished_at"))}<br>'
-        f'<b>Modo:</b> {_escape(latest.get("mode"))} · <b>Origem:</b> {_escape(latest.get("runner"))} · <b>Fonte:</b> {_escape(latest.get("source") or summary.get("fonte"))}</p>'
+        f'<p><span class="status-badge {_status_css(general)}">{_escape(status_label(general))}</span> '
+        f'<span class="status-badge status-neutral">snapshot {_escape(status_label(status.get("snapshot_age_status", "indisponível")))}</span></p>'
+        f'<p><b>Última atualização:</b> {format_dt(latest.get("finished_at"))}<br>'
+        f'<b>Modo:</b> {_escape(latest.get("mode"))} · <b>Origem:</b> {_escape(runner_label(latest.get("runner")))} · <b>Fonte:</b> {_escape(latest.get("source") or summary.get("fonte"))}</p>'
         f'<p><b>Ativos consultados:</b> {latest.get("total_tickers", 0)} · <b>Atualizados:</b> {latest.get("updated_count", 0)} · '
         f'<b>Incompletos:</b> {latest.get("incomplete_count", 0)} · <b>Erros:</b> {latest.get("error_count", 0)}</p></div>',
         unsafe_allow_html=True,
@@ -298,8 +385,8 @@ def render_options_eod_status_card(status: dict) -> None:
     general = str(last.get("status") or summary.get("status") or "não atualizado")
     st.markdown(
         f'<div class="section-card"><div class="small-label">STATUS OPÇÕES EOD</div>'
-        f'<p><span class="status-badge {_status_css(general)}">{_escape(general)}</span></p>'
-        f'<p><b>Última atualização:</b> {_escape(last.get("finished_at") or summary.get("latest_collection") or "não atualizada")}<br>'
+        f'<p><span class="status-badge {_status_css(general)}">{_escape(status_label(general))}</span></p>'
+        f'<p><b>Última atualização:</b> {format_dt(last.get("finished_at") or summary.get("latest_collection") or None, "não atualizada")}<br>'
         f'<b>Ativos disponíveis:</b> {last.get("available_count", summary.get("available_count", 0))} · <b>Séries:</b> {last.get("total_series", summary.get("total_series", 0))} · '
         f'<b>Erros:</b> {last.get("error_count", summary.get("error_count", 0))}</p></div>',
         unsafe_allow_html=True,
@@ -338,16 +425,16 @@ def render_full_strategy_screening(item: dict) -> None:
             plan = candidate.get("manual_validation_plan") or {}
             rows.append(
                 {
-                    "Estratégia": candidate.get("strategy_name"),
-                    "Score": candidate.get("suitability_score"),
-                    "Status": candidate.get("status"),
-                    "Objetivo": candidate.get("objective_label"),
-                    "Complexidade": candidate.get("complexidade"),
-                    "Motivos contra": "; ".join(candidate.get("motivos_contra", [])),
-                    "Dados necessários": "; ".join(candidate.get("dados_necessarios", [])),
-                    "Delta-alvo": plan.get("delta_target"),
-                    "Vencimento": plan.get("expiration_window"),
-                    "Encaixe capital": candidate.get("capital_fit_status"),
+                    "Estratégia": strategy_label(candidate.get("strategy_name")),
+                    "Score": _display(candidate.get("suitability_score")),
+                    "Status": status_label(candidate.get("status")),
+                    "Objetivo": _display(candidate.get("objective_label")),
+                    "Complexidade": _display(candidate.get("complexidade")),
+                    "Motivos contra": "; ".join(candidate.get("motivos_contra", [])) or "—",
+                    "Dados necessários": "; ".join(candidate.get("dados_necessarios", [])) or "—",
+                    "Delta-alvo": _display(plan.get("delta_target")),
+                    "Vencimento": _display(plan.get("expiration_window")),
+                    "Encaixe capital": _display(candidate.get("capital_fit_status")),
                 }
             )
         if rows:
@@ -393,7 +480,7 @@ def render_manual_simulation(simulation: dict) -> None:
     break_evens = "; ".join(str(value) for value in simulation.get("break_even_points", [])) or "indisponível"
     st.markdown(
         f'<div class="section-card"><div class="small-label">SIMULADOR · NÃO É ORDEM</div>'
-        f'<h3>{_escape(simulation.get("ticker"))} · {_escape(simulation.get("strategy_name"))}</h3>'
+        f'<h3>{_escape(simulation.get("ticker"))} · {_escape(strategy_label(simulation.get("strategy_name")))}</h3>'
         f'<div class="compact-row">{_line_box("Fonte", simulation.get("source"))}{_line_box("Vencimento", simulation.get("expiration"))}'
         f'{_line_box("Quantidade", simulation.get("quantity"))}{_line_box("Multiplicador", simulation.get("contract_multiplier"))}'
         f'{_line_box("Capital mínimo", simulation.get("capital_required"))}{_line_box("Perda máxima", simulation.get("max_loss"))}'
@@ -431,7 +518,7 @@ def render_top_conditional_entries(entries: list[dict], diagnostics: dict | None
         st.caption(f"Principal motivo agregado: {principal[0]} ({principal[1]})")
     for item in entries[:5]:
         st.markdown(
-            f"**{_escape(item.get('ativo', '—'))} · {_escape(item.get('estrategia', 'indisponível'))}** — "
+            f"**{_escape(item.get('ativo', '—'))} · {_escape(strategy_label(item.get('estrategia')))}** — "
             f"`{_escape(item.get('conditional_status', 'inconclusivo'))}` · score {_escape(item.get('score') if item.get('score') is not None else 'indisponível')}"
         )
 
@@ -474,26 +561,32 @@ def opportunity_card(item: dict) -> str | None:
     return None
 
 
+def _display(value: object, fallback: str = "—") -> str:
+    if value is None or str(value).strip() == "":
+        return fallback
+    return str(value)
+
+
 def positions_table(positions: list[dict]) -> None:
     rows = [
         {
-            "Ativo": p.get("ativo"),
-            "Origem": "Abertura" if p.get("origem") == "opening_watchlist" else "MOCK / EXEMPLO",
-            "Estratégia": p.get("estrategia"),
-            "Preço real de entrada": p.get("preco_real_entrada"),
-            "Preço EOD de referência": p.get("preco_eod_referencia"),
-            "Quantidade": p.get("quantidade"),
-            "Data de entrada": p.get("data_entrada"),
-            "Vencimento": f"{p.get('vencimento_dias')} dias",
-            "Ganho máximo": p.get("ganho_maximo"),
-            "Perda máxima": p.get("perda_maxima"),
-            "Break-even": p.get("break_even"),
-            "Status": p.get("status"),
-            "Tipo do dado": p.get("tipo_dado"),
+            "Ativo": _display(p.get("ativo")),
+            "Origem": "Abertura" if p.get("origem") == "opening_watchlist" else "Mock / Exemplo",
+            "Estratégia": strategy_label(p.get("estrategia")),
+            "Preço real de entrada": _money_br(p.get("preco_real_entrada")),
+            "Preço EOD de referência": _money_br(p.get("preco_eod_referencia")),
+            "Quantidade": _display(p.get("quantidade")),
+            "Data de entrada": format_dt(p.get("data_entrada")) if p.get("data_entrada") else "—",
+            "Vencimento": f"{p.get('vencimento_dias')} dias" if p.get("vencimento_dias") is not None else "—",
+            "Ganho máximo": _money_br(p.get("ganho_maximo")),
+            "Perda máxima": _money_br(p.get("perda_maxima")),
+            "Break-even": _money_br(p.get("break_even")),
+            "Status": status_label(p.get("status")),
+            "Tipo do dado": _display(p.get("tipo_dado")),
         }
         for p in positions
     ]
-    st.dataframe(pd.DataFrame(rows).astype(str), width="stretch", hide_index=True)
+    st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
 
 
 def sources_table(sources: list[dict]) -> None:

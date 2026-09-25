@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import streamlit as st
+
 from app.conditional_entry_engine import rank_conditional_entries, summarize_conditional_entries
 from app.healthbox_engine import healthbox_confirms_strategy
 from app.market_snapshot_engine import snapshot_to_healthbox
@@ -28,6 +30,7 @@ from app.graphical_watchlist import (
     save_graphical_watchlist,
     summarize_graphical_watchlist,
 )
+from app.position_marking import build_option_mark_context
 from app.position_monitor import build_position_status
 from app.real_opportunity_engine import generate_real_eod_opportunities
 from app.storage import load_json, load_positions, save_json
@@ -51,6 +54,7 @@ def _phase_messages(phase: str, messages: list[str] | None) -> list[str]:
     return [f"{phase}: {message}" for message in (messages or []) if message]
 
 
+@st.cache_data(ttl=5)
 def load_real_opportunities_snapshot() -> dict[str, Any]:
     value = load_json(REAL_OPPORTUNITIES_FILE, {})
     return value if isinstance(value, dict) else {}
@@ -58,8 +62,10 @@ def load_real_opportunities_snapshot() -> dict[str, Any]:
 
 def save_real_opportunities_snapshot(data: dict[str, Any]) -> None:
     save_json(REAL_OPPORTUNITIES_FILE, data)
+    load_real_opportunities_snapshot.clear()
 
 
+@st.cache_data(ttl=5)
 def load_pipeline_status() -> dict[str, Any]:
     value = load_json(PIPELINE_STATUS_FILE, {})
     return value if isinstance(value, dict) else {}
@@ -67,8 +73,10 @@ def load_pipeline_status() -> dict[str, Any]:
 
 def save_pipeline_status(status: dict[str, Any]) -> None:
     save_json(PIPELINE_STATUS_FILE, status)
+    load_pipeline_status.clear()
 
 
+@st.cache_data(ttl=5)
 def load_graphical_theses_snapshot() -> dict[str, Any]:
     value = load_json(GRAPHICAL_THESES_FILE, {})
     return value if isinstance(value, dict) else {}
@@ -76,6 +84,7 @@ def load_graphical_theses_snapshot() -> dict[str, Any]:
 
 def save_graphical_theses_snapshot(data: dict[str, Any]) -> None:
     save_json(GRAPHICAL_THESES_FILE, data)
+    load_graphical_theses_snapshot.clear()
 
 
 def _graphical_candidate_tickers() -> list[str]:
@@ -119,6 +128,10 @@ def _evaluate_saved_items() -> dict[str, Any]:
             healthbox = snapshot_to_healthbox(snapshot)
             healthbox["confirmation"] = healthbox_confirms_strategy(healthbox, position.get("tipo_estrutura", ""))
             context = {"asset_snapshot": snapshot, "healthbox": healthbox, "current_mark": None, "tipo_dado": snapshot.get("tipo_dado"), "fonte": snapshot.get("fonte") or "brapi"}
+            try:
+                context.update(build_option_mark_context(position))
+            except Exception as exc:  # noqa: BLE001 - marcação não pode derrubar o pipeline
+                context["option_mark_error"] = str(exc)
         positions.append({"position_id": position.get("id"), "ativo": position.get("ativo"), **build_position_status(position, context)})
     return {
         "watchlist_evaluated": len(watchlist),
@@ -171,7 +184,7 @@ def run_pipeline(mode: str = "close", tickers: list[str] | None = None, max_expi
         conditional = summarize_conditional_entries(opportunities)
         ranked = rank_conditional_entries(opportunities, top_n=10)
         opportunities_snapshot = {
-            "generated_at": _now(), "mode": mode, "source": ["brapi", "brapi_options"],
+            "generated_at": _now(), "mode": mode, "source": ["opcoes_net_br", "brapi_options", "brapi"],
             "tickers": option_symbols, "total_candidates": len(opportunities),
             "entrada_condicional": conditional["entrada_condicional"],
             "acompanhar_na_abertura": conditional["acompanhar_na_abertura"],

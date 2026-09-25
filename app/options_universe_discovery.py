@@ -1,12 +1,20 @@
-"""Descoberta real e cacheada de acesso a opções EOD por ativo."""
+"""Descoberta real e cacheada de acesso a opções EOD por ativo.
+
+Fonte primária: grade pública do opcoes.net.br (uma requisição por ativo traz
+todos os vencimentos). Fallback: brapi options (requer token).
+"""
 
 from __future__ import annotations
 
+from collections import Counter
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import streamlit as st
+
 from app.providers.brapi_options_provider import BrapiOptionsProvider
+from app.providers.opcoes_net_provider import fetch_options_chain
 from app.storage import load_json, save_json
 
 
@@ -14,12 +22,14 @@ ROOT = Path(__file__).resolve().parent.parent
 AVAILABILITY_FILE = ROOT / "data" / "runtime" / "options_universe_availability.json"
 CANDIDATES_FILE = ROOT / "data" / "option_candidate_tickers.json"
 LOW_LIQUIDITY_WARNING = "Liquidez baixa no mercado brasileiro. Validar book, spread e execução manualmente."
+SPREAD_UNAVAILABLE_NOTE = "book/spread indisponíveis na fonte; validar no pregão"
 
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+@st.cache_data(ttl=5)
 def load_options_universe_availability() -> dict[str, Any]:
     value = load_json(AVAILABILITY_FILE, {})
     return value if isinstance(value, dict) else {}
@@ -27,6 +37,7 @@ def load_options_universe_availability() -> dict[str, Any]:
 
 def save_options_universe_availability(data: dict[str, Any]) -> None:
     save_json(AVAILABILITY_FILE, data)
+    load_options_universe_availability.clear()
 
 
 def load_option_candidate_tickers() -> list[str]:
@@ -58,6 +69,7 @@ def summarize_options_availability(data: dict[str, Any]) -> dict[str, Any]:
         classification: sum(item.get("liquidity_class") == classification for item in assets)
         for classification in ("alta", "média", "baixa", "muito baixa", "sem negócio", "indisponível")
     }
+    source_counts = Counter(str(item.get("fonte") or "indisponível") for item in assets)
     return {
         "tickers_tested": len(assets),
         "available_count": sum(item.get("has_options_access") is True for item in assets),
@@ -65,7 +77,8 @@ def summarize_options_availability(data: dict[str, Any]) -> dict[str, Any]:
         "error_count": sum(item.get("status") == "erro" for item in assets),
         "total_series": sum(int(item.get("series_count") or 0) for item in assets),
         "generated_at": data.get("generated_at") if isinstance(data, dict) else None,
-        "source": "brapi_options",
+        "source": "+".join(sorted(source_counts)) if source_counts else "indisponível",
+        "sources": dict(source_counts),
         "data_frequency": "EOD",
         "liquidity_classes": liquidity_classes,
     }
@@ -104,12 +117,45 @@ def classify_options_liquidity(series: list[dict[str, Any]]) -> dict[str, Any]:
         liquidity_class = "alta"
     elif has_bid_ask and average_spread is not None and average_spread <= 25 and ((total_volume or 0) > 0 or (total_trades or 0) > 0):
         liquidity_class = "média"
+    elif not has_bid_ask and (total_trades or 0) >= 100:
+        liquidity_class = "média"
     elif ((total_volume is not None and 0 < total_volume <= 5) or (total_trades is not None and 0 < total_trades <= 2)):
         liquidity_class = "muito baixa"
     else:
         liquidity_class = "baixa"
-    warning = None if liquidity_class in {"alta", "média"} else LOW_LIQUIDITY_WARNING if liquidity_class in {"baixa", "muito baixa", "sem negócio"} else "Liquidez indisponível; validar manualmente antes de qualquer decisão."
+    if not has_bid_ask and liquidity_class in {"alta", "média"}:
+        warning = f"{LOW_LIQUIDITY_WARNING} {SPREAD_UNAVAILABLE_NOTE}"
+    else:
+        warning = None if liquidity_class in {"alta", "média"} else LOW_LIQUIDITY_WARNING if liquidity_class in {"baixa", "muito baixa", "sem negócio"} else "Liquidez indisponível; validar manualmente antes de qualquer decisão."
     return {"liquidity_class": liquidity_class, "total_volume": total_volume, "total_trades": total_trades, "has_bid_ask": has_bid_ask, "average_spread_pct": average_spread, "execution_warning": warning}
+
+
+def _discover_asset_onb(symbol: str, min_dte: int, max_dte: int, max_expirations: int) -> dict[str, Any] | None:
+    """Coleta via opcoes.net.br; devolve None quando a fonte falha para permitir fallback."""
+    try:
+        chain = fetch_options_chain(symbol, load=1000)
+    except Exception:  # noqa: BLE001 - falha de rede ativa o fallback
+        return None
+    if not chain.get("success"):
+        return None
+    expirations = chain.get("expirations") or []
+    eligible = [
+        (str(item.get("expiration_date")), int(item["dte"]))
+        for item in expirations
+        if isinstance(item.get("dte"), int) and min_dte <= int(item["dte"]) <= max_dte
+    ]
+    selected = [expiration for expiration, _ in sorted(eligible, key=lambda item: (0 if 15 <= item[1] <= 45 else 1, item[1]))[:max_expirations]]
+    wanted = set(selected)
+    series = [item for item in chain.get("series") or [] if item.get("expiration_date") in wanted]
+    return {
+        "fonte": "opcoes_net_br",
+        "expirations_found": len(expirations),
+        "expirations_selected": selected,
+        "series_count": len(series),
+        "calls_count": sum(item.get("side") == "call" for item in series),
+        "puts_count": sum(item.get("side") == "put" for item in series),
+        "collected_series": series,
+    }
 
 
 def discover_options_availability(
@@ -126,36 +172,59 @@ def discover_options_availability(
     errors: list[str] = []
     for symbol in symbols:
         checked_at = _now()
-        expirations_result = provider.get_expirations(symbol)
-        expirations = expirations_result.get("expirations", []) if expirations_result.get("success") else []
-        selected = [value for value in expirations if (days := _dte(value)) is not None and min_dte <= days <= max_dte][:max_expirations]
+        expirations_found = 0
+        selected: list[str] = []
         series_count = calls_count = puts_count = 0
         collected_series: list[dict[str, Any]] = []
         reasons: list[str] = []
         status = "indisponível"
-        if not expirations_result.get("success"):
-            reason = expirations_result.get("error") or "vencimentos indisponíveis"
-            reasons.append(str(reason))
-            if expirations_result.get("access_status") == "sem_acesso":
-                status = "sem_acesso_fonte"
-            elif expirations_result.get("status_dado") == "indisponível":
-                status = "sem_opcoes_na_fonte"
+        fonte = "opcoes_net_br"
+        onb_result = None
+        try:
+            onb_result = _discover_asset_onb(symbol, min_dte, max_dte, max_expirations)
+        except Exception:  # noqa: BLE001
+            onb_result = None
+        if onb_result is not None:
+            fonte = "opcoes_net_br"
+            expirations_found = onb_result["expirations_found"]
+            selected = onb_result["expirations_selected"]
+            if not selected:
+                reasons.append(f"nenhum vencimento entre {min_dte} e {max_dte} dias")
             else:
-                status = "erro"
-        elif not selected:
-            reasons.append(f"nenhum vencimento entre {min_dte} e {max_dte} dias")
+                series_count = onb_result["series_count"]
+                calls_count = onb_result["calls_count"]
+                puts_count = onb_result["puts_count"]
+                collected_series = onb_result["collected_series"]
+                status = "disponível" if series_count > 0 else "indisponível"
         else:
-            for expiration in selected:
-                chain = provider.get_chain(symbol, expiration)
-                if chain.get("success"):
-                    chain_series = chain.get("data", [])
-                    collected_series.extend(chain_series)
-                    series_count += int(chain.get("count") or len(chain_series))
-                    calls_count += int(chain.get("calls") or 0)
-                    puts_count += int(chain.get("puts") or 0)
+            fonte = "brapi_options"
+            expirations_result = provider.get_expirations(symbol)
+            expirations = expirations_result.get("expirations", []) if expirations_result.get("success") else []
+            expirations_found = len(expirations)
+            selected = [value for value in expirations if (days := _dte(value)) is not None and min_dte <= days <= max_dte][:max_expirations]
+            if not expirations_result.get("success"):
+                reason = expirations_result.get("error") or "vencimentos indisponíveis"
+                reasons.append(str(reason))
+                if expirations_result.get("access_status") == "sem_acesso":
+                    status = "sem_acesso_fonte"
+                elif expirations_result.get("status_dado") == "indisponível":
+                    status = "sem_opcoes_na_fonte"
                 else:
-                    reasons.append(f"{expiration}: {chain.get('error') or 'cadeia indisponível'}")
-            status = "disponível" if series_count > 0 else "indisponível"
+                    status = "erro"
+            elif not selected:
+                reasons.append(f"nenhum vencimento entre {min_dte} e {max_dte} dias")
+            else:
+                for expiration in selected:
+                    chain = provider.get_chain(symbol, expiration)
+                    if chain.get("success"):
+                        chain_series = chain.get("data", [])
+                        collected_series.extend(chain_series)
+                        series_count += int(chain.get("count") or len(chain_series))
+                        calls_count += int(chain.get("calls") or 0)
+                        puts_count += int(chain.get("puts") or 0)
+                    else:
+                        reasons.append(f"{expiration}: {chain.get('error') or 'cadeia indisponível'}")
+                status = "disponível" if series_count > 0 else "indisponível"
         has_access = series_count > 0
         liquidity = classify_options_liquidity(collected_series)
         if has_access:
@@ -164,8 +233,8 @@ def discover_options_availability(
         if status == "erro":
             errors.append(f"{symbol}: {reason}")
         assets.append({
-            "ticker": symbol, "has_options_access": has_access,
-            "expirations_found": len(expirations), "expirations_selected": selected,
+            "ticker": symbol, "has_options_access": has_access, "fonte": fonte,
+            "expirations_found": expirations_found, "expirations_selected": selected,
             "series_count": series_count, "calls_count": calls_count, "puts_count": puts_count,
             **liquidity,
             "status": status, "reason": reason, "checked_at": checked_at,
@@ -176,8 +245,9 @@ def discover_options_availability(
         merged.update({item["ticker"]: item for item in assets})
         assets = list(merged.values())
     candidate_tickers = load_option_candidate_tickers()
+    source_counts = Counter(str(item.get("fonte") or "indisponível") for item in assets)
     data = {
-        "generated_at": _now(), "source": "brapi_options", "tickers_tested": symbols,
+        "generated_at": _now(), "source": "+".join(sorted(source_counts)) if source_counts else "indisponível", "tickers_tested": symbols,
         "available": [item["ticker"] for item in assets if item["has_options_access"]],
         "unavailable": [item["ticker"] for item in assets if not item["has_options_access"]],
         "errors": errors, "assets": assets, "data_frequency": "EOD",

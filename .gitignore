@@ -1,6 +1,7 @@
 .env
 .env.*
 !.env.example
+data/secrets/
 data/cache/*.json
 data/runtime/*
 !data/runtime/market_snapshots.json

@@ -32,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       DATA_PROVIDER: brapi
       ALLOW_MOCK_FALLBACK: "false"
 
@@ -116,6 +118,11 @@ jobs:
             git commit -m "Snapshots $MODE via update-market-data"
             git push
           fi
+
+      - name: Enviar digest por Telegram (opcional, só no fechamento)
+        if: steps.mode.outputs.mode == 'close' && env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
+        continue-on-error: true
+        run: python scripts/send_daily_digest.py
 
       - name: Sinalizar falha da atualização
         if: steps.market_update.outcome == 'failure'

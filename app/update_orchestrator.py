@@ -9,6 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import streamlit as st
+
 from app.market_snapshot_engine import build_many_asset_snapshots
 
 
@@ -41,6 +43,7 @@ def default_watchlist() -> list[str]:
     return ["PETR4", "VALE3", "ITUB4", "BOVA11", "BBAS3", "B3SA3", "WEGE3", "PRIO3"]
 
 
+@st.cache_data(ttl=5)
 def load_market_snapshots() -> list[dict[str, Any]]:
     value = _read_json(SNAPSHOTS_FILE, [])
     return value if isinstance(value, list) else []
@@ -48,8 +51,10 @@ def load_market_snapshots() -> list[dict[str, Any]]:
 
 def save_market_snapshots(snapshots: list[dict[str, Any]]) -> None:
     _write_json(SNAPSHOTS_FILE, snapshots)
+    load_market_snapshots.clear()
 
 
+@st.cache_data(ttl=5)
 def load_update_status() -> dict[str, Any]:
     default = {"last_updates": {}, "last_error": None, "notes": []}
     value = _read_json(STATUS_FILE, default)
@@ -58,6 +63,7 @@ def load_update_status() -> dict[str, Any]:
 
 def save_update_status(status: dict[str, Any]) -> None:
     _write_json(STATUS_FILE, status)
+    load_update_status.clear()
 
 
 def resolve_runner(runner: str | None = None) -> str:
