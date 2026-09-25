@@ -101,7 +101,7 @@ def show_real_market_radar() -> None:
                 "Distância suporte %": snapshot.get("distancia_suporte_percent"), "Distância resistência %": snapshot.get("distancia_resistencia_percent"),
                 "Score Healthbox": score_result.get("score") if score_result.get("score") is not None else "Score Healthbox não calculado: dados insuficientes",
                 "Campos ausentes": ", ".join(snapshot.get("campos_ausentes", [])) or "nenhum",
-                "Fonte": snapshot.get("fonte"), "Tipo do dado": snapshot.get("tipo_dado"), "Status": snapshot.get("status_dado"), "Coleta": snapshot.get("coleta"),
+                "Fonte": snapshot.get("fonte"), "Tipo do dado": snapshot.get("tipo_dado"), "Status": snapshot.get("status_dado"), "Coleta": format_dt(snapshot.get("coleta"), "nenhuma"),
             }
         )
     st.markdown("### Tabela Healthbox real")

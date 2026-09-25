@@ -14,6 +14,7 @@ from typing import Any
 
 import requests
 
+from app.formatting import format_dt
 from app.options_update_orchestrator import load_options_eod_status
 from app.pipeline_orchestrator import (
     load_pipeline_status,
@@ -119,9 +120,9 @@ def send_message(text: str, config: dict[str, Any] | None = None, timeout: int =
 def _format_update_line(label: str, status: dict[str, Any]) -> str:
     if not status:
         return f"{label}: nenhuma atualização registrada"
-    finished = str(status.get("finished_at") or status.get("generated_at") or "indisponível")[:16].replace("T", " ")
+    finished = format_dt(status.get("finished_at") or status.get("generated_at"), "indisponível")
     return (
-        f"{label}: {status.get('status', 'indisponível')} · concluído {finished} (UTC) · "
+        f"{label}: {status.get('status', 'indisponível')} · concluído {finished} · "
         f"fonte {status.get('source', 'indisponível')}"
     )
 

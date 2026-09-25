@@ -1,5 +1,9 @@
 # Status das atualizações
 
+## Horários
+
+Os arquivos gravam os horários em UTC. A interface exibe os horários convertidos para o horário de Brasília (UTC-3), identificados pelo sufixo `(Brasília)`. Vales de horário sem fuso informado aparecem como estão, sem conversão suposta.
+
 ## Arquivos persistidos
 
 Os snapshots de mercado ficam em `data/runtime/market_snapshots.json`. Cada snapshot mantém a fonte, a data/hora de coleta, o `status_dado` e a lista `campos_ausentes`; campos reais ausentes não são preenchidos com valores inventados.

@@ -374,7 +374,7 @@ def render_options_status_card(summary: dict) -> None:
         f'<div class="section-card"><div class="small-label">OPÇÕES EOD</div>'
         f'<p><span class="status-badge {_status_css(label)}">{_escape(label)}</span></p>'
         f'<p><b>Fonte:</b> {_escape(summary.get("fonte", "brapi_options"))} · <b>Séries salvas:</b> {summary.get("series_count", 0)} · '
-        f'<b>Status:</b> {_escape(summary.get("status_dado", "indisponível"))} · <b>Coleta:</b> {_escape(summary.get("coleta") or "nenhuma")}</p></div>',
+        f'<b>Status:</b> {_escape(summary.get("status_dado", "indisponível"))} · <b>Coleta:</b> {_escape(format_dt(summary.get("coleta"), "nenhuma"))}</p></div>',
         unsafe_allow_html=True,
     )
 

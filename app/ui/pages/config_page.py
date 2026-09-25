@@ -12,6 +12,7 @@ from app.components import (
     render_options_status_card,
 )
 from app.data_contracts import CONTRACTS
+from app.formatting import format_dt
 from app.market_snapshot_engine import build_many_asset_snapshots, snapshot_to_healthbox
 from app.options_snapshot_engine import (
     build_options_snapshot,
@@ -51,7 +52,7 @@ def _render_provider_overview() -> None:
     p3.metric("Token detectado", "sim" if status.get("token_detected") else "não")
     p4.metric("Cache ativo", f"sim · {status.get('cached_files', 0)} arquivo(s)")
     st.caption(
-        f"Última coleta: {status.get('last_collection') or 'nenhuma'} · "
+        f"Última coleta: {format_dt(status.get('last_collection'), 'nenhuma')} · "
         f"fallback permitido: {'sim' if status.get('fallback_allowed') else 'não'}"
     )
     render_data_notice(
@@ -157,7 +158,7 @@ def _render_options_test() -> None:
     missing_options = options_summary.get("campos_ausentes_comuns", {})
     st.caption(
         f"Status de acesso: {options_summary.get('access_status', 'indisponível')} · "
-        f"Fonte: {options_summary.get('fonte', 'brapi_options')} · Coleta: {options_summary.get('coleta') or 'nenhuma'} · "
+        f"Fonte: {options_summary.get('fonte', 'brapi_options')} · Coleta: {format_dt(options_summary.get('coleta'), 'nenhuma')} · "
         f"Campos ausentes comuns: {', '.join(f'{key} ({value})' for key, value in missing_options.items()) or 'nenhum registrado'}"
     )
     if options_summary.get("error"):
@@ -196,7 +197,7 @@ def _render_options_eod_update() -> None:
         st.caption(
             f"Séries: {eod_result.get('total_series', 0)} · Calls: {eod_result.get('total_calls', 0)} · "
             f"Puts: {eod_result.get('total_puts', 0)} · Fonte: {eod_result.get('source', 'brapi_options')} · "
-            f"Frequência: {eod_result.get('data_frequency', 'EOD')} · Coleta: {eod_result.get('finished_at', 'indisponível')}"
+            f"Frequência: {eod_result.get('data_frequency', 'EOD')} · Coleta: {format_dt(eod_result.get('finished_at'), 'indisponível')}"
         )
         if eod_result.get("errors"):
             st.error("Falhas registradas: " + " | ".join(map(str, eod_result["errors"])))
@@ -207,7 +208,7 @@ def _render_options_eod_update() -> None:
                 "Ativo": symbol, "Status": item.get("status_dado"), "Acesso": item.get("access_status"),
                 "Vencimento": item.get("expiration_used"), "Séries": item.get("series_count", 0),
                 "Calls": item.get("calls_count", 0), "Puts": item.get("puts_count", 0),
-                "Erro": item.get("error") or "nenhum", "Coleta": item.get("coleta"),
+                "Erro": item.get("error") or "nenhum", "Coleta": format_dt(item.get("coleta"), "nenhuma"),
             }
             for symbol, item in saved_options.items()
         ]
@@ -229,7 +230,7 @@ def _render_universe() -> None:
     universe_metrics[3].metric("Acessíveis", availability_summary["available_count"])
     universe_metrics[4].metric("Sem acesso pela fonte", source_denied)
     universe_metrics[5].metric("Erros", technical_errors)
-    st.caption(f"Última descoberta: {availability.get('generated_at', 'nunca')}")
+    st.caption(f"Última descoberta: {format_dt(availability.get('generated_at'), 'nunca')}")
     st.warning("Sem acesso pela fonte atual não significa ausência de opções na B3.")
     st.caption("Cache real EOD; o pipeline reutiliza apenas resultados com até 72 horas e não executa discovery automaticamente.")
     if availability.get("available"):
@@ -282,7 +283,7 @@ def _render_telegram_section() -> None:
     text, meta = build_daily_digest()
     with st.expander("Pré-visualizar digest diário", expanded=False):
         st.code(text)
-        st.caption(f"Gerado às {meta.get('built_at')} (UTC) · status pipeline: {meta.get('pipeline_status') or 'indisponível'}")
+        st.caption(f"Gerado às {format_dt(meta.get('built_at'), 'indisponível')} · status pipeline: {meta.get('pipeline_status') or 'indisponível'}")
     st.info(
         "O digest é informativo: resumo das rotinas e números do radar. Nenhuma recomendação, nenhuma ordem. "
         "Para automação diária, use scripts/send_daily_digest.py no GitHub Actions."
@@ -291,10 +292,12 @@ def _render_telegram_section() -> None:
 
 def _render_routines() -> None:
     st.markdown(
-        "- **Pré-pregão:** 1x antes da abertura;\n"
-        "- **Intraday radar:** a cada 15 minutos;\n"
-        "- **Posições abertas:** a cada 5 a 15 minutos, se houver dados confiáveis;\n"
-        "- **Pós-fechamento:** 1x após o fechamento."
+        "- **Pré-pregão:** diário às 09:30 (Brasília), 30 minutos antes da abertura;\n"
+        "- **Intraday radar:** a cada 15 minutos entre 10:00 e 17:45 (posições e monitoramento entram nessas rodadas);\n"
+        "- **Pós-fechamento:** às 18:30, com coleta EOD de opções e digest;\n"
+        "- **Descoberta do universo de opções:** aos domingos às 07:00.\n\n"
+        "Horários do GitHub Actions convertidos de UTC (12:30, 13:00–20:45 e 21:30 UTC; domingo 10:00 UTC). "
+        "Sem Actions, use os botões desta aba ou os scripts locais."
     )
     routine_status = get_last_update_summary()
     routine_rows = []
@@ -304,7 +307,7 @@ def _render_routines() -> None:
         routine_rows.append(
             {
                 "Modo": mode,
-                "Última execução": execution.get("finished_at", "nunca"),
+                "Última execução": format_dt(execution.get("finished_at"), "nunca"),
                 "Runner": execution.get("runner", "indisponível"),
                 "Sucesso": "sim" if success is True else "não" if success is False else "indisponível",
                 "Incompletos": execution.get("incomplete_count", 0),
@@ -371,7 +374,7 @@ def _render_real_healthbox() -> None:
                     "Campos ausentes": ", ".join(snapshot.get("campos_ausentes", [])) or "nenhum",
                     "Fonte": snapshot.get("fonte"),
                     "Tipo do dado": snapshot.get("tipo_dado"),
-                    "Coleta": snapshot.get("coleta"),
+                    "Coleta": format_dt(snapshot.get("coleta"), "nenhuma"),
                 }
             )
         st.dataframe(pd.DataFrame(rows).astype(str), width="stretch", hide_index=True)
@@ -391,7 +394,7 @@ def _render_sources_registry() -> None:
             "Custo": source["custo"],
             "Frequência esperada": source["frequencia_esperada"],
             "Confiabilidade": source["confiabilidade"],
-            "Última coleta": source["ultima_coleta"] or "nunca coletado",
+            "Última coleta": format_dt(source.get("ultima_coleta"), "nunca coletado"),
             "Observação": source["observacao"],
         }
         for source in sources

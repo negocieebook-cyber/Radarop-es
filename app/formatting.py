@@ -2,7 +2,17 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+import re
+from datetime import datetime, timedelta, timezone
+
+try:
+    from zoneinfo import ZoneInfo
+
+    BRASILIA_TZ = ZoneInfo("America/Sao_Paulo")
+except Exception:
+    BRASILIA_TZ = timezone(timedelta(hours=-3))
+
+_DATE_ONLY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def _parse_dt(value: object) -> datetime | None:
@@ -15,16 +25,22 @@ def _parse_dt(value: object) -> datetime | None:
             parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
         except (TypeError, ValueError):
             return None
-    if parsed.tzinfo is None:
-        parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed
 
 
 def format_dt(value: object, fallback: str = "indisponível") -> str:
+    if isinstance(value, str):
+        trimmed = value.strip()
+        if _DATE_ONLY_RE.match(trimmed):
+            return f"{trimmed[8:10]}/{trimmed[5:7]}/{trimmed[0:4]}"
     parsed = _parse_dt(value)
     if parsed is None:
+        if isinstance(value, str) and value.strip():
+            return value.strip()
         return fallback
-    return parsed.strftime("%d/%m/%Y %H:%M")
+    if parsed.tzinfo is None:
+        return parsed.strftime("%d/%m/%Y %H:%M")
+    return parsed.astimezone(BRASILIA_TZ).strftime("%d/%m/%Y %H:%M (Brasília)")
 
 
 def format_dt_relative(value: object, fallback: str = "indisponível") -> str:
