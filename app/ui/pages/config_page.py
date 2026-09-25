@@ -295,8 +295,9 @@ def _render_routines() -> None:
         "- **Pré-pregão:** diário às 09:30 (Brasília), 30 minutos antes da abertura;\n"
         "- **Intraday radar:** a cada 15 minutos entre 10:00 e 17:45 (posições e monitoramento entram nessas rodadas);\n"
         "- **Pós-fechamento:** às 18:30, com coleta EOD de opções e digest;\n"
+        "- **Retry de opções EOD:** às 20:30, caso a fonte não tenha processado o fechamento na rodada anterior;\n"
         "- **Descoberta do universo de opções:** aos domingos às 07:00.\n\n"
-        "Horários do GitHub Actions convertidos de UTC (12:30, 13:00–20:45 e 21:30 UTC; domingo 10:00 UTC). "
+        "Horários do GitHub Actions convertidos de UTC (12:30, 13:00–20:45, 21:30 e 23:30 UTC; domingo 10:00 UTC). "
         "Sem Actions, use os botões desta aba ou os scripts locais."
     )
     routine_status = get_last_update_summary()

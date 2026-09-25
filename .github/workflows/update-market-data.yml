@@ -14,10 +14,11 @@ on:
           - intraday
           - close
   schedule:
-    - cron: "30 12 * * 1-5"   # Pré-pregão: 12:30 UTC
-    - cron: "*/15 13-20 * * 1-5" # Intraday: 13:00–20:45 UTC
-    - cron: "30 21 * * 1-5"   # Pós-fechamento: 21:30 UTC
-    - cron: "0 10 * * 0"      # Descoberta semanal de opções: domingo 10:00 UTC
+    - cron: "30 12 * * 1-5"   # Pré-pregão: 12:30 UTC (09:30 Brasília)
+    - cron: "*/15 13-20 * * 1-5" # Intraday: 13:00–20:45 UTC (10:00–17:45 Brasília)
+    - cron: "30 21 * * 1-5"   # Pós-fechamento: 21:30 UTC (18:30 Brasília)
+    - cron: "30 23 * * 1-5"   # Retry de opções EOD: 23:30 UTC (20:30 Brasília)
+    - cron: "0 10 * * 0"      # Descoberta semanal de opções: domingo 10:00 UTC (07:00 Brasília)
 
 permissions:
   contents: write
@@ -28,7 +29,7 @@ concurrency:
 
 jobs:
   update:
-    if: github.event.schedule != '0 10 * * 0'
+    if: github.event.schedule != '0 10 * * 0' && github.event.schedule != '30 23 * * 1-5'
     runs-on: ubuntu-latest
     env:
       BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
@@ -165,3 +166,37 @@ jobs:
           path: data/runtime/options_universe_availability.json
           if-no-files-found: error
           retention-days: 14
+
+  options-eod-retry:
+    # Segunda tentativa de opções EOD: a fonte pode processar o fechamento
+    # mais tarde que a rodada das 18:30 (Brasília). Reescreve o snapshot e o
+    # histórico do mesmo dia, sem duplicar registros.
+    if: github.event.schedule == '30 23 * * 1-5'
+    runs-on: ubuntu-latest
+    env:
+      BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+      DATA_PROVIDER: brapi
+      ALLOW_MOCK_FALLBACK: "false"
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Instalar dependências
+        run: python -m pip install -r requirements.txt
+      - name: Reprocessar opções EOD
+        run: python scripts/update_options_data.py --mode close
+      - name: Commitar snapshots de opções
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/runtime/options_snapshots/ data/runtime/options_eod_status.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nenhum snapshot novo para commitar."
+          else
+            git commit -m "Retry de opções EOD via update-market-data"
+            git push
+          fi

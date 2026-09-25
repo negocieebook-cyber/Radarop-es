@@ -29,7 +29,10 @@ As agendas rodam de segunda a sexta-feira:
 
 - pré-pregão: 12:30 UTC;
 - intraday: a cada 15 minutos, de 13:00 até 20:45 UTC;
-- pós-fechamento: 21:30 UTC.
+- pós-fechamento: 21:30 UTC;
+- retry de opções EOD: 23:30 UTC (job `options-eod-retry`, só opções).
+
+O job de retry reprocessa apenas as cadeias de opções EOD por volta das 20:30 em Brasília, caso a fonte não tenha processado o fechamento na rodada das 18:30. Ele reescreve o snapshot e o histórico do mesmo dia e commita os arquivos de opções; não envia o digest nem repete a atualização de mercado.
 
 Os horários do GitHub Actions são UTC. Brasília normalmente está em UTC-3; revise as agendas caso o horário desejado ou as regras de mercado mudem. Execuções agendadas podem começar com atraso em períodos de alta demanda do GitHub.
 
