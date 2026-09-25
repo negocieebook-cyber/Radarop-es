@@ -19,7 +19,7 @@ O digest (montado em `app/notify_engine.py`) resume, com status honesto e sem da
 
 - atualização de mercado, de opções EOD e do pipeline (status, horário e fonte);
 - cotações no banco da fonte (se o fechamento de hoje já foi coletado);
-- contagens do Radar EOD (estudar, atenção, evitar, inconclusivo, entrada condicional, acompanhar na abertura);
+- contagens do Radar de Fechamento (estudar, atenção, evitar, inconclusivo, entrada condicional, acompanhar na abertura);
 - watchlist da Abertura em andamento, posições registradas e retrospectiva estimada.
 
 ## Formas de envio

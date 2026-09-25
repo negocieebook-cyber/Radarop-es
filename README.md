@@ -6,7 +6,7 @@ O deploy usa Streamlit em um container Vercel. Arquivos gravados em `data/runtim
 
 Dashboard diária para apoiar a análise de oportunidades em opções do mercado brasileiro. O projeto organiza informações de liquidez, risco, vencimento, strikes, prêmio, break-even, perda e ganho máximos, leitura gráfica, Stock Healthbox e referências do ThePatternSite/Bulkowski.
 
-> **Estado atual:** mercado e opções EOD são reais — cadeias via opcoes.net.br (gratuita) com fallback brapi — e o Radar EOD cruza Healthbox real com as cadeias em uma camada experimental de decisão. Posições manuais são marcadas com preço real EOD, a Retrospectiva fecha o ciclo das candidatas vencidas e o digest diário pode ir para o Telegram. Nada disso é tempo real e nenhuma ordem é enviada.
+> **Estado atual:** mercado e opções EOD são reais — cadeias via opcoes.net.br (gratuita) com fallback brapi — e o Radar de Fechamento cruza Healthbox real com as cadeias em uma camada experimental de decisão. Posições manuais são marcadas com preço real EOD, a Retrospectiva fecha o ciclo das candidatas vencidas e o digest diário pode ir para o Telegram. Nada disso é tempo real e nenhuma ordem é enviada.
 
 ## Objetivo
 
@@ -18,7 +18,7 @@ A navegação é única na sidebar, com 11 páginas servidas pelo `app.py`:
 
 - **Visão geral** — Painel de Decisão com leitura rápida do que olhar primeiro;
 - **Terminal** — motor unificado por ativo (contexto, Healthbox, estratégia, calendário, alertas);
-- **Radar EOD** — candidatas reais condicionais, funil diagnóstico, quase entradas e auditoria;
+- **Radar de Fechamento** — candidatas reais condicionais calculadas com o fechamento (EOD), funil diagnóstico, quase entradas e auditoria;
 - **Radar Gráfico** — teses de regiões, prioridades por objetivo, diagnóstico e quase setups;
 - **Radar de Mercado** — snapshots reais brapi com Healthbox por ativo e status de coleta;
 - **Teses** — watchlist gráfica persistente com gatilho, proximidade e invalidação;

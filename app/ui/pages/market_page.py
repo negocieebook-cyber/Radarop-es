@@ -1,4 +1,4 @@
-"""Páginas do Radar de Mercado e do Radar EOD real."""
+"""Páginas do Radar de Mercado e do Radar de Fechamento (oportunidades reais EOD)."""
 
 from __future__ import annotations
 

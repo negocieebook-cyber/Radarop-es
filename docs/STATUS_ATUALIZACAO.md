@@ -37,4 +37,4 @@ Essa classificação é apenas informativa e ainda não bloqueia nenhuma ação.
 
 ## Camada de decisão real EOD
 
-O Radar EOD cruza snapshots de mercado, Healthbox real e cadeias de opções EOD em uma camada experimental de decisão com bloqueios e avisos honestos: preço EOD não é executável, candidatas devem ser confirmadas no pregão e nenhuma ordem é enviada. Os motores MOCK / EXEMPLO continuam disponíveis na página Demonstração, separados sem mistura silenciosa de fontes.
+O Radar de Fechamento cruza snapshots de mercado, Healthbox real e cadeias de opções EOD em uma camada experimental de decisão com bloqueios e avisos honestos: preço EOD não é executável, candidatas devem ser confirmadas no pregão e nenhuma ordem é enviada. Os motores MOCK / EXEMPLO continuam disponíveis na página Demonstração, separados sem mistura silenciosa de fontes.

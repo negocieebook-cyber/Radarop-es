@@ -151,7 +151,7 @@ def build_daily_digest() -> tuple[str, dict[str, Any]]:
         )
     lines += [
         "",
-        "Radar EOD (última rodada):",
+        "Radar de Fechamento (última rodada):",
         f"  estudar: {opportunities.get('estudar', 0) if opportunities else 'indisponível'} · atenção: {opportunities.get('atenção', 0) if opportunities else 'indisponível'} · evitar: {opportunities.get('evitar', 0) if opportunities else 'indisponível'} · inconclusivo: {opportunities.get('inconclusivo', 0) if opportunities else 'indisponível'}",
         f"  entrada condicional: {opportunities.get('entrada_condicional', 0) if opportunities else 'indisponível'} · acompanhar na abertura: {opportunities.get('acompanhar_na_abertura', 0) if opportunities else 'indisponível'}",
         "",

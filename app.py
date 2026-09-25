@@ -23,7 +23,7 @@ from app.ui.pages.retrospective_page import retrospective_page
 from app.ui.pages.config_page import configuration_page
 
 PAGE_GROUPS: list[tuple[str, list[str]]] = [
-    ("Painel", ["Visão geral", "Radar EOD", "Radar de Mercado"]),
+    ("Painel", ["Visão geral", "Radar de Fechamento", "Radar de Mercado"]),
     ("Análise", ["Terminal", "Radar Gráfico"]),
     ("Acompanhamento", ["Eventos", "Posições", "Retrospectiva"]),
     ("Ferramentas", ["Simulador", "Demonstração"]),
@@ -32,7 +32,7 @@ PAGE_GROUPS: list[tuple[str, list[str]]] = [
 
 PAGE_TITLES = {
     "Visão geral": "Painel de decisão",
-    "Radar EOD": "Radar EOD",
+    "Radar de Fechamento": "Radar de Fechamento",
     "Radar de Mercado": "Radar de Mercado",
     "Terminal": "Terminal",
     "Radar Gráfico": "Radar Gráfico",
@@ -46,11 +46,11 @@ PAGE_TITLES = {
 
 PAGE_DESCRIPTIONS = {
     "Visão geral": "Página inicial: o que merece atenção hoje, quantas oportunidades estão prontas ou esperando gatilho e se os dados estão atualizados. Comece por aqui.",
-    "Radar EOD": "Lista de oportunidades calculadas com o fechamento de ontem (EOD). Cada card mostra estratégia, gatilho e invalidação. Confira no pregão antes de decidir; não é ordem.",
+    "Radar de Fechamento": "Oportunidades calculadas com o fechamento de ontem (dados EOD, fim de pregão). Cada card mostra estratégia, gatilho e invalidação. Confira no pregão antes de decidir; não é ordem.",
     "Radar de Mercado": "Foto do mercado por ativo: preço, variação do dia, tendência e nota de saúde (Healthbox). Serve para entender o cenário, não para recomendar.",
     "Terminal": "Digite um ativo (ex.: PETR4) e veja tudo sobre ele numa tela: preço, saúde, estratégia que combinaria, eventos próximos e alertas.",
     "Radar Gráfico": "Ideias baseadas em regiões do gráfico (suporte, resistência, rompimento), ranqueadas por objetivo. Na segunda aba ficam as que você marcou para acompanhar.",
-    "Eventos": "Candidatas que você salvou do Radar EOD, prontas para conferir na abertura do pregão, com preço de referência e regras de invalidação.",
+    "Eventos": "Candidatas que você salvou do Radar de Fechamento, prontas para conferir na abertura do pregão, com preço de referência e regras de invalidação.",
     "Posições": "Suas posições registradas (exemplo e entradas manuais), com lucro/prejuízo acompanhado. Na aba Alertas, avisos de saída e de revisão.",
     "Retrospectiva": "O que aconteceu com as candidatas da Abertura que venceram: resultado estimado com o fechamento do ativo no vencimento. Aprendizado, não relatório de execução.",
     "Simulador": "Calculadora de opções: digite strikes e prêmios e veja perda máxima, ganho máximo e break-even. Na aba Histórico ficam suas decisões. Não envia ordens.",
@@ -64,7 +64,7 @@ PAGE_HOW_TO = {
         "Veja a leitura operacional: o que validar, acompanhar ou evitar",
         "Clique em Detalhes ou Simular no que interessar",
     ],
-    "Radar EOD": [
+    "Radar de Fechamento": [
         "Leia os cards: gatilho é a condição para a ideia valer",
         "Salve as que fizerem sentido em Acompanhar",
         "Confira-as amanhã em Eventos antes da abertura",
@@ -117,7 +117,7 @@ PAGE_HOW_TO = {
 }
 
 REAL_BADGE_PAGES = {
-    "Visão geral", "Radar EOD", "Radar Gráfico", "Radar de Mercado",
+    "Visão geral", "Radar de Fechamento", "Radar Gráfico", "Radar de Mercado",
     "Eventos", "Posições", "Retrospectiva", "Simulador", "Terminal",
 }
 
@@ -150,7 +150,7 @@ def main() -> None:
 
     render_page_header(
         PAGE_TITLES.get(page, page),
-        "DADOS REAIS EOD / EXPERIMENTAL" if page in REAL_BADGE_PAGES else "DADOS MOCK / EXEMPLO",
+        "DADOS REAIS / FECHAMENTO / EXPERIMENTAL" if page in REAL_BADGE_PAGES else "DADOS MOCK / EXEMPLO",
         PAGE_DESCRIPTIONS.get(page, ""),
         PAGE_HOW_TO.get(page),
     )
@@ -158,7 +158,7 @@ def main() -> None:
 
     routes = {
         "Visão geral": decision_panel_page,
-        "Radar EOD": real_eod_opportunities_page,
+        "Radar de Fechamento": real_eod_opportunities_page,
         "Radar de Mercado": show_real_market_radar,
         "Terminal": render_terminal_page,
         "Radar Gráfico": radar_grafico_page,

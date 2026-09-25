@@ -396,7 +396,7 @@ def render_options_eod_status_card(status: dict) -> None:
 def render_real_opportunity_card(item: dict, key_suffix: str = "") -> str | None:
     action_item = {
         "card_key": f'{item.get("ativo")}_{item.get("estrategia")}_{item.get("vencimento")}{key_suffix}',
-        "source_label": "RADAR EOD",
+        "source_label": "RADAR DE FECHAMENTO",
         "ativo": item.get("ativo"),
         "action_status": item.get("conditional_status") or item.get("status"),
         "action_label": item.get("conditional_decision") or item.get("conditional_status"),
@@ -529,7 +529,7 @@ def render_real_engine_status_card(options_snapshots: dict, last_summary: dict |
         symbol for symbol, snapshot in options_snapshots.items() if not snapshot.get("success") or not snapshot.get("series")
     ]
     st.markdown(
-        f'<div class="section-card"><div class="small-label">RADAR EOD</div>'
+        f'<div class="section-card"><div class="small-label">RADAR DE FECHAMENTO</div>'
         f'<p><span class="status-badge status-info">gerado</span></p>'
         f'<p><b>Candidatas na última geração:</b> {summary.get("candidates", 0)} · <b>Evitar:</b> {summary.get("evitar", 0)} · '
         f'<b>Inconclusivas:</b> {summary.get("inconclusivo", 0)}<br><b>Ativos sem acesso/dados:</b> {_escape(", ".join(unavailable) or "nenhum")}</p></div>',

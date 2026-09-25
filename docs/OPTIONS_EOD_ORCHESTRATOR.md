@@ -36,4 +36,4 @@ Cada série mantém `campos_ausentes`. Bid, ask, gregas, IV, OI ou qualquer outr
 
 ## Limite atual
 
-Os snapshots reais alimentam a camada experimental de decisão (Radar EOD, marcação de posições e retrospectiva), que permanece sujeita à validação no pregão e não envia ordens. Os próximos passos são ampliar cobertura de ativos, melhorar leitura de liquidez e avaliar dados intraday se necessário.
+Os snapshots reais alimentam a camada experimental de decisão (Radar de Fechamento, marcação de posições e retrospectiva), que permanece sujeita à validação no pregão e não envia ordens. Os próximos passos são ampliar cobertura de ativos, melhorar leitura de liquidez e avaliar dados intraday se necessário.
