@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T23:33:49.418481+00:00",
+  "generated_at": "2026-09-25T23:59:44.110891+00:00",
   "mode": "close",
   "source": "brapi_market_snapshots",
   "tickers": [
@@ -115,7 +115,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.757120+00:00"
+        "coleta": "2026-09-25T23:59:24.001542+00:00"
       },
       "healthbox_score": 75,
       "rvol": 0.6627,
@@ -148,7 +148,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.757120+00:00",
+      "coleta": "2026-09-25T23:59:24.001542+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_compra",
@@ -2990,7 +2990,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.075318+00:00"
+        "coleta": "2026-09-25T23:59:25.800149+00:00"
       },
       "healthbox_score": 75,
       "rvol": 0.7237,
@@ -3023,7 +3023,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.075318+00:00",
+      "coleta": "2026-09-25T23:59:25.800149+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_compra",
@@ -5864,7 +5864,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.909136+00:00"
+        "coleta": "2026-09-25T23:59:24.111345+00:00"
       },
       "healthbox_score": 85,
       "rvol": 0.9216,
@@ -5897,7 +5897,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.909136+00:00",
+      "coleta": "2026-09-25T23:59:24.111345+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_compra",
@@ -8836,7 +8836,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.573327+00:00"
+        "coleta": "2026-09-25T23:59:24.653094+00:00"
       },
       "healthbox_score": 60,
       "rvol": 0.5283,
@@ -8869,7 +8869,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.573327+00:00",
+      "coleta": "2026-09-25T23:59:24.653094+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -11665,7 +11665,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.602139+00:00"
+        "coleta": "2026-09-25T23:59:23.901499+00:00"
       },
       "healthbox_score": 85,
       "rvol": 0.9319,
@@ -11698,7 +11698,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.602139+00:00",
+      "coleta": "2026-09-25T23:59:23.901499+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -14635,7 +14635,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.482342+00:00"
+        "coleta": "2026-09-25T23:59:23.787297+00:00"
       },
       "healthbox_score": 85,
       "rvol": 1.1132,
@@ -14668,7 +14668,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.482342+00:00",
+      "coleta": "2026-09-25T23:59:23.787297+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -17458,7 +17458,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.303466+00:00"
+        "coleta": "2026-09-25T23:59:24.432051+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.7493,
@@ -17491,7 +17491,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.303466+00:00",
+      "coleta": "2026-09-25T23:59:24.432051+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -20252,7 +20252,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.355984+00:00"
+        "coleta": "2026-09-25T23:59:23.683613+00:00"
       },
       "healthbox_score": 67,
       "rvol": 0.7773,
@@ -20285,7 +20285,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.355984+00:00",
+      "coleta": "2026-09-25T23:59:23.683613+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -23088,7 +23088,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:28.244164+00:00"
+        "coleta": "2026-09-25T23:59:25.159930+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.6682,
@@ -23121,7 +23121,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.244164+00:00",
+      "coleta": "2026-09-25T23:59:25.159930+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -25870,7 +25870,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:28.514719+00:00"
+        "coleta": "2026-09-25T23:59:25.358900+00:00"
       },
       "healthbox_score": 61,
       "rvol": 1.1049,
@@ -25903,7 +25903,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.514719+00:00",
+      "coleta": "2026-09-25T23:59:25.358900+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -28804,7 +28804,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:28.378728+00:00"
+        "coleta": "2026-09-25T23:59:25.258816+00:00"
       },
       "healthbox_score": 62,
       "rvol": 0.8963,
@@ -28837,7 +28837,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.378728+00:00",
+      "coleta": "2026-09-25T23:59:25.258816+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -31736,7 +31736,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.214283+00:00"
+        "coleta": "2026-09-25T23:59:23.582887+00:00"
       },
       "healthbox_score": 57,
       "rvol": 0.7871,
@@ -31769,7 +31769,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.214283+00:00",
+      "coleta": "2026-09-25T23:59:23.582887+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -34628,7 +34628,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.607501+00:00"
+        "coleta": "2026-09-25T23:59:26.232332+00:00"
       },
       "healthbox_score": 57,
       "rvol": 0.5006,
@@ -34661,7 +34661,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.607501+00:00",
+      "coleta": "2026-09-25T23:59:26.232332+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -37523,7 +37523,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:28.097417+00:00"
+        "coleta": "2026-09-25T23:59:25.054108+00:00"
       },
       "healthbox_score": 62,
       "rvol": 1.0536,
@@ -37556,7 +37556,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.097417+00:00",
+      "coleta": "2026-09-25T23:59:25.054108+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -40352,7 +40352,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.063248+00:00"
+        "coleta": "2026-09-25T23:59:23.477371+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.5041,
@@ -40385,7 +40385,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.063248+00:00",
+      "coleta": "2026-09-25T23:59:23.477371+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -43132,7 +43132,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.880029+00:00"
+        "coleta": "2026-09-25T23:59:26.473912+00:00"
       },
       "healthbox_score": 59,
       "rvol": 0.517,
@@ -43165,7 +43165,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.880029+00:00",
+      "coleta": "2026-09-25T23:59:26.473912+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -46023,7 +46023,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.847358+00:00"
+        "coleta": "2026-09-25T23:59:24.846543+00:00"
       },
       "healthbox_score": 61,
       "rvol": 0.5588,
@@ -46056,7 +46056,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.847358+00:00",
+      "coleta": "2026-09-25T23:59:24.846543+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -48854,7 +48854,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.705689+00:00"
+        "coleta": "2026-09-25T23:59:24.747088+00:00"
       },
       "healthbox_score": 54,
       "rvol": 0.6971,
@@ -48887,7 +48887,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.705689+00:00",
+      "coleta": "2026-09-25T23:59:24.747088+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -51638,7 +51638,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.451698+00:00"
+        "coleta": "2026-09-25T23:59:24.554471+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.397,
@@ -51671,7 +51671,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.451698+00:00",
+      "coleta": "2026-09-25T23:59:24.554471+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -54432,7 +54432,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:30.013522+00:00"
+        "coleta": "2026-09-25T23:59:26.571162+00:00"
       },
       "healthbox_score": 82,
       "rvol": 1.4231,
@@ -54465,7 +54465,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:30.013522+00:00",
+      "coleta": "2026-09-25T23:59:26.571162+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -57201,7 +57201,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.040588+00:00"
+        "coleta": "2026-09-25T23:59:24.218258+00:00"
       },
       "healthbox_score": 77,
       "rvol": 0.9194,
@@ -57234,7 +57234,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.040588+00:00",
+      "coleta": "2026-09-25T23:59:24.218258+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -59873,7 +59873,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.332285+00:00"
+        "coleta": "2026-09-25T23:59:26.015340+00:00"
       },
       "healthbox_score": 77,
       "rvol": 0.9328,
@@ -59906,7 +59906,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.332285+00:00",
+      "coleta": "2026-09-25T23:59:26.015340+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -62642,7 +62642,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.169557+00:00"
+        "coleta": "2026-09-25T23:59:24.329680+00:00"
       },
       "healthbox_score": 67,
       "rvol": 0.8897,
@@ -62675,7 +62675,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.169557+00:00",
+      "coleta": "2026-09-25T23:59:24.329680+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -65310,7 +65310,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.478072+00:00"
+        "coleta": "2026-09-25T23:59:26.124110+00:00"
       },
       "healthbox_score": 67,
       "rvol": 0.4096,
@@ -65343,7 +65343,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.478072+00:00",
+      "coleta": "2026-09-25T23:59:26.124110+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -67984,7 +67984,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.970755+00:00"
+        "coleta": "2026-09-25T23:59:24.949266+00:00"
       },
       "healthbox_score": 61,
       "rvol": 0.9645,
@@ -68017,7 +68017,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.970755+00:00",
+      "coleta": "2026-09-25T23:59:24.949266+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -70654,7 +70654,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:28.648236+00:00"
+        "coleta": "2026-09-25T23:59:25.473804+00:00"
       },
       "healthbox_score": 61,
       "rvol": 0.6753,
@@ -70687,7 +70687,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.648236+00:00",
+      "coleta": "2026-09-25T23:59:25.473804+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -73430,7 +73430,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.739177+00:00"
+        "coleta": "2026-09-25T23:59:26.340208+00:00"
       },
       "healthbox_score": 51,
       "rvol": 0.5145,
@@ -73463,7 +73463,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.739177+00:00",
+      "coleta": "2026-09-25T23:59:26.340208+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -76165,7 +76165,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "indisponível",
-        "coleta": "2026-09-25T23:33:28.794727+00:00"
+        "coleta": "2026-09-25T23:59:25.581401+00:00"
       },
       "healthbox_score": null,
       "rvol": null,
@@ -76203,7 +76203,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.794727+00:00",
+      "coleta": "2026-09-25T23:59:25.581401+00:00",
       "tipo_dado": "indisponível",
       "data_frequency": "EOD",
       "status": "inconclusiva",
@@ -84507,7 +84507,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.909136+00:00"
+        "coleta": "2026-09-25T23:59:24.111345+00:00"
       },
       "healthbox_score": 85,
       "rvol": 0.9216,
@@ -84540,7 +84540,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.909136+00:00",
+      "coleta": "2026-09-25T23:59:24.111345+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_compra",
@@ -87479,7 +87479,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.602139+00:00"
+        "coleta": "2026-09-25T23:59:23.901499+00:00"
       },
       "healthbox_score": 85,
       "rvol": 0.9319,
@@ -87512,7 +87512,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.602139+00:00",
+      "coleta": "2026-09-25T23:59:23.901499+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -90449,7 +90449,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.075318+00:00"
+        "coleta": "2026-09-25T23:59:25.800149+00:00"
       },
       "healthbox_score": 75,
       "rvol": 0.7237,
@@ -90482,7 +90482,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.075318+00:00",
+      "coleta": "2026-09-25T23:59:25.800149+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_compra",
@@ -93323,7 +93323,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.757120+00:00"
+        "coleta": "2026-09-25T23:59:24.001542+00:00"
       },
       "healthbox_score": 75,
       "rvol": 0.6627,
@@ -93356,7 +93356,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.757120+00:00",
+      "coleta": "2026-09-25T23:59:24.001542+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_compra",
@@ -96198,7 +96198,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:26.482342+00:00"
+        "coleta": "2026-09-25T23:59:23.787297+00:00"
       },
       "healthbox_score": 85,
       "rvol": 1.1132,
@@ -96231,7 +96231,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:26.482342+00:00",
+      "coleta": "2026-09-25T23:59:23.787297+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -99020,7 +99020,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.573327+00:00"
+        "coleta": "2026-09-25T23:59:24.653094+00:00"
       },
       "healthbox_score": 60,
       "rvol": 0.5283,
@@ -99053,7 +99053,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.573327+00:00",
+      "coleta": "2026-09-25T23:59:24.653094+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -101847,7 +101847,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:29.880029+00:00"
+        "coleta": "2026-09-25T23:59:26.473912+00:00"
       },
       "healthbox_score": 59,
       "rvol": 0.517,
@@ -101880,7 +101880,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:29.880029+00:00",
+      "coleta": "2026-09-25T23:59:26.473912+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -104738,7 +104738,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.705689+00:00"
+        "coleta": "2026-09-25T23:59:24.747088+00:00"
       },
       "healthbox_score": 54,
       "rvol": 0.6971,
@@ -104771,7 +104771,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.705689+00:00",
+      "coleta": "2026-09-25T23:59:24.747088+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -107523,7 +107523,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:27.303466+00:00"
+        "coleta": "2026-09-25T23:59:24.432051+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.7493,
@@ -107556,7 +107556,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:27.303466+00:00",
+      "coleta": "2026-09-25T23:59:24.432051+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -110315,7 +110315,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-09-25T23:33:28.514719+00:00"
+        "coleta": "2026-09-25T23:59:25.358900+00:00"
       },
       "healthbox_score": 61,
       "rvol": 1.1049,
@@ -110348,7 +110348,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-09-25T23:33:28.514719+00:00",
+      "coleta": "2026-09-25T23:59:25.358900+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
