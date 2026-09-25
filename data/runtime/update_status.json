@@ -3,14 +3,18 @@
     "intraday": {
       "success": true,
       "mode": "intraday",
-      "runner": "local_script",
-      "started_at": "2026-09-25T02:16:43.018226+00:00",
-      "finished_at": "2026-09-25T02:16:51.331298+00:00",
-      "total_tickers": 8,
+      "runner": "github_actions",
+      "started_at": "2026-09-25T17:24:23.581218+00:00",
+      "finished_at": "2026-09-25T17:24:28.342339+00:00",
+      "total_tickers": 30,
       "updated_count": 0,
-      "incomplete_count": 8,
-      "error_count": 0,
-      "errors": [],
+      "incomplete_count": 27,
+      "error_count": 3,
+      "errors": [
+        "ELET3: dados indisponíveis",
+        "ELET6: dados indisponíveis",
+        "CPLE6: dados indisponíveis"
+      ],
       "source": "brapi",
       "opportunity_engine_status": "MOCK / EXEMPLO"
     },
