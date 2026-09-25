@@ -1,0 +1,40 @@
+{
+  "last_updates": {
+    "intraday": {
+      "success": true,
+      "mode": "intraday",
+      "runner": "local_script",
+      "started_at": "2026-09-25T02:16:43.018226+00:00",
+      "finished_at": "2026-09-25T02:16:51.331298+00:00",
+      "total_tickers": 8,
+      "updated_count": 0,
+      "incomplete_count": 8,
+      "error_count": 0,
+      "errors": [],
+      "source": "brapi",
+      "opportunity_engine_status": "MOCK / EXEMPLO"
+    },
+    "close": {
+      "success": true,
+      "mode": "close",
+      "runner": "local_script",
+      "started_at": "2026-09-25T02:27:01.947764+00:00",
+      "finished_at": "2026-09-25T02:27:23.427278+00:00",
+      "total_tickers": 30,
+      "updated_count": 0,
+      "incomplete_count": 27,
+      "error_count": 3,
+      "errors": [
+        "ELET3: dados indisponíveis",
+        "ELET6: dados indisponíveis",
+        "CPLE6: dados indisponíveis"
+      ],
+      "source": "brapi",
+      "opportunity_engine_status": "MOCK / EXEMPLO"
+    }
+  },
+  "last_error": "CPLE6: dados indisponíveis",
+  "notes": [
+    "Arquivo inicial. Nenhuma atualização automática executada ainda."
+  ]
+}

@@ -2,7 +2,15 @@
 .env.*
 !.env.example
 data/cache/*.json
-data/runtime/
+data/runtime/*
+!data/runtime/market_snapshots.json
+!data/runtime/update_status.json
+!data/runtime/real_opportunities_snapshot.json
+!data/runtime/graphical_theses_snapshot.json
+!data/runtime/options_universe_availability.json
+!data/runtime/options_eod_status.json
+!data/runtime/options_data_audit_report.json
+!data/runtime/options_snapshots/
 __pycache__/
 *.py[cod]
 .pytest_cache/

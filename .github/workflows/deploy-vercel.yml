@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "data/runtime/**"
+      - "docs/**"
   workflow_dispatch:
 
 permissions:
@@ -41,6 +44,22 @@ jobs:
             echo "Secrets VERCEL_TOKEN, VERCEL_ORG_ID ou VERCEL_PROJECT_ID ausentes."
             exit 1
           fi
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Gerar snapshots frescos para a imagem
+        env:
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+          DATA_PROVIDER: brapi
+        continue-on-error: true
+        run: |
+          python -m pip install -r requirements.txt
+          python scripts/run_pipeline.py --mode intraday
+          echo "Snapshots gerados. Sem token, a imagem parte vazia e o app coleta sob demanda."
 
       - name: Publicar produção
         env:

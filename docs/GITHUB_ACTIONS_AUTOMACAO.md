@@ -14,8 +14,12 @@ Em cada execução, o GitHub Actions:
 2. instala `requirements.txt`;
 3. confirma que o secret `BRAPI_TOKEN` existe, sem imprimir seu valor;
 4. escolhe o modo `premarket`, `intraday` ou `close`;
-5. executa `python scripts/update_market_data.py --mode <modo>`;
-6. adiciona somente os dois JSONs de runtime e cria o commit `Atualiza snapshots de mercado` quando houver mudanças.
+5. executa `python scripts/run_pipeline.py --mode <modo>`;
+6. salva artefato privado de `data/runtime/` e commita somente os JSONs de runtime previstos (market, update_status, oportunidades reais, teses gráficas, universo de opções, status de opções EOD e snapshots por ativo) quando houver mudanças.
+
+Commits de snapshots não disparam deploy novo: o workflow de deploy ignora caminhos em `data/runtime/` e `docs/`.
+
+No domingo 10:00 UTC, um job separado roda `scripts/discover_options_universe.py --limit 30` e guarda o mapa de disponibilidade como artefato.
 
 Se a brapi falhar, o orchestrator registra a falha em `update_status.json`. O workflow ainda tenta salvar esse estado no repositório e, em seguida, termina com erro visível. O fallback mock fica desativado na automação e nenhum dado é inventado.
 
@@ -51,7 +55,11 @@ Abra a aba **Actions**, selecione **Atualizar dados de mercado**, clique em **Ru
 ## Arquivos atualizados
 
 - `data/runtime/market_snapshots.json`: último conjunto de snapshots reais coletados;
-- `data/runtime/update_status.json`: resultado por modo, horários e eventual erro da coleta.
+- `data/runtime/update_status.json`: resultado por modo, horários e eventual erro da coleta;
+- `data/runtime/real_opportunities_snapshot.json`: oportunidades condicionais EOD;
+- `data/runtime/graphical_theses_snapshot.json`: teses gráficas de regiões;
+- `data/runtime/options_universe_availability.json`: disponibilidade real de opções;
+- `data/runtime/options_eod_status.json` e `data/runtime/options_snapshots/`: estado e cadeias EOD por ativo.
 
 A dashboard lê o último snapshot salvo. Isso é atualização automática periódica, não streaming nem tempo real: entre duas execuções, o conteúdo permanece igual. O GitHub Actions também pode atrasar, sofrer limites de uso, indisponibilidade externa ou conflitos com proteções da branch. Se a branch exigir revisão ou bloquear pushes do bot, será necessário ajustar as permissões do repositório.
 

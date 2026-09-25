@@ -20,7 +20,7 @@ on:
     - cron: "0 10 * * 0"      # Descoberta semanal de opções: domingo 10:00 UTC
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: update-market-data
@@ -101,6 +101,21 @@ jobs:
           path: data/runtime/
           if-no-files-found: warn
           retention-days: 7
+
+      - name: Commitar snapshots persistidos
+        if: always()
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/runtime/market_snapshots.json data/runtime/update_status.json data/runtime/real_opportunities_snapshot.json data/runtime/graphical_theses_snapshot.json data/runtime/options_universe_availability.json data/runtime/options_eod_status.json data/runtime/options_snapshots/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nenhum snapshot novo para commitar."
+          else
+            git commit -m "Snapshots $MODE via update-market-data"
+            git push
+          fi
 
       - name: Sinalizar falha da atualização
         if: steps.market_update.outcome == 'failure'

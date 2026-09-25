@@ -306,9 +306,9 @@ def render_options_eod_status_card(status: dict) -> None:
     )
 
 
-def render_real_opportunity_card(item: dict) -> str | None:
+def render_real_opportunity_card(item: dict, key_suffix: str = "") -> str | None:
     action_item = {
-        "card_key": f'{item.get("ativo")}_{item.get("estrategia")}_{item.get("vencimento")}',
+        "card_key": f'{item.get("ativo")}_{item.get("estrategia")}_{item.get("vencimento")}{key_suffix}',
         "source_label": "RADAR EOD",
         "ativo": item.get("ativo"),
         "action_status": item.get("conditional_status") or item.get("status"),
@@ -356,10 +356,10 @@ def render_full_strategy_screening(item: dict) -> None:
             st.caption("Nenhum screening disponível.")
 
 
-def render_daily_priority_item(item: dict) -> None:
+def render_daily_priority_item(item: dict, key_suffix: str = "") -> None:
     render_decision_card(
         {
-            "card_key": f'priority_{item.get("ativo")}_{item.get("strategy_name")}',
+            "card_key": f'priority_{item.get("ativo")}_{item.get("strategy_name")}{key_suffix}',
             "source_label": "PRIORIDADE DIÁRIA",
             "ativo": item.get("ativo"),
             "action_status": item.get("practical_action"),

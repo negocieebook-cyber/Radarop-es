@@ -1,0 +1,72 @@
+{
+  "last_update": {
+    "success": true,
+    "completed": true,
+    "mode": "close",
+    "started_at": "2026-09-25T02:27:23.484815+00:00",
+    "finished_at": "2026-09-25T02:27:28.516137+00:00",
+    "total_underlyings": 8,
+    "available_count": 1,
+    "unavailable_count": 7,
+    "error_count": 7,
+    "total_series": 461,
+    "total_calls": 242,
+    "total_puts": 219,
+    "underlyings": [
+      "PETR4",
+      "VALE3",
+      "ITUB4",
+      "BOVA11",
+      "BBAS3",
+      "B3SA3",
+      "WEGE3",
+      "PRIO3"
+    ],
+    "available_underlyings": [
+      "PETR4"
+    ],
+    "unavailable_underlyings": [
+      "VALE3",
+      "ITUB4",
+      "BOVA11",
+      "BBAS3",
+      "B3SA3",
+      "WEGE3",
+      "PRIO3"
+    ],
+    "errors": [
+      "VALE3: acesso negado; o plano atual pode não incluir opções",
+      "ITUB4: acesso negado; o plano atual pode não incluir opções",
+      "BOVA11: acesso negado; o plano atual pode não incluir opções",
+      "BBAS3: acesso negado; o plano atual pode não incluir opções",
+      "B3SA3: acesso negado; o plano atual pode não incluir opções",
+      "WEGE3: acesso negado; o plano atual pode não incluir opções",
+      "PRIO3: acesso negado; o plano atual pode não incluir opções"
+    ],
+    "saved_files": [
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\PETR4.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\VALE3.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\ITUB4.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\BOVA11.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\BBAS3.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\B3SA3.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\WEGE3.json",
+      "D:\\ARQUIVOS PC\\Documents\\Antigravity\\Radar de Opções Brasil\\data\\runtime\\options_snapshots\\PRIO3.json"
+    ],
+    "status": "parcial",
+    "source": "brapi_options",
+    "data_frequency": "EOD",
+    "opportunity_engine_status": "MOCK / EXEMPLO",
+    "min_dte": 7,
+    "max_dte": 60,
+    "max_expirations": 4,
+    "expirations_found": 30,
+    "expirations_selected": 4,
+    "series_by_expiration": {
+      "PETR4:2026-10-16": 335,
+      "PETR4:2026-10-23": 61,
+      "PETR4:2026-10-30": 49,
+      "PETR4:2026-11-06": 16
+    }
+  }
+}

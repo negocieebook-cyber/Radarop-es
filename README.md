@@ -14,26 +14,22 @@ Transformar dados rastreáveis em uma rotina objetiva de estudo, acompanhamento 
 
 ## Módulos principais
 
-- Painel de Decisão com leitura rápida do que olhar primeiro;
-- Radar de oportunidades MOCK / EXEMPLO com filtros;
-- Radar EOD com candidatas reais condicionais e detalhes técnicos em expanders;
-- análise de estratégias com risco definido;
-- Stock Healthbox;
-- leitura gráfica baseada em Bulkowski/ThePatternSite;
-- checklist de qualidade e controle de fontes;
-- acompanhamento de posições, alertas de saída e histórico.
-- núcleo determinístico de qualidade, validação, matemática de opções e score explicável.
-- catálogo estrutural Bulkowski/ThePatternSite com padrões e análises MOCK / EXEMPLO, sem scraping.
-- Stock Healthbox calculado sobre snapshots MOCK / EXEMPLO, usado apenas como filtro contextual.
-- registro de fontes futuras, confiabilidade e contratos mínimos de dados, sem conectores ativos.
-- Position Monitor / Exit Engine com P/L, captura de ganho e alertas explicáveis sobre contexto MOCK / EXEMPLO.
-- Opportunity Engine que cruza universo, cadeia, risco, liquidez, Healthbox e Bulkowski para aprovar ou reprovar candidatos mockados.
-- fluxo diário com filtros, detalhe auditável da oportunidade e acompanhamento organizado.
-- interface premium em dark mode com hierarquia visual e status por cor.
-- Data Provider Engine com brapi para testes manuais de preços/histórico e cache local.
-- Market Snapshot Engine e Healthbox real experimental com indicadores calculados sobre histórico brapi.
-- Painel de Decisão usando snapshots reais/EOD sem misturar com o Radar MOCK / EXEMPLO.
-- Update Orchestrator para persistir snapshots reais e registrar execuções e erros por modo.
+A navegação é única na sidebar, com 14 páginas servidas pelo `app.py`:
+
+- **Visão geral** — Painel de Decisão com leitura rápida do que olhar primeiro;
+- **Terminal** — motor unificado por ativo (contexto, Healthbox, estratégia, calendário, alertas);
+- **Oportunidades** — Radar de oportunidades MOCK / EXEMPLO com filtros e controle de fonte;
+- **Radar EOD** — candidatas reais condicionais, funil diagnóstico, quase entradas e auditoria;
+- **Radar Gráfico** — teses de regiões, prioridades por objetivo, diagnóstico e quase setups;
+- **Radar de Mercado** — snapshots reais brapi com Healthbox por ativo e status de coleta;
+- **Teses** — watchlist gráfica persistente com gatilho, proximidade e invalidação;
+- **Eventos** — Watchlist de Abertura e registro manual de entrada com confirmação;
+- **Posições** — acompanhamento com P/L, captura de ganho e contexto por posição;
+- **Alertas** — saídas explicáveis por severidade;
+- **Simulador** — estruturas digitadas do book, salvas localmente, nunca ordens;
+- **Histórico** — registro das decisões;
+- **Motores** — Healthbox, Bulkowski, checklist e exemplos MOCK / EXEMPLO;
+- **Configurações** — testes brapi, atualização de opções EOD, universo, rotinas e fontes.
 
 As decisões da versão demonstrativa são persistidas localmente em `data/positions.json` e `data/history.json`. Esses registros continuam classificados como **MOCK / EXEMPLO** e não representam ordens ou posições de corretora.
 
@@ -65,11 +61,15 @@ Os snapshots reais ficam em `data/runtime/market_snapshots.json` e o estado das 
 
 ## Atualização automática
 
-O projeto inclui um GitHub Actions agendado para executar o Update Orchestrator em modos de pré-pregão, intraday e pós-fechamento. Para ativá-lo, crie no repositório o secret `BRAPI_TOKEN` em **Settings > Secrets and variables > Actions**. O token não deve ser colocado no código nem em arquivos versionados.
+O projeto inclui um GitHub Actions agendado para executar o pipeline em modos de pré-pregão, intraday e pós-fechamento, além da descoberta semanal de opções. Para ativá-lo, crie no repositório o secret `BRAPI_TOKEN` em **Settings > Secrets and variables > Actions**. O token não deve ser colocado no código nem em arquivos versionados.
 
-As agendas de segunda a sexta rodam às 12:30 UTC (pré-pregão), a cada 15 minutos entre 13:00 e 20:45 UTC (intraday) e às 21:30 UTC (pós-fechamento). O workflow salva e commita `data/runtime/market_snapshots.json` e `data/runtime/update_status.json`; a dashboard lê o último snapshot persistido.
+As agendas de segunda a sexta rodam às 12:30 UTC (pré-pregão), a cada 15 minutos entre 13:00 e 20:45 UTC (intraday) e às 21:30 UTC (pós-fechamento). O workflow commita os snapshots em `data/runtime/` (market, update_status, oportunidades reais, teses gráficas e opções), exceto `pipeline_status.json`; os commits de snapshots não disparam deploy novo. A dashboard lê o último snapshot persistido.
 
 Essa rotina é periódica, não uma conexão em tempo real. O Opportunity Engine e os dados de opções continuam **MOCK / EXEMPLO**. Consulte [a documentação da automação](docs/GITHUB_ACTIONS_AUTOMACAO.md) para configurar o secret e executar o workflow manualmente.
+
+## Deploy no Vercel
+
+O workflow `deploy-vercel.yml` roda em push para `main` (ignorando `data/runtime/` e `docs/`) e antes de publicar executa o pipeline para gerar snapshots frescos que entram na imagem Docker. Sem o secret `BRAPI_TOKEN`, o deploy continua funcionando e o app parte sem snapshots. Para coleta sob demanda na nuvem, configure também a variável de ambiente `BRAPI_TOKEN` no projeto Vercel (**Settings > Environment Variables**) e use os botões de atualização da dashboard. Dados gravados no container continuam efêmeros entre instâncias.
 
 A dashboard exibe o modo, a origem (`streamlit_app`, `local_script` ou `github_actions`), as contagens e a idade da atualização. Consulte [Status das atualizações](docs/STATUS_ATUALIZACAO.md) para interpretar snapshots incompletos, erros e atrasos.
 

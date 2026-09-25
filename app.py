@@ -1,5 +1,12 @@
 from __future__ import annotations
 
+from pathlib import Path
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 from datetime import date, datetime
 from uuid import uuid4
 
@@ -130,10 +137,8 @@ from app.storage import (
 )
 from app.validators import build_operation_checklist
 from app.universe import load_asset_universe
-
-
-st.set_page_config(page_title="Radar de Opções Brasil", page_icon="📡", layout="wide")
-inject_styles()
+from app.theme import apply_theme
+from app.ui.terminal_page import render_terminal_page
 
 
 def now_iso() -> str:
@@ -318,7 +323,7 @@ def decision_panel_page() -> None:
 
     has_any_data = any(summary[key] for key in ("validated", "near_entries", "events", "avoid"))
     if not has_any_data:
-        render_empty_state("Nenhuma leitura disponível", "Execute o pipeline ou atualize os dados.")
+        render_empty_state("Nenhuma leitura disponível", "Nenhuma leitura disponível. Atualize os dados ou execute o pipeline.")
         c1, c2 = st.columns(2)
         if c1.button("Atualizar dados", key="empty_state_update_data"):
             result = run_market_update(
@@ -341,18 +346,21 @@ def decision_panel_page() -> None:
     left_col, right_col = st.columns([0.65, 0.35], gap="large")
 
     with left_col:
-        sections = (
-            ("Prioridade de hoje", "O que merece validação primeiro no book.", "olhar_primeiro"),
-            ("Aguardar gatilho", "Ideias que ainda dependem de confirmação.", "aguardar_gatilho"),
-            ("Evitar por enquanto", "Bloqueios, contexto ruim ou risco sem confirmação.", "evitar"),
+        render_section_title("Leitura operacional", "Uma lista única para decidir o que validar, acompanhar ou evitar.")
+        ordered_groups = (
+            ("Operável agora", groups["olhar_primeiro"], "operavel"),
+            ("Aguardando gatilho", groups["aguardar_gatilho"], "aguardar"),
+            ("Evitar por enquanto", groups["evitar"], "evitar"),
         )
-        for title, subtitle, key in sections:
-            render_section_title(title, subtitle)
-            items = groups[key]
-            if not items:
-                st.caption("Sem itens nesta seção no momento.")
-                continue
-            for index, thesis in enumerate(items[:6]):
+        decision_items: list[tuple[dict, str, int]] = []
+        for label, items, group_key in ordered_groups:
+            for thesis in items[:6]:
+                decision_items.append((thesis, label, len(decision_items)))
+        if not decision_items:
+            render_empty_state("Nenhuma leitura disponível", "Nenhuma leitura disponível. Atualize os dados ou execute o pipeline.")
+        else:
+            st.markdown('<div class="integrated-panel">', unsafe_allow_html=True)
+            for thesis, source_label, index in decision_items:
                 event_label = (
                     f'{events_summary["next_asset"]} · {events_summary["next_date"]}'
                     if events_summary["next_asset"] == thesis.get("ativo") and events_summary["next_date"]
@@ -360,8 +368,8 @@ def decision_panel_page() -> None:
                 )
                 action = render_decision_card(
                     {
-                        "card_key": f"decision_panel_{key}_{index}_{thesis.get('ativo')}",
-                        "source_label": "PAINEL",
+                        "card_key": f"decision_panel_{source_label}_{index}_{thesis.get('ativo')}",
+                        "source_label": source_label,
                         "ativo": thesis.get("ativo"),
                         "action_status": thesis.get("practical_action"),
                         "action_label": thesis.get("practical_action"),
@@ -374,7 +382,8 @@ def decision_panel_page() -> None:
                         "reason": (thesis.get("best_strategy") or {}).get("reason") or thesis.get("evaluation_reason"),
                     }
                 )
-                handle_thesis_card_action(thesis, action, f"{key}_{index}")
+                handle_thesis_card_action(thesis, action, f"decision_{index}")
+            st.markdown("</div>", unsafe_allow_html=True)
 
     with right_col:
         render_info_panel(
@@ -946,7 +955,7 @@ def show_graphical_radar() -> None:
             if not items:
                 st.info("Nenhuma prioridade nesta categoria com os dados atuais.")
             for priority_index, priority in enumerate(items):
-                render_daily_priority_item(priority)
+                render_daily_priority_item(priority, key_suffix=f"_{group}_{priority_index}")
                 render_daily_priority_plan(priority, f"priority_plan_{group}_{priority_index}")
                 if priority.get("capital_fit_status") == "pendente_dados" and st.button("Simular manualmente", key=f"simulate_priority_{group}_{priority_index}_{priority.get('ativo')}"):
                     st.session_state["manual_simulation_seed"] = {"candidate": priority, "thesis": priority.get("thesis") or {}}
@@ -1061,95 +1070,6 @@ def graphical_watchlist_page() -> None:
             if remove_from_graphical_watchlist(str(item.get("id"))):
                 add_history_event(history_event("remover_tese_grafica", item, "Tese gráfica removida da watchlist persistente."))
                 st.rerun()
-
-
-def dashboard_page() -> None:
-    opportunities = generate_daily_opportunities()
-    groups = split_opportunities_by_status(opportunities)
-    summary = [
-        (len(groups["aprovada"]), "Oportunidades aprovadas"),
-        (len(groups["atenção"]), "Em atenção"),
-        (len(groups["reprovada"]), "Reprovadas"),
-        (len(groups["score não calculado"]), "Score não calculado"),
-        (len(load_positions()), "Posições em acompanhamento"),
-        (len(generate_exit_alerts(load_positions(), MOCK_MARKET_CONTEXT)), "Alertas de saída"),
-    ]
-    for start in range(0, len(summary), 3):
-        for column, (value, label) in zip(st.columns(3), summary[start : start + 3]):
-            with column:
-                status = "approved" if "aprovad" in label.lower() else "warning" if "atenção" in label.lower() else "rejected" if "reprovad" in label.lower() else "teal" if "Posições" in label or "Alertas" in label else "neutral"
-                metric_card(value, label, "Atualização do funil MOCK", status)
-    opening_items = [evaluate_watchlist_item(item) for item in load_opening_watchlist()]
-    opening_counts = {
-        status: sum(item.get("status") == status for item in opening_items)
-        for status in ("aguardando confirmação", "atenção", "invalidado", "inconclusivo")
-    }
-    st.markdown("### Acompanhamento da Abertura")
-    opening_metrics = st.columns(5)
-    opening_metrics[0].metric("Total", len(opening_items))
-    opening_metrics[1].metric("Aguardando confirmação", opening_counts["aguardando confirmação"])
-    opening_metrics[2].metric("Atenção", opening_counts["atenção"])
-    opening_metrics[3].metric("Invalidados", opening_counts["invalidado"])
-    opening_metrics[4].metric("Inconclusivos", opening_counts["inconclusivo"])
-    if groups["aprovada"]:
-        st.success(
-            f"Hoje o radar encontrou {len(groups['aprovada'])} oportunidade(s) aprovada(s), "
-            f"{len(groups['atenção'])} em atenção e {len(groups['reprovada'])} reprovada(s)."
-        )
-    else:
-        st.warning("Melhor não operar por enquanto. Nenhuma oportunidade passou nos filtros mínimos.")
-    st.markdown(
-        '<div class="section-card"><div class="small-label">Resumo do Radar</div><h3>Leitura do dia</h3><p>As reprovações ocorrem principalmente por liquidez ruim, cálculo de risco ausente, contexto incompleto ou filtros gráficos contrariados.</p></div>',
-        unsafe_allow_html=True,
-    )
-    render_options_eod_status_card(get_last_options_update_summary())
-    saved_real = st.session_state.get("real_eod_opportunities")
-    render_real_engine_status_card(
-        load_real_options_snapshots(),
-        summarize_real_opportunities(saved_real) if saved_real is not None else None,
-    )
-    saved_pipeline_snapshot = load_real_opportunities_snapshot()
-    panel_real_candidates = saved_pipeline_snapshot.get("opportunities", [])
-    pipeline_metrics = st.columns(6)
-    pipeline_metrics[0].metric("Entradas condicionais EOD", saved_pipeline_snapshot.get("entrada_condicional", 0))
-    pipeline_metrics[1].metric("Acompanhar abertura", saved_pipeline_snapshot.get("acompanhar_na_abertura", 0))
-    pipeline_metrics[2].metric("Evitar EOD", saved_pipeline_snapshot.get("evitar", 0))
-    pipeline_metrics[3].metric("Inconclusivas EOD", saved_pipeline_snapshot.get("inconclusivo", 0))
-    pipeline_metrics[4].metric("Última geração", saved_pipeline_snapshot.get("generated_at", "não gerado"))
-    pipeline_metrics[5].metric("Erros do pipeline", len(saved_pipeline_snapshot.get("errors", [])))
-    render_top_conditional_entries(
-        rank_conditional_entries(panel_real_candidates, top_n=5),
-        summarize_real_eod_funnel(panel_real_candidates),
-    )
-    show_graphical_radar()
-    show_real_market_radar()
-    render_data_notice(
-        "As oportunidades abaixo ainda são geradas pelo Opportunity Engine com dados MOCK / EXEMPLO. A ligação com o Radar de Mercado real será feita em etapa futura."
-    )
-    st.caption("Todos os candidatos e decisões abaixo são MOCK / EXEMPLO.")
-    show_opportunities(opportunities)
-
-    show_healthbox_engine()
-
-    show_bulkowski_engine()
-
-    st.markdown("## Checklist da Operação")
-    for opportunity in MOCK_OPPORTUNITIES:
-        evaluated = evaluate_opportunity(opportunity)
-        with st.expander(f"{opportunity['ativo']} • {opportunity['estrategia']}"):
-            for item in evaluated["checklist"]:
-                icon = "🟢" if item["status"] == "ok" else "🟡" if item["status"] in {"atenção", "não calculado"} else "🔴"
-                st.markdown(f"{icon} **{item['question']}** — {item['detail']} · `{item['tipo_dado']}`")
-
-    st.markdown("## Posições em Acompanhamento — exemplo visual")
-    st.caption(
-        "Esta tabela é MOCK / EXEMPLO. Entradas confirmadas aparecem em Minhas Posições."
-    )
-    st.dataframe(pd.DataFrame(MOCK_POSITIONS), width="stretch", hide_index=True)
-
-    st.markdown("## Alertas de Saída — exemplo")
-    alerts_section(MOCK_ALERTS)
-    show_data_control()
 
 
 def show_real_market_radar() -> None:
@@ -1385,7 +1305,7 @@ def real_eod_opportunities_page() -> None:
     for status in ("entrada_condicional", "acompanhar_na_abertura", "evitar", "inconclusivo"):
         st.markdown(f"## {labels[status]} ({len(groups[status])})")
         for index, item in enumerate(groups[status]):
-            action = render_real_opportunity_card(item)
+            action = render_real_opportunity_card(item, key_suffix=f"_{status}_{index}")
             if action == "simulate":
                 st.session_state["manual_simulation_seed"] = {"candidate": item, "thesis": {}}
                 st.info("Simulador preparado com os dados atuais da candidata EOD.")
@@ -1982,57 +1902,103 @@ def sources_configuration_page() -> None:
     )
 
 
-with st.sidebar:
-    st.markdown('<div class="sidebar-title">Radar de Opções Brasil</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sidebar-group">Painel</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sidebar-group">Acompanhamento</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sidebar-group">Ferramentas</div>', unsafe_allow_html=True)
-    page = st.radio(
-        "Navegação",
-        [
+def engines_page() -> None:
+    st.markdown("## Motores de exemplo — MOCK / EXEMPLO")
+    st.info("Estas seções usam somente dados MOCK / EXEMPLO e não se misturam com o Radar real.")
+    show_healthbox_engine()
+    show_bulkowski_engine()
+    st.markdown("## Checklist da Operação")
+    for opportunity in MOCK_OPPORTUNITIES:
+        evaluated = evaluate_opportunity(opportunity)
+        with st.expander(f"{opportunity['ativo']} • {opportunity['estrategia']}"):
+            for item in evaluated["checklist"]:
+                icon = "🟢" if item["status"] == "ok" else "🟡" if item["status"] in {"atenção", "não calculado"} else "🔴"
+                st.markdown(f"{icon} **{item['question']}** — {item['detail']} · `{item['tipo_dado']}`")
+    st.markdown("## Posições em Acompanhamento — exemplo visual")
+    st.caption("Esta tabela é MOCK / EXEMPLO. Entradas confirmadas aparecem em Minhas Posições.")
+    st.dataframe(pd.DataFrame(MOCK_POSITIONS), width="stretch", hide_index=True)
+    st.markdown("## Alertas de Saída — exemplo")
+    alerts_section(MOCK_ALERTS)
+    show_data_control()
+
+
+def main() -> None:
+    st.set_page_config(page_title="Radar de Opções Brasil", page_icon="📡", layout="wide")
+    apply_theme()
+    with st.sidebar:
+        st.markdown('<div class="sidebar-title">Radar de Opções Brasil</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sidebar-group">Painel</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sidebar-group">Acompanhamento</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sidebar-group">Ferramentas</div>', unsafe_allow_html=True)
+        page_options = [
             "Visão geral",
+            "Terminal",
+            "Oportunidades",
             "Radar EOD",
+            "Radar Gráfico",
+            "Radar de Mercado",
             "Teses",
             "Eventos",
             "Posições",
             "Alertas",
             "Simulador",
             "Histórico",
+            "Motores",
             "Configurações",
-        ],
-        label_visibility="collapsed",
+        ]
+        if st.session_state.get("sidebar_page") not in page_options:
+            st.session_state["sidebar_page"] = "Visão geral"
+        page = st.radio(
+            "Navegação",
+            page_options,
+            key="sidebar_page",
+            label_visibility="collapsed",
+        )
+
+    st.markdown('<div class="eyebrow">Radar de Opções Brasil</div>', unsafe_allow_html=True)
+    if page != "Visão geral":
+        st.title(page)
+    if page in {"Visão geral", "Oportunidades", "Radar EOD", "Radar Gráfico", "Radar de Mercado", "Eventos", "Teses", "Posições", "Alertas", "Terminal"}:
+        mock_badge("DADOS REAIS EOD / EXPERIMENTAL")
+    else:
+        mock_badge()
+
+    render_global_risk_notice()
+
+    if page == "Visão geral":
+        decision_panel_page()
+    elif page == "Terminal":
+        render_terminal_page()
+    elif page == "Oportunidades":
+        opportunities_page()
+    elif page == "Radar EOD":
+        real_eod_opportunities_page()
+    elif page == "Radar Gráfico":
+        show_graphical_radar()
+    elif page == "Radar de Mercado":
+        show_real_market_radar()
+    elif page == "Eventos":
+        opening_watchlist_page()
+    elif page == "Teses":
+        graphical_watchlist_page()
+    elif page == "Simulador":
+        manual_simulations_page()
+    elif page == "Posições":
+        positions_page()
+    elif page == "Alertas":
+        alerts_page()
+    elif page == "Histórico":
+        history_page()
+    elif page == "Motores":
+        engines_page()
+    else:
+        sources_configuration_page()
+        show_data_control()
+
+    st.caption(
+        "Radar de Opções Brasil • apoio à decisão • nenhuma ordem é enviada • motor mock e análise real EOD experimental permanecem separados"
     )
 
-st.markdown('<div class="eyebrow">Radar de Opções Brasil</div>', unsafe_allow_html=True)
-if page != "Visão geral":
-    st.title(page)
-if page in {"Visão geral", "Radar EOD", "Eventos", "Teses", "Posições", "Alertas"}:
-    mock_badge("DADOS REAIS EOD / EXPERIMENTAL")
-else:
-    mock_badge()
 
-render_global_risk_notice()
-
-if page == "Visão geral":
-    decision_panel_page()
-elif page == "Radar EOD":
-    real_eod_opportunities_page()
-elif page == "Eventos":
-    opening_watchlist_page()
-elif page == "Teses":
-    graphical_watchlist_page()
-elif page == "Simulador":
-    manual_simulations_page()
-elif page == "Posições":
-    positions_page()
-elif page == "Alertas":
-    alerts_page()
-elif page == "Histórico":
-    history_page()
-else:
-    sources_configuration_page()
-    show_data_control()
-
-st.caption(
-    "Radar de Opções Brasil • apoio à decisão • nenhuma ordem é enviada • motor mock e análise real EOD experimental permanecem separados"
-)
+if __name__ == "__main__":
+    main()

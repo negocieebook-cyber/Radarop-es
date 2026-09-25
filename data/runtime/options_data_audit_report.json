@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "assets_audited": 4,
+    "series_total": 204,
+    "calls": 113,
+    "puts": 91,
+    "expirations": [
+      "2026-07-17",
+      "2026-07-24",
+      "2026-07-31",
+      "2026-08-07"
+    ],
+    "with_close": 204,
+    "with_average": 204,
+    "with_bid_ask": 204,
+    "with_usable_price": 204,
+    "without_usable_price": 0,
+    "with_trades": 204,
+    "with_volume": 204,
+    "zero_price_series": 117,
+    "raw_field_inventory": {
+      "symbol": 204,
+      "underlyingSymbol": 204,
+      "side": 204,
+      "market": 204,
+      "optionStyle": 204,
+      "strike": 204,
+      "allocationRoundLot": 204,
+      "expirationDate": 204,
+      "firstTradeDate": 204,
+      "lastTradeDate": 204,
+      "date": 204,
+      "open": 204,
+      "high": 204,
+      "low": 204,
+      "average": 204,
+      "close": 204,
+      "bid": 204,
+      "ask": 204,
+      "trades": 204,
+      "volume": 204,
+      "financialVolume": 204
+    },
+    "possible_aliases": {
+      "financialVolume": 204
+    },
+    "math_incomplete_causes": {}
+  },
+  "pairing_by_expiration": {
+    "PETR4:2026-07-17": {
+      "calls_available": 97,
+      "puts_available": 74,
+      "calls_with_price": 97,
+      "puts_with_price": 74,
+      "possible_call_pairs": 41,
+      "possible_put_pairs": 33,
+      "discarded_missing_price": 0,
+      "discarded_illiquid": 95,
+      "discarded_missing_expiration": 0
+    },
+    "PETR4:2026-07-24": {
+      "calls_available": 10,
+      "puts_available": 8,
+      "calls_with_price": 10,
+      "puts_with_price": 8,
+      "possible_call_pairs": 0,
+      "possible_put_pairs": 0,
+      "discarded_missing_price": 0,
+      "discarded_illiquid": 18,
+      "discarded_missing_expiration": 0
+    },
+    "PETR4:2026-07-31": {
+      "calls_available": 4,
+      "puts_available": 6,
+      "calls_with_price": 4,
+      "puts_with_price": 6,
+      "possible_call_pairs": 0,
+      "possible_put_pairs": 0,
+      "discarded_missing_price": 0,
+      "discarded_illiquid": 10,
+      "discarded_missing_expiration": 0
+    },
+    "PETR4:2026-08-07": {
+      "calls_available": 2,
+      "puts_available": 3,
+      "calls_with_price": 2,
+      "puts_with_price": 3,
+      "possible_call_pairs": 0,
+      "possible_put_pairs": 0,
+      "discarded_missing_price": 0,
+      "discarded_illiquid": 5,
+      "discarded_missing_expiration": 0
+    }
+  },
+  "source": "saved_options_snapshots",
+  "data_frequency": "EOD"
+}

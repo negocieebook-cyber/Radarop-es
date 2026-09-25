@@ -1,0 +1,26 @@
+{
+  "underlying": "ITUB4",
+  "success": false,
+  "source": "brapi_options",
+  "fonte": "brapi_options",
+  "tipo_dado": "indisponível",
+  "status_dado": "erro",
+  "access_status": "sem_acesso",
+  "data_frequency": "EOD",
+  "coleta": "2026-09-25T02:27:26.050033+00:00",
+  "expiration_used": null,
+  "expirations_used": [],
+  "expirations_selected": [],
+  "expirations_count": 0,
+  "chains": [],
+  "series_count": 0,
+  "calls_count": 0,
+  "puts_count": 0,
+  "series": [],
+  "missing_common_fields": [],
+  "error": "acesso negado; o plano atual pode não incluir opções",
+  "errors": [
+    "acesso negado; o plano atual pode não incluir opções"
+  ],
+  "observacao": "Dados de opções EOD/fim de pregão. Não usar como tempo real intraday."
+}

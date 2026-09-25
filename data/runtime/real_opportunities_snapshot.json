@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-09-25T02:32:04.415276+00:00",
+  "mode": "close",
+  "source": [
+    "brapi",
+    "brapi_options"
+  ],
+  "tickers": [
+    "PETR4",
+    "VALE3"
+  ],
+  "total_candidates": 4,
+  "entrada_condicional": 1,
+  "acompanhar_na_abertura": 1,
+  "evitar": 1,
+  "inconclusivo": 1,
+  "top_entries": [
+    {
+      "ativo": "PETR4",
+      "conditional_status": "entrada_condicional",
+      "score": 80,
+      "liquidez": "alta",
+      "risco_retorno": 2.0
+    },
+    {
+      "ativo": "VALE3",
+      "conditional_status": "acompanhar_na_abertura",
+      "score": 70,
+      "liquidez": "média",
+      "risco_retorno": 1.5
+    },
+    {
+      "ativo": "ITUB4",
+      "conditional_status": "evitar",
+      "score": 40
+    },
+    {
+      "ativo": "BOVA11",
+      "conditional_status": "inconclusivo",
+      "score": null
+    }
+  ],
+  "opportunities": [
+    {
+      "ativo": "PETR4",
+      "conditional_status": "entrada_condicional",
+      "score": 80,
+      "liquidez": "alta",
+      "risco_retorno": 2.0
+    },
+    {
+      "ativo": "VALE3",
+      "conditional_status": "acompanhar_na_abertura",
+      "score": 70,
+      "liquidez": "média",
+      "risco_retorno": 1.5
+    },
+    {
+      "ativo": "ITUB4",
+      "conditional_status": "evitar",
+      "score": 40
+    },
+    {
+      "ativo": "BOVA11",
+      "conditional_status": "inconclusivo",
+      "score": null
+    }
+  ],
+  "warnings": [
+    "Dados EOD. Validar no pregão antes de qualquer entrada."
+  ],
+  "errors": [],
+  "data_frequency": "EOD",
+  "opportunity_engine": "real_experimental",
+  "aviso": "Dados EOD. Validar no pregão antes de qualquer entrada."
+}
