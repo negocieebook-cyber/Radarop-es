@@ -1,14 +1,14 @@
 [
   {
     "ativo": "PETR4",
-    "preco_atual": 48.07,
+    "preco_atual": 47.99,
     "abertura": 48.8,
     "maxima": 48.87,
     "minima": 47.92,
     "fechamento_anterior": 48.04,
-    "volume": 34427400,
-    "variacao_diaria_percent": 0.0624,
-    "range_diario_percent": 1.9763,
+    "volume": 34445400,
+    "variacao_diaria_percent": -0.1041,
+    "range_diario_percent": 1.9796,
     "adr_percent": 1.7627,
     "atr_percent": 2.3185,
     "rvol": 0.5041,
@@ -17,8 +17,8 @@
     "tendencia": "baixa",
     "suporte": 37.4,
     "resistencia": 43.49,
-    "distancia_suporte_percent": 28.5294,
-    "distancia_resistencia_percent": 10.5312,
+    "distancia_suporte_percent": 28.3155,
+    "distancia_resistencia_percent": 10.3472,
     "volatilidade_implicita": null,
     "campos_ausentes": [
       "rsi_200",
@@ -28,7 +28,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:25.265534+00:00",
+    "coleta": "2026-09-25T23:33:26.063248+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -66,7 +66,7 @@
     "maxima": 53.89,
     "minima": 52.74,
     "fechamento_anterior": 53.03,
-    "volume": 6590500,
+    "volume": 6591500,
     "variacao_diaria_percent": 0.0189,
     "range_diario_percent": 2.1682,
     "adr_percent": 2.1347,
@@ -88,7 +88,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:25.437046+00:00",
+    "coleta": "2026-09-25T23:33:26.214283+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -126,7 +126,7 @@
     "maxima": 71.2,
     "minima": 69.94,
     "fechamento_anterior": 70.72,
-    "volume": 11325700,
+    "volume": 11387000,
     "variacao_diaria_percent": 0.0707,
     "range_diario_percent": 1.7804,
     "adr_percent": 2.0868,
@@ -148,7 +148,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:25.694277+00:00",
+    "coleta": "2026-09-25T23:33:26.355984+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -186,7 +186,7 @@
     "maxima": 42.43,
     "minima": 41.72,
     "fechamento_anterior": 42.03,
-    "volume": 16443200,
+    "volume": 16444600,
     "variacao_diaria_percent": 0.2379,
     "range_diario_percent": 1.6853,
     "adr_percent": 1.9188,
@@ -208,7 +208,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:25.806130+00:00",
+    "coleta": "2026-09-25T23:33:26.482342+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -246,7 +246,7 @@
     "maxima": 14.12,
     "minima": 13.89,
     "fechamento_anterior": 14.01,
-    "volume": 11935200,
+    "volume": 11966500,
     "variacao_diaria_percent": -0.1428,
     "range_diario_percent": 1.644,
     "adr_percent": 1.8222,
@@ -268,7 +268,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:25.918896+00:00",
+    "coleta": "2026-09-25T23:33:26.602139+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -306,7 +306,7 @@
     "maxima": 17.95,
     "minima": 17.65,
     "fechamento_anterior": 17.89,
-    "volume": 21250100,
+    "volume": 21337600,
     "variacao_diaria_percent": -0.0559,
     "range_diario_percent": 1.6779,
     "adr_percent": 1.9255,
@@ -328,7 +328,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.017057+00:00",
+    "coleta": "2026-09-25T23:33:26.757120+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -366,7 +366,7 @@
     "maxima": 15.82,
     "minima": 15.58,
     "fechamento_anterior": 15.75,
-    "volume": 4251000,
+    "volume": 4253600,
     "variacao_diaria_percent": 0.127,
     "range_diario_percent": 1.5219,
     "adr_percent": 1.9343,
@@ -388,7 +388,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.131187+00:00",
+    "coleta": "2026-09-25T23:33:26.909136+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -426,7 +426,7 @@
     "maxima": 21.77,
     "minima": 21.27,
     "fechamento_anterior": 21.64,
-    "volume": 43161500,
+    "volume": 43246900,
     "variacao_diaria_percent": -0.2311,
     "range_diario_percent": 2.3159,
     "adr_percent": 1.8251,
@@ -448,7 +448,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.254168+00:00",
+    "coleta": "2026-09-25T23:33:27.040588+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -486,7 +486,7 @@
     "maxima": 18.03,
     "minima": 17.62,
     "fechamento_anterior": 17.98,
-    "volume": 17056500,
+    "volume": 17058300,
     "variacao_diaria_percent": -0.1112,
     "range_diario_percent": 2.2829,
     "adr_percent": 2.4903,
@@ -508,7 +508,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.412079+00:00",
+    "coleta": "2026-09-25T23:33:27.169557+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -546,7 +546,7 @@
     "maxima": 15.39,
     "minima": 15.21,
     "fechamento_anterior": 15.31,
-    "volume": 12312000,
+    "volume": 12323400,
     "variacao_diaria_percent": 0.0653,
     "range_diario_percent": 1.1749,
     "adr_percent": 1.9023,
@@ -568,7 +568,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.564808+00:00",
+    "coleta": "2026-09-25T23:33:27.303466+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -606,7 +606,7 @@
     "maxima": 51.26,
     "minima": 50.25,
     "fechamento_anterior": 51.12,
-    "volume": 6025400,
+    "volume": 6029900,
     "variacao_diaria_percent": -0.0978,
     "range_diario_percent": 1.9777,
     "adr_percent": 2.0704,
@@ -628,7 +628,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.678371+00:00",
+    "coleta": "2026-09-25T23:33:27.451698+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -666,7 +666,7 @@
     "maxima": 60.25,
     "minima": 59.08,
     "fechamento_anterior": 59.53,
-    "volume": 8058800,
+    "volume": 8062300,
     "variacao_diaria_percent": -0.3024,
     "range_diario_percent": 1.9714,
     "adr_percent": 2.4761,
@@ -688,7 +688,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.780693+00:00",
+    "coleta": "2026-09-25T23:33:27.573327+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -726,7 +726,7 @@
     "maxima": 39.45,
     "minima": 37.87,
     "fechamento_anterior": 38.48,
-    "volume": 14217600,
+    "volume": 14253500,
     "variacao_diaria_percent": -0.3378,
     "range_diario_percent": 4.1199,
     "adr_percent": 2.6898,
@@ -748,7 +748,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:26.908183+00:00",
+    "coleta": "2026-09-25T23:33:27.705689+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -786,7 +786,7 @@
     "maxima": 11.22,
     "minima": 10.89,
     "fechamento_anterior": 11.15,
-    "volume": 8711500,
+    "volume": 8712300,
     "variacao_diaria_percent": -0.2691,
     "range_diario_percent": 2.9676,
     "adr_percent": 3.1569,
@@ -808,7 +808,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.053232+00:00",
+    "coleta": "2026-09-25T23:33:27.847358+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -846,7 +846,7 @@
     "maxima": 6.76,
     "minima": 6.22,
     "fechamento_anterior": 6.72,
-    "volume": 40002200,
+    "volume": 40065400,
     "variacao_diaria_percent": 0.5952,
     "range_diario_percent": 7.9882,
     "adr_percent": 5.2919,
@@ -868,7 +868,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.193860+00:00",
+    "coleta": "2026-09-25T23:33:27.970755+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -906,7 +906,7 @@
     "maxima": 45.79,
     "minima": 44.98,
     "fechamento_anterior": 45.05,
-    "volume": 3047300,
+    "volume": 3054300,
     "variacao_diaria_percent": -0.111,
     "range_diario_percent": 1.8,
     "adr_percent": 1.9235,
@@ -928,7 +928,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.321238+00:00",
+    "coleta": "2026-09-25T23:33:28.097417+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -966,7 +966,7 @@
     "maxima": 25.02,
     "minima": 24.54,
     "fechamento_anterior": 24.98,
-    "volume": 3568600,
+    "volume": 3579200,
     "variacao_diaria_percent": 0.04,
     "range_diario_percent": 1.9208,
     "adr_percent": 2.567,
@@ -988,7 +988,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.442189+00:00",
+    "coleta": "2026-09-25T23:33:28.244164+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1026,7 +1026,7 @@
     "maxima": 11.2,
     "minima": 11.01,
     "fechamento_anterior": 11.19,
-    "volume": 3375300,
+    "volume": 3378400,
     "variacao_diaria_percent": -0.1787,
     "range_diario_percent": 1.701,
     "adr_percent": 2.405,
@@ -1048,7 +1048,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.571276+00:00",
+    "coleta": "2026-09-25T23:33:28.378728+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1086,7 +1086,7 @@
     "maxima": 6.01,
     "minima": 5.88,
     "fechamento_anterior": 5.99,
-    "volume": 12675000,
+    "volume": 12704300,
     "variacao_diaria_percent": -0.6678,
     "range_diario_percent": 2.1849,
     "adr_percent": 3.9094,
@@ -1108,7 +1108,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.703734+00:00",
+    "coleta": "2026-09-25T23:33:28.514719+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1168,7 +1168,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:27.840297+00:00",
+    "coleta": "2026-09-25T23:33:28.648236+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1244,7 +1244,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "indisponível",
     "status_dado": "erro",
-    "coleta": "2026-09-25T20:44:27.973900+00:00",
+    "coleta": "2026-09-25T23:33:28.794727+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1390,7 +1390,7 @@
     "maxima": 10.92,
     "minima": 10.8,
     "fechamento_anterior": 10.88,
-    "volume": 9623000,
+    "volume": 9635000,
     "variacao_diaria_percent": 0.0919,
     "range_diario_percent": 1.1019,
     "adr_percent": 1.6325,
@@ -1412,7 +1412,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:28.203247+00:00",
+    "coleta": "2026-09-25T23:33:29.075318+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1542,7 +1542,7 @@
     "maxima": 27.06,
     "minima": 26.59,
     "fechamento_anterior": 26.96,
-    "volume": 11724200,
+    "volume": 11729300,
     "variacao_diaria_percent": -0.1113,
     "range_diario_percent": 1.7453,
     "adr_percent": 2.2493,
@@ -1564,7 +1564,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:28.467762+00:00",
+    "coleta": "2026-09-25T23:33:29.332285+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1602,7 +1602,7 @@
     "maxima": 29.84,
     "minima": 29.52,
     "fechamento_anterior": 29.72,
-    "volume": 1137000,
+    "volume": 1137500,
     "variacao_diaria_percent": 0.1009,
     "range_diario_percent": 1.0756,
     "adr_percent": 2.1809,
@@ -1624,7 +1624,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:28.609792+00:00",
+    "coleta": "2026-09-25T23:33:29.478072+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1662,7 +1662,7 @@
     "maxima": 63.1,
     "minima": 61.9,
     "fechamento_anterior": 62.68,
-    "volume": 6186000,
+    "volume": 6187000,
     "variacao_diaria_percent": 0.0319,
     "range_diario_percent": 1.9139,
     "adr_percent": 2.4785,
@@ -1684,7 +1684,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:28.751675+00:00",
+    "coleta": "2026-09-25T23:33:29.607501+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1722,7 +1722,7 @@
     "maxima": 6.53,
     "minima": 6.26,
     "fechamento_anterior": 6.27,
-    "volume": 7210900,
+    "volume": 7282500,
     "variacao_diaria_percent": -0.1595,
     "range_diario_percent": 4.3131,
     "adr_percent": 3.8467,
@@ -1744,7 +1744,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:28.870393+00:00",
+    "coleta": "2026-09-25T23:33:29.739177+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1782,7 +1782,7 @@
     "maxima": 18.71,
     "minima": 17.79,
     "fechamento_anterior": 18.14,
-    "volume": 17459600,
+    "volume": 17464400,
     "variacao_diaria_percent": 0.1103,
     "range_diario_percent": 5.0661,
     "adr_percent": 2.9618,
@@ -1804,7 +1804,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:28.984102+00:00",
+    "coleta": "2026-09-25T23:33:29.880029+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1864,7 +1864,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-09-25T20:44:29.148017+00:00",
+    "coleta": "2026-09-25T23:33:30.013522+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [

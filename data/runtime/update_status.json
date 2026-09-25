@@ -21,9 +21,9 @@
     "close": {
       "success": true,
       "mode": "close",
-      "runner": "local_script",
-      "started_at": "2026-09-25T04:46:31.015331+00:00",
-      "finished_at": "2026-09-25T04:46:59.245711+00:00",
+      "runner": "github_actions",
+      "started_at": "2026-09-25T23:33:25.962560+00:00",
+      "finished_at": "2026-09-25T23:33:30.078917+00:00",
       "total_tickers": 30,
       "updated_count": 0,
       "incomplete_count": 27,
