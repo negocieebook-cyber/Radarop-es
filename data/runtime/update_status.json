@@ -35,6 +35,24 @@
       ],
       "source": "brapi",
       "opportunity_engine_status": "MOCK / EXEMPLO"
+    },
+    "premarket": {
+      "success": true,
+      "mode": "premarket",
+      "runner": "github_actions",
+      "started_at": "2026-09-29T01:05:52.353040+00:00",
+      "finished_at": "2026-09-29T01:06:01.540834+00:00",
+      "total_tickers": 30,
+      "updated_count": 0,
+      "incomplete_count": 27,
+      "error_count": 3,
+      "errors": [
+        "ELET3: dados indisponíveis",
+        "ELET6: dados indisponíveis",
+        "CPLE6: dados indisponíveis"
+      ],
+      "source": "brapi",
+      "opportunity_engine_status": "MOCK / EXEMPLO"
     }
   },
   "last_error": "CPLE6: dados indisponíveis",
