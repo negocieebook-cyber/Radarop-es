@@ -28,7 +28,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:10.847314+00:00",
+    "coleta": "2026-10-10T01:03:02.437228+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -88,7 +88,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:11.621905+00:00",
+    "coleta": "2026-10-10T01:03:02.921127+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -148,7 +148,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:12.120811+00:00",
+    "coleta": "2026-10-10T01:03:03.215731+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -208,7 +208,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:12.388197+00:00",
+    "coleta": "2026-10-10T01:03:03.705876+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -268,7 +268,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:12.691423+00:00",
+    "coleta": "2026-10-10T01:03:03.983474+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -328,7 +328,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:12.979807+00:00",
+    "coleta": "2026-10-10T01:03:04.258593+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -388,7 +388,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:13.267973+00:00",
+    "coleta": "2026-10-10T01:03:04.544771+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -448,7 +448,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:13.768881+00:00",
+    "coleta": "2026-10-10T01:03:04.823944+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -508,7 +508,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:14.080061+00:00",
+    "coleta": "2026-10-10T01:03:05.126084+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -568,7 +568,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:14.378218+00:00",
+    "coleta": "2026-10-10T01:03:05.417998+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -628,7 +628,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:14.664406+00:00",
+    "coleta": "2026-10-10T01:03:05.896099+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -688,7 +688,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:14.955544+00:00",
+    "coleta": "2026-10-10T01:03:06.385511+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -748,7 +748,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:15.256865+00:00",
+    "coleta": "2026-10-10T01:03:06.649733+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -808,7 +808,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:15.761726+00:00",
+    "coleta": "2026-10-10T01:03:06.928702+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -868,7 +868,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:16.071569+00:00",
+    "coleta": "2026-10-10T01:03:07.247140+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -928,7 +928,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:16.401350+00:00",
+    "coleta": "2026-10-10T01:03:07.520766+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -988,7 +988,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:16.941804+00:00",
+    "coleta": "2026-10-10T01:03:07.779168+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1048,7 +1048,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:17.233914+00:00",
+    "coleta": "2026-10-10T01:03:08.070173+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1108,7 +1108,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:17.512631+00:00",
+    "coleta": "2026-10-10T01:03:08.354077+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1168,7 +1168,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:17.787697+00:00",
+    "coleta": "2026-10-10T01:03:08.639715+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1244,7 +1244,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "indisponível",
     "status_dado": "erro",
-    "coleta": "2026-10-09T22:53:18.079070+00:00",
+    "coleta": "2026-10-10T01:03:08.929356+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1336,7 +1336,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "indisponível",
     "status_dado": "erro",
-    "coleta": "2026-10-09T22:53:18.391044+00:00",
+    "coleta": "2026-10-10T01:03:09.200427+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1412,7 +1412,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:18.903914+00:00",
+    "coleta": "2026-10-10T01:03:09.529025+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1564,7 +1564,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:19.552467+00:00",
+    "coleta": "2026-10-10T01:03:10.159286+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1624,7 +1624,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:19.842862+00:00",
+    "coleta": "2026-10-10T01:03:10.415843+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1684,7 +1684,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:20.129106+00:00",
+    "coleta": "2026-10-10T01:03:10.711184+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1744,7 +1744,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:20.427219+00:00",
+    "coleta": "2026-10-10T01:03:10.975712+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1804,7 +1804,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:20.685952+00:00",
+    "coleta": "2026-10-10T01:03:11.248001+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
@@ -1864,7 +1864,7 @@
     "fonte_base": "brapi",
     "tipo_dado": "coletado/calculado",
     "status_dado": "incompleto",
-    "coleta": "2026-10-09T22:53:20.982827+00:00",
+    "coleta": "2026-10-10T01:03:11.511054+00:00",
     "observacao": "Indicadores técnicos experimentais; suporte/resistência são extremos simples da janela.",
     "linhagem_campos": {
       "coletados": [
