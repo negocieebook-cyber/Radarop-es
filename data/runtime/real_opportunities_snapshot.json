@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T22:16:45.814081+00:00",
+  "generated_at": "2026-10-16T23:44:03.211178+00:00",
   "mode": "close",
   "source": [
     "opcoes_net_br",
@@ -44,7 +44,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -120,7 +120,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -216,7 +216,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -292,7 +292,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -388,7 +388,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -466,7 +466,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -562,7 +562,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -640,7 +640,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -734,7 +734,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -812,7 +812,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -911,7 +911,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -987,7 +987,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -1083,7 +1083,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -1159,7 +1159,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -1257,7 +1257,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -1333,7 +1333,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -1433,7 +1433,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -1509,7 +1509,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -1609,7 +1609,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -1685,7 +1685,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -1787,7 +1787,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -1863,7 +1863,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -1964,7 +1964,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -2040,7 +2040,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -2139,7 +2139,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -2215,7 +2215,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -2314,7 +2314,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -2390,7 +2390,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "confirma",
@@ -2485,7 +2485,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -2561,7 +2561,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "confirma",
@@ -2662,7 +2662,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -2738,7 +2738,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -2838,7 +2838,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -2914,7 +2914,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -3010,7 +3010,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -3086,7 +3086,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -3189,7 +3189,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -3265,7 +3265,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -3360,7 +3360,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -3436,7 +3436,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -3537,7 +3537,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -3613,7 +3613,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -3709,7 +3709,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -3785,7 +3785,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -3885,7 +3885,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -3961,7 +3961,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -4064,7 +4064,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -4140,7 +4140,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -4236,7 +4236,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -4312,7 +4312,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -4412,7 +4412,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -4488,7 +4488,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -4588,7 +4588,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -4664,7 +4664,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -4764,7 +4764,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -4840,7 +4840,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -4940,7 +4940,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -5016,7 +5016,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -5116,7 +5116,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -5192,7 +5192,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -5292,7 +5292,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -5368,7 +5368,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -5468,7 +5468,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -5544,7 +5544,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -5644,7 +5644,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -5720,7 +5720,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -5820,7 +5820,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -5896,7 +5896,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -5990,7 +5990,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -6066,7 +6066,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -6164,7 +6164,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -6240,7 +6240,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -6336,7 +6336,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -6412,7 +6412,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -6508,7 +6508,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -6584,7 +6584,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -6677,7 +6677,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -6753,7 +6753,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -6854,7 +6854,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -6930,7 +6930,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -7031,7 +7031,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -7107,7 +7107,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -7202,7 +7202,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -7278,7 +7278,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -7377,7 +7377,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -7453,7 +7453,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -7548,7 +7548,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -7624,7 +7624,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -7726,7 +7726,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -7802,7 +7802,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -7896,7 +7896,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -7972,7 +7972,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.083821+00:00"
+        "coleta": "2026-10-16T23:43:49.254402+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -8071,7 +8071,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -8151,7 +8151,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:35.926189+00:00",
+      "coleta": "2026-10-16T23:43:53.392719+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -8227,7 +8227,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -8305,7 +8305,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -8401,7 +8401,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -8479,7 +8479,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -8575,7 +8575,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -8653,7 +8653,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -8749,7 +8749,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -8827,7 +8827,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -8929,7 +8929,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -9007,7 +9007,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -9103,7 +9103,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -9181,7 +9181,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -9277,7 +9277,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -9355,7 +9355,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -9450,7 +9450,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -9528,7 +9528,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -9626,7 +9626,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -9704,7 +9704,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -9799,7 +9799,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -9877,7 +9877,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -9975,7 +9975,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -10053,7 +10053,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -10154,7 +10154,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -10232,7 +10232,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -10331,7 +10331,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -10409,7 +10409,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -10507,7 +10507,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -10585,7 +10585,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -10683,7 +10683,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -10761,7 +10761,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -10857,7 +10857,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -10935,7 +10935,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -11031,7 +11031,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -11109,7 +11109,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -11205,7 +11205,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -11283,7 +11283,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -11379,7 +11379,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -11457,7 +11457,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -11553,7 +11553,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -11631,7 +11631,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -11727,7 +11727,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -11805,7 +11805,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -11901,7 +11901,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -11979,7 +11979,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -12075,7 +12075,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -12153,7 +12153,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -12252,7 +12252,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -12330,7 +12330,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -12423,7 +12423,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -12501,7 +12501,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -12600,7 +12600,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -12678,7 +12678,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -12772,7 +12772,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -12850,7 +12850,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -12943,7 +12943,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -13021,7 +13021,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -13114,7 +13114,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -13192,7 +13192,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -13285,7 +13285,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -13363,7 +13363,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:26.726175+00:00"
+        "coleta": "2026-10-16T23:43:49.590900+00:00"
       },
       "healthbox_score": 57,
       "healthbox_status": "não confirma",
@@ -13460,7 +13460,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -13540,7 +13540,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -13620,7 +13620,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:37.231917+00:00",
+      "coleta": "2026-10-16T23:43:54.428857+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -13696,7 +13696,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -13772,7 +13772,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -13868,7 +13868,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -13944,7 +13944,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -14040,7 +14040,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -14116,7 +14116,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -14212,7 +14212,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -14288,7 +14288,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -14384,7 +14384,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -14460,7 +14460,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -14556,7 +14556,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -14632,7 +14632,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -14734,7 +14734,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -14810,7 +14810,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -14906,7 +14906,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -14982,7 +14982,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -15077,7 +15077,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -15153,7 +15153,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -15252,7 +15252,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -15328,7 +15328,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -15424,7 +15424,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -15500,7 +15500,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -15598,7 +15598,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -15674,7 +15674,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -15769,7 +15769,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -15845,7 +15845,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -15944,7 +15944,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -16020,7 +16020,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -16116,7 +16116,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -16192,7 +16192,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -16289,7 +16289,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -16365,7 +16365,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -16462,7 +16462,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -16538,7 +16538,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -16635,7 +16635,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -16711,7 +16711,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -16808,7 +16808,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -16884,7 +16884,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -16984,7 +16984,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -17049,7 +17049,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -17153,7 +17153,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -17218,7 +17218,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -17322,7 +17322,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -17398,7 +17398,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -17495,7 +17495,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -17571,7 +17571,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -17668,7 +17668,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -17744,7 +17744,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -17840,7 +17840,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -17916,7 +17916,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -18013,7 +18013,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -18089,7 +18089,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -18183,7 +18183,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -18259,7 +18259,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -18355,7 +18355,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -18431,7 +18431,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -18530,7 +18530,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -18606,7 +18606,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -18700,7 +18700,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -18776,7 +18776,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:27.013870+00:00"
+        "coleta": "2026-10-16T23:43:49.708884+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -18877,7 +18877,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -18957,7 +18957,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -19037,7 +19037,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:38.612230+00:00",
+      "coleta": "2026-10-16T23:43:55.484831+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -19115,7 +19115,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -19249,7 +19249,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -19388,7 +19388,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -19525,7 +19525,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -19668,7 +19668,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -19804,7 +19804,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -19946,7 +19946,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20082,7 +20082,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20217,7 +20217,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20351,7 +20351,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20493,7 +20493,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20629,7 +20629,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20765,7 +20765,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -20907,7 +20907,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21043,7 +21043,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21185,7 +21185,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21321,7 +21321,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21462,7 +21462,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21598,7 +21598,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21740,7 +21740,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -21882,7 +21882,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22018,7 +22018,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22160,7 +22160,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22296,7 +22296,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22437,7 +22437,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22573,7 +22573,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22715,7 +22715,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22851,7 +22851,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -22987,7 +22987,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -23123,7 +23123,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -23264,7 +23264,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -23400,7 +23400,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -23536,7 +23536,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -23672,7 +23672,7 @@
         "snapshot de mercado"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -23810,7 +23810,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -23890,7 +23890,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:39.892311+00:00",
+      "coleta": "2026-10-16T23:43:56.787050+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -23966,7 +23966,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -24042,7 +24042,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -24139,7 +24139,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -24215,7 +24215,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -24312,7 +24312,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -24388,7 +24388,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -24485,7 +24485,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -24561,7 +24561,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -24658,7 +24658,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -24734,7 +24734,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -24835,7 +24835,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -24911,7 +24911,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -25008,7 +25008,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -25084,7 +25084,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -25188,7 +25188,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -25264,7 +25264,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -25360,7 +25360,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -25436,7 +25436,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -25536,7 +25536,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -25612,7 +25612,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -25708,7 +25708,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -25784,7 +25784,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -25887,7 +25887,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -25963,7 +25963,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -26063,7 +26063,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -26139,7 +26139,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -26242,7 +26242,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -26318,7 +26318,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -26418,7 +26418,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -26494,7 +26494,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -26594,7 +26594,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -26670,7 +26670,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -26768,7 +26768,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -26844,7 +26844,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -26942,7 +26942,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -27018,7 +27018,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -27116,7 +27116,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -27192,7 +27192,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -27286,7 +27286,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -27362,7 +27362,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -27460,7 +27460,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -27536,7 +27536,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -27634,7 +27634,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -27710,7 +27710,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -27808,7 +27808,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -27884,7 +27884,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -27982,7 +27982,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -28058,7 +28058,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -28156,7 +28156,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -28232,7 +28232,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -28326,7 +28326,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -28402,7 +28402,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -28503,7 +28503,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -28579,7 +28579,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -28681,7 +28681,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -28757,7 +28757,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -28852,7 +28852,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -28928,7 +28928,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -29030,7 +29030,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -29106,7 +29106,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -29205,7 +29205,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -29270,7 +29270,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -29377,7 +29377,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -29442,7 +29442,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:28.489636+00:00"
+        "coleta": "2026-10-16T23:43:50.185484+00:00"
       },
       "healthbox_score": 67,
       "healthbox_status": "não confirma",
@@ -29552,7 +29552,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -29632,7 +29632,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:41.125396+00:00",
+      "coleta": "2026-10-16T23:43:58.410869+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -29708,7 +29708,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -29784,7 +29784,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -29881,7 +29881,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -29946,7 +29946,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -30053,7 +30053,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -30129,7 +30129,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -30226,7 +30226,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -30302,7 +30302,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -30399,7 +30399,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -30475,7 +30475,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -30572,7 +30572,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -30648,7 +30648,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -30744,7 +30744,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -30820,7 +30820,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -30923,7 +30923,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -30999,7 +30999,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -31103,7 +31103,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -31179,7 +31179,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -31283,7 +31283,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -31359,7 +31359,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -31456,7 +31456,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -31521,7 +31521,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -31628,7 +31628,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -31704,7 +31704,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -31805,7 +31805,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -31881,7 +31881,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -31982,7 +31982,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -32058,7 +32058,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -32159,7 +32159,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -32235,7 +32235,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -32336,7 +32336,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -32412,7 +32412,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -32511,7 +32511,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -32587,7 +32587,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -32686,7 +32686,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -32762,7 +32762,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -32861,7 +32861,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -32937,7 +32937,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -33036,7 +33036,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -33112,7 +33112,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -33211,7 +33211,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -33287,7 +33287,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -33386,7 +33386,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -33462,7 +33462,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -33561,7 +33561,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -33637,7 +33637,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -33735,7 +33735,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -33811,7 +33811,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -33910,7 +33910,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -33986,7 +33986,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -34085,7 +34085,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -34161,7 +34161,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -34260,7 +34260,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -34336,7 +34336,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -34435,7 +34435,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -34511,7 +34511,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -34606,7 +34606,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -34682,7 +34682,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -34781,7 +34781,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -34857,7 +34857,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.030037+00:00"
+        "coleta": "2026-10-16T23:43:50.360693+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -34956,7 +34956,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -35036,7 +35036,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -35116,7 +35116,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.130210+00:00",
+      "coleta": "2026-10-16T23:43:59.307486+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -35192,7 +35192,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -35268,7 +35268,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -35365,7 +35365,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -35441,7 +35441,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -35538,7 +35538,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -35614,7 +35614,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -35711,7 +35711,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -35787,7 +35787,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -35884,7 +35884,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -35960,7 +35960,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -36057,7 +36057,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -36133,7 +36133,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -36230,7 +36230,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -36306,7 +36306,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -36403,7 +36403,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -36479,7 +36479,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -36576,7 +36576,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -36652,7 +36652,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -36750,7 +36750,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -36826,7 +36826,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -36923,7 +36923,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -36999,7 +36999,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -37096,7 +37096,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -37172,7 +37172,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -37268,7 +37268,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -37344,7 +37344,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -37439,7 +37439,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -37515,7 +37515,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -37611,7 +37611,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -37687,7 +37687,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -37783,7 +37783,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -37859,7 +37859,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -37956,7 +37956,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -38032,7 +38032,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -38129,7 +38129,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -38205,7 +38205,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -38302,7 +38302,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -38378,7 +38378,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -38475,7 +38475,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -38551,7 +38551,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -38648,7 +38648,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -38724,7 +38724,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -38821,7 +38821,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -38897,7 +38897,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -38994,7 +38994,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -39070,7 +39070,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -39167,7 +39167,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -39243,7 +39243,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -39343,7 +39343,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -39419,7 +39419,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -39513,7 +39513,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -39589,7 +39589,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -39685,7 +39685,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -39761,7 +39761,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -39858,7 +39858,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -39934,7 +39934,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -40031,7 +40031,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -40107,7 +40107,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -40200,7 +40200,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -40276,7 +40276,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.638940+00:00"
+        "coleta": "2026-10-16T23:43:50.606381+00:00"
       },
       "healthbox_score": 59,
       "healthbox_status": "não confirma",
@@ -40373,7 +40373,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -40453,7 +40453,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -40533,7 +40533,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:42.901473+00:00",
+      "coleta": "2026-10-16T23:44:00.093245+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -40609,7 +40609,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -40674,7 +40674,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -40782,7 +40782,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -40847,7 +40847,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -40953,7 +40953,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -41029,7 +41029,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -41127,7 +41127,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -41203,7 +41203,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -41302,7 +41302,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -41378,7 +41378,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -41476,7 +41476,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -41552,7 +41552,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -41651,7 +41651,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -41727,7 +41727,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -41825,7 +41825,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -41901,7 +41901,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -41998,7 +41998,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -42074,7 +42074,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -42171,7 +42171,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -42247,7 +42247,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -42345,7 +42345,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -42421,7 +42421,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -42520,7 +42520,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -42596,7 +42596,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -42693,7 +42693,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -42769,7 +42769,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -42867,7 +42867,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -42943,7 +42943,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -43040,7 +43040,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -43116,7 +43116,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -43213,7 +43213,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -43289,7 +43289,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -43386,7 +43386,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -43462,7 +43462,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -43559,7 +43559,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -43635,7 +43635,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -43732,7 +43732,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -43808,7 +43808,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -43905,7 +43905,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -43981,7 +43981,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -44078,7 +44078,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -44154,7 +44154,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -44253,7 +44253,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -44329,7 +44329,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -44428,7 +44428,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -44504,7 +44504,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -44603,7 +44603,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -44679,7 +44679,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -44778,7 +44778,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -44854,7 +44854,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -44956,7 +44956,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -45032,7 +45032,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -45131,7 +45131,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -45207,7 +45207,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -45302,7 +45302,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -45378,7 +45378,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -45477,7 +45477,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -45553,7 +45553,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -45648,7 +45648,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -45724,7 +45724,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -45819,7 +45819,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -45895,7 +45895,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -45990,7 +45990,7 @@
       "spread_disponivel": false,
       "campos_ausentes": [],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "experimental EOD",
       "expiration_source": "options_snapshot.chains",
@@ -46066,7 +46066,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-16T22:16:29.958387+00:00"
+        "coleta": "2026-10-16T23:43:50.723353+00:00"
       },
       "healthbox_score": 61,
       "healthbox_status": "não confirma",
@@ -46165,7 +46165,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
@@ -46245,7 +46245,7 @@
         "nenhum pareamento elegível neste vencimento"
       ],
       "fonte": "opcoes_net_br",
-      "coleta": "2026-10-16T22:16:43.703112+00:00",
+      "coleta": "2026-10-16T23:44:01.158003+00:00",
       "tipo_dado": "DADOS REAIS EOD / EXPERIMENTAL",
       "status_dado": "atualizado",
       "conditional_status": "inconclusivo",
