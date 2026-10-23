@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T23:29:06.518215+00:00",
+  "generated_at": "2026-10-23T23:54:13.457426+00:00",
   "mode": "close",
   "source": "brapi_market_snapshots",
   "tickers": [
@@ -61,10 +61,10 @@
       "strategies_evaluated": 750,
       "strategies_per_thesis": 25,
       "statuses": {
-        "pendente_validacao_opcoes": 118,
+        "pendente_validacao_opcoes": 117,
         "rejeitada": 248,
         "nao_aplicavel": 378,
-        "apta_graficamente": 6
+        "apta_graficamente": 7
       },
       "top_preferred_strategies": {
         "esperar / acompanhar tese gráfica": 14,
@@ -117,7 +117,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.514204+00:00"
+        "coleta": "2026-10-23T23:53:58.014137+00:00"
       },
       "healthbox_score": 59,
       "rvol": 0.3902,
@@ -150,7 +150,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.514204+00:00",
+      "coleta": "2026-10-23T23:53:58.014137+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -3050,7 +3050,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:58.195587+00:00"
+        "coleta": "2026-10-23T23:54:02.218715+00:00"
       },
       "healthbox_score": 69,
       "rvol": 0.4835,
@@ -3083,7 +3083,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:58.195587+00:00",
+      "coleta": "2026-10-23T23:54:02.218715+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -6023,7 +6023,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.337246+00:00"
+        "coleta": "2026-10-23T23:53:57.673130+00:00"
       },
       "healthbox_score": 69,
       "rvol": 0.4608,
@@ -6056,7 +6056,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.337246+00:00",
+      "coleta": "2026-10-23T23:53:57.673130+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -8971,7 +8971,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.212352+00:00"
+        "coleta": "2026-10-23T23:53:57.349096+00:00"
       },
       "healthbox_score": 75,
       "rvol": 0.6676,
@@ -9004,7 +9004,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.212352+00:00",
+      "coleta": "2026-10-23T23:53:57.349096+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "neutra_observar",
@@ -11924,7 +11924,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:58.084197+00:00"
+        "coleta": "2026-10-23T23:54:01.861272+00:00"
       },
       "healthbox_score": 54,
       "rvol": 0.419,
@@ -11957,7 +11957,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:58.084197+00:00",
+      "coleta": "2026-10-23T23:54:01.861272+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "neutra_observar",
@@ -14647,7 +14647,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.816542+00:00"
+        "coleta": "2026-10-23T23:53:58.654180+00:00"
       },
       "healthbox_score": 54,
       "rvol": 0.4331,
@@ -14680,7 +14680,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.816542+00:00",
+      "coleta": "2026-10-23T23:53:58.654180+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -17542,7 +17542,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.700009+00:00"
+        "coleta": "2026-10-23T23:53:55.822806+00:00"
       },
       "healthbox_score": 61,
       "rvol": 0.9981,
@@ -17575,7 +17575,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.700009+00:00",
+      "coleta": "2026-10-23T23:53:55.822806+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -17706,7 +17706,7 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 66.5; strike_vendido: 66.0",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 68.0; strike_vendido: 67.5",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.2273,
             "min_credit_required": null,
@@ -18554,9 +18554,9 @@
             "strategy_name": "call debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 65.5; strike_vendido: 67.0",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 67.0; strike_vendido: 67.5",
             "expiration_window": "20 a 45 dias",
-            "max_debit_allowed": 0.6818,
+            "max_debit_allowed": null,
             "min_credit_required": null,
             "structure_legs_description": [
               "comprar call de strike menor",
@@ -20028,7 +20028,7 @@
           "status": "apta_graficamente",
           "reason": "regime queda_moderada compatível",
           "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 66.5; strike_vendido: 66.0",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 68.0; strike_vendido: 67.5",
           "expiration_window": "20 a 45 dias",
           "max_debit_allowed": 0.2273,
           "min_credit_required": null,
@@ -20262,7 +20262,7 @@
         "status": "apta_graficamente",
         "reason": "regime queda_moderada compatível",
         "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 66.5; strike_vendido: 66.0",
+        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 68.0; strike_vendido: 67.5",
         "expiration_window": "20 a 45 dias",
         "max_debit_allowed": 0.2273,
         "min_credit_required": null,
@@ -20373,7 +20373,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:57.829224+00:00"
+        "coleta": "2026-10-23T23:54:01.140703+00:00"
       },
       "healthbox_score": 59,
       "rvol": 0.5649,
@@ -20406,7 +20406,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:57.829224+00:00",
+      "coleta": "2026-10-23T23:54:01.140703+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -23243,7 +23243,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.342024+00:00"
+        "coleta": "2026-10-23T23:53:54.742720+00:00"
       },
       "healthbox_score": 61,
       "rvol": 0.6774,
@@ -23276,7 +23276,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.342024+00:00",
+      "coleta": "2026-10-23T23:53:54.742720+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -23432,9 +23432,9 @@
             "strategy_name": "call debit spread",
             "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 16.02; strike_vendido: 18.52",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 18.77; strike_vendido: 19.77",
             "expiration_window": "20 a 45 dias",
-            "max_debit_allowed": 1.1364,
+            "max_debit_allowed": 0.4545,
             "min_credit_required": null,
             "structure_legs_description": [
               "comprar call de strike menor",
@@ -23525,7 +23525,7 @@
             "strategy_name": "bull put spread",
             "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "put vendida 0,15 a 0,30 em módulo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 25.77; strike_vendido: 26.27",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 26.27; strike_vendido: 26.77",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
             "min_credit_required": 0.1,
@@ -24480,10 +24480,10 @@
             "strategy_name": "bear call spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "call vendida 0,15 a 0,30",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 26.82; strike_vendido: 21.32",
+            "strike_region": "vender call acima da resistência (16.22); comprar call acima",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
-            "min_credit_required": 1.1,
+            "min_credit_required": null,
             "structure_legs_description": [
               "vender call de strike menor",
               "comprar call de strike maior"
@@ -24510,7 +24510,9 @@
           "max_loss_estimate": null,
           "margin_proxy": null,
           "missing_capital_fields": [
-            "multiplicador"
+            "multiplicador",
+            "largura da estrutura",
+            "crédito"
           ],
           "capital_fit_status": "pendente_dados",
           "capital_fit_reason": "Informe capital disponível para classificar encaixe.",
@@ -24939,9 +24941,9 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 17.77; strike_vendido: 16.52",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 18.77; strike_vendido: 18.52",
             "expiration_window": "20 a 45 dias",
-            "max_debit_allowed": 0.5682,
+            "max_debit_allowed": null,
             "min_credit_required": null,
             "structure_legs_description": [
               "comprar put de strike maior",
@@ -25753,9 +25755,9 @@
           "status": "apta_graficamente",
           "reason": "regime alta_moderada compatível",
           "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 16.02; strike_vendido: 18.52",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 18.77; strike_vendido: 19.77",
           "expiration_window": "20 a 45 dias",
-          "max_debit_allowed": 1.1364,
+          "max_debit_allowed": 0.4545,
           "min_credit_required": null,
           "book_checklist": [
             "confirmar preço ou prêmio atual no book",
@@ -25793,7 +25795,7 @@
           "status": "apta_graficamente",
           "reason": "regime alta_moderada compatível",
           "delta_target": "put vendida 0,15 a 0,30 em módulo",
-          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 25.77; strike_vendido: 26.27",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 26.27; strike_vendido: 26.77",
           "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
           "max_debit_allowed": null,
           "min_credit_required": 0.1,
@@ -25964,9 +25966,9 @@
         "status": "apta_graficamente",
         "reason": "regime alta_moderada compatível",
         "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 16.02; strike_vendido: 18.52",
+        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 18.77; strike_vendido: 19.77",
         "expiration_window": "20 a 45 dias",
-        "max_debit_allowed": 1.1364,
+        "max_debit_allowed": 0.4545,
         "min_credit_required": null,
         "book_checklist": [
           "confirmar preço ou prêmio atual no book",
@@ -26077,7 +26079,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.710175+00:00"
+        "coleta": "2026-10-23T23:53:52.926663+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.5856,
@@ -26110,7 +26112,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.710175+00:00",
+      "coleta": "2026-10-23T23:53:52.926663+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -26173,7 +26175,7 @@
           "category": "direcional",
           "priority": 90,
           "is_candidate": true,
-          "status": "pendente_validacao_opcoes",
+          "status": "validada_com_cadeia",
           "requires_options_chain": true,
           "required_validations": [
             "cadeia real",
@@ -26265,9 +26267,9 @@
             "strategy_name": "call debit spread",
             "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 47.51; strike_vendido: 47.76",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.34; strike_vendido: 46.28",
             "expiration_window": "20 a 45 dias",
-            "max_debit_allowed": null,
+            "max_debit_allowed": 0.4273,
             "min_credit_required": null,
             "structure_legs_description": [
               "comprar call de strike menor",
@@ -26324,14 +26326,14 @@
             "margem"
           ],
           "suitability_score": 90,
-          "status": "pendente_validacao_opcoes",
+          "status": "apta_graficamente",
           "motivos_favoraveis": [
             "regime alta_moderada compatível",
-            "estratégia favorecida para o regime"
+            "estratégia favorecida para o regime",
+            "motor de opções forneceu perda máxima, break-even, preço e liquidez"
           ],
           "motivos_contra": [
-            "caixa necessário não confirmado",
-            "cadeia e matemática de opções ainda não validaram a candidata"
+            "caixa necessário não confirmado"
           ],
           "dados_necessarios": [],
           "validacoes_obrigatorias": [
@@ -26355,9 +26357,9 @@
           "manual_validation_plan": {
             "strategy_id": "bull_put_spread",
             "strategy_name": "bull put spread",
-            "manual_validation_status": "procurar_no_book",
+            "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "put vendida 0,15 a 0,30 em módulo",
-            "strike_region": "vender put abaixo do suporte/invalidação (37.35); comprar put abaixo",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 44.16; strike_vendido: 44.41",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
             "min_credit_required": null,
@@ -26374,7 +26376,6 @@
             ],
             "rejection_rules": [
               "caixa necessário não confirmado",
-              "cadeia e matemática de opções ainda não validaram a candidata",
               "rejeitar se spread estiver aberto ou liquidez insuficiente",
               "rejeitar se perda máxima ou break-even não puderem ser calculados",
               "rejeitar se suporte estiver fraco ou crédito abaixo de 20% da largura"
@@ -26388,7 +26389,6 @@
           "margin_proxy": null,
           "missing_capital_fields": [
             "multiplicador",
-            "largura da estrutura",
             "crédito"
           ],
           "capital_fit_status": "pendente_dados",
@@ -27750,9 +27750,9 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 43.85; strike_vendido: 42.15",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.84; strike_vendido: 45.34",
             "expiration_window": "20 a 45 dias",
-            "max_debit_allowed": 0.7727,
+            "max_debit_allowed": 0.2273,
             "min_credit_required": null,
             "structure_legs_description": [
               "comprar put de strike maior",
@@ -28549,9 +28549,9 @@
           "status": "apta_graficamente",
           "reason": "regime alta_moderada compatível",
           "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 47.51; strike_vendido: 47.76",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.34; strike_vendido: 46.28",
           "expiration_window": "20 a 45 dias",
-          "max_debit_allowed": null,
+          "max_debit_allowed": 0.4273,
           "min_credit_required": null,
           "book_checklist": [
             "confirmar preço ou prêmio atual no book",
@@ -28586,10 +28586,10 @@
           "strategy_id": "bull_put_spread",
           "strategy_name": "bull put spread",
           "score": 90,
-          "status": "pendente_validacao_opcoes",
+          "status": "apta_graficamente",
           "reason": "regime alta_moderada compatível",
           "delta_target": "put vendida 0,15 a 0,30 em módulo",
-          "strike_region": "vender put abaixo do suporte/invalidação (37.35); comprar put abaixo",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 44.16; strike_vendido: 44.41",
           "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
           "max_debit_allowed": null,
           "min_credit_required": null,
@@ -28602,7 +28602,6 @@
           ],
           "rejection_rules": [
             "caixa necessário não confirmado",
-            "cadeia e matemática de opções ainda não validaram a candidata",
             "rejeitar se spread estiver aberto ou liquidez insuficiente",
             "rejeitar se perda máxima ou break-even não puderem ser calculados",
             "rejeitar se suporte estiver fraco ou crédito abaixo de 20% da largura"
@@ -28621,7 +28620,6 @@
           "capital_fit_reason": "Informe capital disponível para classificar encaixe.",
           "missing_capital_fields": [
             "multiplicador",
-            "largura da estrutura",
             "crédito"
           ],
           "capital_warning": "Capital estimado não substitui a margem exigida pela corretora."
@@ -28763,9 +28761,9 @@
         "status": "apta_graficamente",
         "reason": "regime alta_moderada compatível",
         "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 47.51; strike_vendido: 47.76",
+        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.34; strike_vendido: 46.28",
         "expiration_window": "20 a 45 dias",
-        "max_debit_allowed": null,
+        "max_debit_allowed": 0.4273,
         "min_credit_required": null,
         "book_checklist": [
           "confirmar preço ou prêmio atual no book",
@@ -28876,7 +28874,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.834503+00:00"
+        "coleta": "2026-10-23T23:53:53.280507+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.7118,
@@ -28909,7 +28907,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.834503+00:00",
+      "coleta": "2026-10-23T23:53:53.280507+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -31783,7 +31781,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.595529+00:00"
+        "coleta": "2026-10-23T23:53:55.477486+00:00"
       },
       "healthbox_score": 72,
       "rvol": 1.9307,
@@ -31816,7 +31814,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.595529+00:00",
+      "coleta": "2026-10-23T23:53:55.477486+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -31951,7 +31949,7 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 41.85; strike_vendido: 41.35",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 39.85; strike_vendido: 39.35",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.2273,
             "min_credit_required": null,
@@ -32044,10 +32042,10 @@
             "strategy_name": "bear call spread",
             "manual_validation_status": "validavel_com_cadeia",
             "delta_target": "call vendida 0,15 a 0,30",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.03; strike_vendido: 44.03",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.28; strike_vendido: 45.03",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
-            "min_credit_required": 0.2,
+            "min_credit_required": 0.05,
             "structure_legs_description": [
               "vender call de strike menor",
               "comprar call de strike maior"
@@ -32609,10 +32607,10 @@
             "strategy_name": "bull put spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put vendida 0,15 a 0,30 em módulo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.03; strike_vendido: 46.03",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 43.28; strike_vendido: 44.03",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
-            "min_credit_required": 0.2,
+            "min_credit_required": 0.15,
             "structure_legs_description": [
               "vender put de strike maior",
               "comprar put de strike menor"
@@ -32794,9 +32792,9 @@
             "strategy_name": "call debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 41.85; strike_vendido: 42.35",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 43.1; strike_vendido: 43.35",
             "expiration_window": "20 a 45 dias",
-            "max_debit_allowed": 0.2273,
+            "max_debit_allowed": 0.1136,
             "min_credit_required": null,
             "structure_legs_description": [
               "comprar call de strike menor",
@@ -34268,7 +34266,7 @@
           "status": "apta_graficamente",
           "reason": "regime queda_moderada compatível",
           "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 41.85; strike_vendido: 41.35",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 39.85; strike_vendido: 39.35",
           "expiration_window": "20 a 45 dias",
           "max_debit_allowed": 0.2273,
           "min_credit_required": null,
@@ -34308,10 +34306,10 @@
           "status": "apta_graficamente",
           "reason": "regime queda_moderada compatível",
           "delta_target": "call vendida 0,15 a 0,30",
-          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.03; strike_vendido: 44.03",
+          "strike_region": "strikes disponíveis na candidata real: strike_comprado: 45.28; strike_vendido: 45.03",
           "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
           "max_debit_allowed": null,
-          "min_credit_required": 0.2,
+          "min_credit_required": 0.05,
           "book_checklist": [
             "confirmar preço ou prêmio atual no book",
             "confirmar bid/ask e spread",
@@ -34499,7 +34497,7 @@
         "status": "apta_graficamente",
         "reason": "regime queda_moderada compatível",
         "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 41.85; strike_vendido: 41.35",
+        "strike_region": "strikes disponíveis na candidata real: strike_comprado: 39.85; strike_vendido: 39.35",
         "expiration_window": "20 a 45 dias",
         "max_debit_allowed": 0.2273,
         "min_credit_required": null,
@@ -34612,7 +34610,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.094833+00:00"
+        "coleta": "2026-10-23T23:53:54.014787+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.5837,
@@ -34645,7 +34643,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.094833+00:00",
+      "coleta": "2026-10-23T23:53:54.014787+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -37519,7 +37517,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:57.701795+00:00"
+        "coleta": "2026-10-23T23:54:00.773566+00:00"
       },
       "healthbox_score": 46,
       "rvol": 0.3171,
@@ -37552,7 +37550,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:57.701795+00:00",
+      "coleta": "2026-10-23T23:54:00.773566+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -40426,7 +40424,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.974875+00:00"
+        "coleta": "2026-10-23T23:53:53.633167+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.4257,
@@ -40459,7 +40457,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.974875+00:00",
+      "coleta": "2026-10-23T23:53:53.633167+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -43308,7 +43306,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.640118+00:00"
+        "coleta": "2026-10-23T23:53:58.352946+00:00"
       },
       "healthbox_score": 46,
       "rvol": 0.7015,
@@ -43341,7 +43339,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.640118+00:00",
+      "coleta": "2026-10-23T23:53:58.352946+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -46215,7 +46213,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.969979+00:00"
+        "coleta": "2026-10-23T23:53:56.617164+00:00"
       },
       "healthbox_score": 46,
       "rvol": 0.4817,
@@ -46248,7 +46246,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.969979+00:00",
+      "coleta": "2026-10-23T23:53:56.617164+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -49094,7 +49092,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:58.294771+00:00"
+        "coleta": "2026-10-23T23:54:02.554926+00:00"
       },
       "healthbox_score": 71,
       "rvol": 1.1268,
@@ -49127,7 +49125,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:58.294771+00:00",
+      "coleta": "2026-10-23T23:54:02.554926+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -51863,7 +51861,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.465592+00:00"
+        "coleta": "2026-10-23T23:53:52.159374+00:00"
       },
       "healthbox_score": 67,
       "rvol": 0.5973,
@@ -51896,7 +51894,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.465592+00:00",
+      "coleta": "2026-10-23T23:53:52.159374+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -54639,7 +54637,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.592842+00:00"
+        "coleta": "2026-10-23T23:53:52.618443+00:00"
       },
       "healthbox_score": 67,
       "rvol": 0.5543,
@@ -54672,7 +54670,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.592842+00:00",
+      "coleta": "2026-10-23T23:53:52.618443+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -56323,10 +56321,10 @@
             "strategy_name": "bear call spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "call vendida 0,15 a 0,30",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 64.14; strike_vendido: 63.14",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 62.14; strike_vendido: 60.64",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
-            "min_credit_required": 0.2,
+            "min_credit_required": 0.3,
             "structure_legs_description": [
               "vender call de strike menor",
               "comprar call de strike maior"
@@ -56508,7 +56506,7 @@
             "strategy_name": "call debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 58.89; strike_vendido: 59.39",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 58.39; strike_vendido: 58.89",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.2273,
             "min_credit_required": null,
@@ -56780,7 +56778,7 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 58.39; strike_vendido: 57.89",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 58.89; strike_vendido: 58.39",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.2273,
             "min_credit_required": null,
@@ -57312,7 +57310,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.475925+00:00"
+        "coleta": "2026-10-23T23:53:55.131814+00:00"
       },
       "healthbox_score": 62,
       "rvol": 0.9329,
@@ -57345,7 +57343,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.475925+00:00",
+      "coleta": "2026-10-23T23:53:55.131814+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -60055,7 +60053,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:57.956629+00:00"
+        "coleta": "2026-10-23T23:54:01.508550+00:00"
       },
       "healthbox_score": 61,
       "rvol": 0.2704,
@@ -60088,7 +60086,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:57.956629+00:00",
+      "coleta": "2026-10-23T23:54:01.508550+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -62828,7 +62826,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.352765+00:00"
+        "coleta": "2026-10-23T23:53:51.848431+00:00"
       },
       "healthbox_score": 57,
       "rvol": 0.7432,
@@ -62861,7 +62859,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.352765+00:00",
+      "coleta": "2026-10-23T23:53:51.848431+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -64573,7 +64571,7 @@
             "strategy_name": "bull put spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put vendida 0,15 a 0,30 em módulo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 37.11; strike_vendido: 44.86",
+            "strike_region": "vender put abaixo do suporte/invalidação (40.82); comprar put abaixo",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
             "min_credit_required": null,
@@ -64604,6 +64602,7 @@
           "margin_proxy": null,
           "missing_capital_fields": [
             "multiplicador",
+            "largura da estrutura",
             "crédito"
           ],
           "capital_fit_status": "pendente_dados",
@@ -64664,7 +64663,7 @@
             "strategy_name": "call debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "call comprada 0,45 a 0,60; call vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 54.41; strike_vendido: 54.91",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 54.91; strike_vendido: 55.41",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.2273,
             "min_credit_required": null,
@@ -64930,7 +64929,7 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 54.91; strike_vendido: 54.41",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 55.41; strike_vendido: 54.91",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.2273,
             "min_credit_required": null,
@@ -65456,7 +65455,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:57.388116+00:00"
+        "coleta": "2026-10-23T23:53:59.980670+00:00"
       },
       "healthbox_score": 52,
       "rvol": 0.5461,
@@ -65489,7 +65488,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:57.388116+00:00",
+      "coleta": "2026-10-23T23:53:59.980670+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -68157,7 +68156,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.226287+00:00"
+        "coleta": "2026-10-23T23:53:54.399624+00:00"
       },
       "healthbox_score": 46,
       "rvol": 0.4115,
@@ -68190,7 +68189,7 @@
       "opcao_validacao": "validada_pelo_motor_real_experimental",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.226287+00:00",
+      "coleta": "2026-10-23T23:53:54.399624+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -69899,7 +69898,7 @@
             "strategy_name": "bull put spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put vendida 0,15 a 0,30 em módulo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 24.0; strike_vendido: 25.0",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 25.0; strike_vendido: 26.0",
             "expiration_window": "15 a 45 dias, sujeito à validação da cadeia",
             "max_debit_allowed": null,
             "min_credit_required": 0.2,
@@ -70255,7 +70254,7 @@
             "strategy_name": "put debit spread",
             "manual_validation_status": "nao_aplicavel",
             "delta_target": "put comprada 0,45 a 0,60 em módulo; put vendida perto do alvo",
-            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 25.0; strike_vendido: 24.0",
+            "strike_region": "strikes disponíveis na candidata real: strike_comprado: 26.0; strike_vendido: 25.0",
             "expiration_window": "20 a 45 dias",
             "max_debit_allowed": 0.4545,
             "min_credit_required": null,
@@ -70780,7 +70779,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.855396+00:00"
+        "coleta": "2026-10-23T23:53:56.215876+00:00"
       },
       "healthbox_score": 46,
       "rvol": 0.5142,
@@ -70813,7 +70812,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.855396+00:00",
+      "coleta": "2026-10-23T23:53:56.215876+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -73481,7 +73480,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.091344+00:00"
+        "coleta": "2026-10-23T23:53:56.984425+00:00"
       },
       "healthbox_score": 46,
       "rvol": 0.6456,
@@ -73514,7 +73513,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.091344+00:00",
+      "coleta": "2026-10-23T23:53:56.984425+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -76191,7 +76190,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "indisponível",
-        "coleta": "2026-10-23T23:28:56.925852+00:00"
+        "coleta": "2026-10-23T23:53:59.036125+00:00"
       },
       "healthbox_score": null,
       "rvol": null,
@@ -76229,7 +76228,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.925852+00:00",
+      "coleta": "2026-10-23T23:53:59.036125+00:00",
       "tipo_dado": "indisponível",
       "data_frequency": "EOD",
       "status": "inconclusiva",
@@ -78964,7 +78963,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "indisponível",
-        "coleta": "2026-10-23T23:28:57.034147+00:00"
+        "coleta": "2026-10-23T23:53:59.371658+00:00"
       },
       "healthbox_score": null,
       "rvol": null,
@@ -79002,7 +79001,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:57.034147+00:00",
+      "coleta": "2026-10-23T23:53:59.371658+00:00",
       "tipo_dado": "indisponível",
       "data_frequency": "EOD",
       "status": "inconclusiva",
@@ -84534,7 +84533,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:58.195587+00:00"
+        "coleta": "2026-10-23T23:54:02.218715+00:00"
       },
       "healthbox_score": 69,
       "rvol": 0.4835,
@@ -84567,7 +84566,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:58.195587+00:00",
+      "coleta": "2026-10-23T23:54:02.218715+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -87507,7 +87506,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.337246+00:00"
+        "coleta": "2026-10-23T23:53:57.673130+00:00"
       },
       "healthbox_score": 69,
       "rvol": 0.4608,
@@ -87540,7 +87539,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.337246+00:00",
+      "coleta": "2026-10-23T23:53:57.673130+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -90457,7 +90456,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.514204+00:00"
+        "coleta": "2026-10-23T23:53:58.014137+00:00"
       },
       "healthbox_score": 59,
       "rvol": 0.3902,
@@ -90490,7 +90489,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.514204+00:00",
+      "coleta": "2026-10-23T23:53:58.014137+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "interesse_venda",
@@ -93392,7 +93391,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.816542+00:00"
+        "coleta": "2026-10-23T23:53:58.654180+00:00"
       },
       "healthbox_score": 54,
       "rvol": 0.4331,
@@ -93425,7 +93424,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.816542+00:00",
+      "coleta": "2026-10-23T23:53:58.654180+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -96287,7 +96286,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:56.212352+00:00"
+        "coleta": "2026-10-23T23:53:57.349096+00:00"
       },
       "healthbox_score": 75,
       "rvol": 0.6676,
@@ -96320,7 +96319,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:56.212352+00:00",
+      "coleta": "2026-10-23T23:53:57.349096+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "neutra_observar",
@@ -99238,7 +99237,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:57.829224+00:00"
+        "coleta": "2026-10-23T23:54:01.140703+00:00"
       },
       "healthbox_score": 59,
       "rvol": 0.5649,
@@ -99271,7 +99270,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:57.829224+00:00",
+      "coleta": "2026-10-23T23:54:01.140703+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -102110,7 +102109,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:58.084197+00:00"
+        "coleta": "2026-10-23T23:54:01.861272+00:00"
       },
       "healthbox_score": 54,
       "rvol": 0.419,
@@ -102143,7 +102142,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:58.084197+00:00",
+      "coleta": "2026-10-23T23:54:01.861272+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "neutra_observar",
@@ -104831,7 +104830,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:58.294771+00:00"
+        "coleta": "2026-10-23T23:54:02.554926+00:00"
       },
       "healthbox_score": 71,
       "rvol": 1.1268,
@@ -104864,7 +104863,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:58.294771+00:00",
+      "coleta": "2026-10-23T23:54:02.554926+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -107603,7 +107602,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:55.475925+00:00"
+        "coleta": "2026-10-23T23:53:55.131814+00:00"
       },
       "healthbox_score": 62,
       "rvol": 0.9329,
@@ -107636,7 +107635,7 @@
       "opcao_validacao": "cadeia_disponivel_validacao_pendente",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:55.475925+00:00",
+      "coleta": "2026-10-23T23:53:55.131814+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
@@ -110346,7 +110345,7 @@
         ],
         "fonte": "brapi",
         "tipo_dado": "coletado/calculado",
-        "coleta": "2026-10-23T23:28:54.465592+00:00"
+        "coleta": "2026-10-23T23:53:52.159374+00:00"
       },
       "healthbox_score": 67,
       "rvol": 0.5973,
@@ -110379,7 +110378,7 @@
       "opcao_validacao": "opcao_pendente_validacao_manual",
       "aviso": "Sem cadeia real, validar opção manualmente no book/corretora.",
       "fonte": "brapi",
-      "coleta": "2026-10-23T23:28:54.465592+00:00",
+      "coleta": "2026-10-23T23:53:52.159374+00:00",
       "tipo_dado": "coletado/calculado",
       "data_frequency": "EOD",
       "status": "evitar",
