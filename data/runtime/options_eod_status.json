@@ -3,23 +3,24 @@
     "success": true,
     "completed": true,
     "mode": "close",
-    "started_at": "2026-10-30T02:44:05.987151+00:00",
-    "finished_at": "2026-10-30T02:44:13.333424+00:00",
-    "total_underlyings": 7,
-    "available_count": 7,
+    "started_at": "2026-10-30T22:30:46.067255+00:00",
+    "finished_at": "2026-10-30T22:30:56.719407+00:00",
+    "total_underlyings": 8,
+    "available_count": 8,
     "unavailable_count": 0,
     "error_count": 0,
-    "total_series": 3154,
-    "total_calls": 1577,
-    "total_puts": 1577,
+    "total_series": 3554,
+    "total_calls": 1777,
+    "total_puts": 1777,
     "underlyings": [
       "PETR4",
       "VALE3",
       "ITUB4",
       "BOVA11",
       "BBAS3",
-      "BBDC4",
-      "B3SA3"
+      "B3SA3",
+      "WEGE3",
+      "PRIO3"
     ],
     "available_underlyings": [
       "PETR4",
@@ -27,8 +28,9 @@
       "ITUB4",
       "BOVA11",
       "BBAS3",
-      "BBDC4",
-      "B3SA3"
+      "B3SA3",
+      "WEGE3",
+      "PRIO3"
     ],
     "unavailable_underlyings": [],
     "errors": [],
@@ -38,8 +40,9 @@
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/ITUB4.json",
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/BOVA11.json",
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/BBAS3.json",
-      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/BBDC4.json",
-      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/B3SA3.json"
+      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/B3SA3.json",
+      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/WEGE3.json",
+      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_snapshots/PRIO3.json"
     ],
     "history_files": [
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/PETR4/2026-10-30.json",
@@ -47,13 +50,14 @@
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/ITUB4/2026-10-30.json",
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/BOVA11/2026-10-30.json",
       "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/BBAS3/2026-10-30.json",
-      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/BBDC4/2026-10-30.json",
-      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/B3SA3/2026-10-30.json"
+      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/B3SA3/2026-10-30.json",
+      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/WEGE3/2026-10-30.json",
+      "/home/runner/work/Radarop-es/Radarop-es/data/runtime/options_chains_history/PRIO3/2026-10-30.json"
     ],
     "status": "disponível",
     "source": "opcoes_net_br",
     "sources": {
-      "opcoes_net_br": 7
+      "opcoes_net_br": 8
     },
     "source_by_underlying": {
       "PETR4": "opcoes_net_br",
@@ -61,8 +65,9 @@
       "ITUB4": "opcoes_net_br",
       "BOVA11": "opcoes_net_br",
       "BBAS3": "opcoes_net_br",
-      "BBDC4": "opcoes_net_br",
-      "B3SA3": "opcoes_net_br"
+      "B3SA3": "opcoes_net_br",
+      "WEGE3": "opcoes_net_br",
+      "PRIO3": "opcoes_net_br"
     },
     "data_frequency": "EOD",
     "opportunity_engine_status": "MOCK / EXEMPLO",
@@ -71,17 +76,17 @@
       "fonte": "opcoes_net_br",
       "tipo_dado": "coletado",
       "status_dado": "atualizado",
-      "coleta": "2026-10-30T02:44:12.692005+00:00",
+      "coleta": "2026-10-30T22:30:55.559056+00:00",
       "date_last_quotes_in_db": "2026-10-29",
-      "has_todays_quotes": true,
+      "has_todays_quotes": false,
       "observacao": "Cotações da última sessão gravada no banco do site. Não é tempo real.",
       "error": null
     },
     "min_dte": 7,
     "max_dte": 60,
     "max_expirations": 4,
-    "expirations_found": 203,
-    "expirations_selected": 28,
+    "expirations_found": 220,
+    "expirations_selected": 32,
     "series_by_expiration": {
       "PETR4:2026-11-19": 418,
       "PETR4:2026-11-27": 66,
@@ -103,14 +108,18 @@
       "BBAS3:2026-11-27": 66,
       "BBAS3:2026-12-04": 72,
       "BBAS3:2026-12-11": 2,
-      "BBDC4:2026-11-19": 236,
-      "BBDC4:2026-11-27": 62,
-      "BBDC4:2026-12-04": 60,
-      "BBDC4:2026-11-06": 64,
       "B3SA3:2026-11-19": 108,
       "B3SA3:2026-11-27": 48,
       "B3SA3:2026-12-04": 50,
-      "B3SA3:2026-12-11": 16
+      "B3SA3:2026-12-11": 16,
+      "WEGE3:2026-11-19": 150,
+      "WEGE3:2026-11-27": 60,
+      "WEGE3:2026-12-04": 60,
+      "WEGE3:2026-11-06": 94,
+      "PRIO3:2026-11-19": 264,
+      "PRIO3:2026-11-27": 60,
+      "PRIO3:2026-12-04": 64,
+      "PRIO3:2026-11-06": 70
     }
   }
 }
