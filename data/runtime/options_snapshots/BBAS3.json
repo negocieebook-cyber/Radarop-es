@@ -7,7 +7,7 @@
   "status_dado": "atualizado",
   "access_status": "disponível",
   "data_frequency": "EOD",
-  "coleta": "2026-11-06T23:49:47.934105+00:00",
+  "coleta": "2026-11-07T02:57:43.095681+00:00",
   "expiration_used": "2026-11-27",
   "expirations_used": [
     "2026-11-27",
@@ -25,7 +25,7 @@
   "chains": [
     {
       "expiration_date": "2026-11-27",
-      "vencimento_dias": 21,
+      "vencimento_dias": 20,
       "series_count": 75,
       "calls_count": 37,
       "puts_count": 38,
@@ -4216,7 +4216,7 @@
     },
     {
       "expiration_date": "2026-12-04",
-      "vencimento_dias": 28,
+      "vencimento_dias": 27,
       "series_count": 79,
       "calls_count": 41,
       "puts_count": 38,
@@ -8691,7 +8691,7 @@
     },
     {
       "expiration_date": "2026-12-11",
-      "vencimento_dias": 35,
+      "vencimento_dias": 34,
       "series_count": 20,
       "calls_count": 13,
       "puts_count": 7,
@@ -9784,7 +9784,7 @@
     },
     {
       "expiration_date": "2026-12-18",
-      "vencimento_dias": 42,
+      "vencimento_dias": 41,
       "series_count": 254,
       "calls_count": 127,
       "puts_count": 127,
